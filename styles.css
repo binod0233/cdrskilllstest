@@ -1,0 +1,897 @@
+/* Footer.css  */
+
+.upperFooter {
+    background-color: #E5E5E5;
+    padding: 40px;
+    color:  #203546;
+    ;
+  }
+  .footerServices {
+    text-decoration: none;
+    color: #747474;
+  }
+  .footerServices>a {
+    text-decoration: none !important;
+    color: #747474 !important;
+  }
+  .footerServices:hover {
+    color: #203546;
+  }
+  .lowerFooter {
+    background-color: #203546
+    ;
+    font-family: Arial;
+    padding: 20px 0 10px 50px;
+    font-weight: 700;
+    font-size: 22px;
+  }
+  @media screen and (max-width: 600px) {
+    .footerServices {
+      font-size: 10px;
+    }
+    .footerAboutUs {
+      font-size: 10px;
+    }
+    .lowerFooter {
+      font-size: 10px;
+    }
+    .footerTitle {
+      font-size: 10px;
+    }
+    .upperFooter {
+      font-size: 10px;
+    }
+    .wholeFooter{
+      width:97.5%
+    }
+  }
+
+
+  /*  Header.css */
+.bg-dark{
+  background-color: #203546 !important;
+}
+a{
+  color:white ;
+  text-decoration: none !important;
+}
+.headerDropdownList{
+  color: white !important;
+}
+  .header {
+    top: 0;
+    z-index: 11;
+  }
+  .headernavbar {
+    width: 100%;
+    height: 95px;
+    background:#203546 !important;
+    font-family: Asap;
+    
+    
+  }
+  .headerDropdownRows{
+    color:white;
+    font-size:13px
+  }
+  .headerDropdownList{
+    display:flex;
+    flex-direction: column;
+  }
+  .headerDropdownLink{
+    text-decoration: none;
+    color:white;
+    font-weight: 400;
+    z-index: 99;
+  
+  }
+  .headerDropdownLink:hover{
+    color:#203546;
+  
+  }
+  .tooltip1:hover .headerAnzsco{
+  visibility: visible !important;
+  }
+  
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    background: #203546;
+  }
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: white !important;
+  }
+  
+  .dropdown-menu {
+    font-size: 0.75rem;
+  }
+  .dropdown-divider {
+    margin: 0.25rem 0;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: white;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar-brand {
+      margin-left: -50px !important;
+      width: "100px";
+      height: "40px";
+    }
+    .navbar-toggler{
+      border:3px solid white !important;
+      color:white !important
+    }
+    .headerAnzsco{
+      margin-left: -60px !important;
+      width:300px !important;
+      height: fit-content !important;
+      font-size: 10px !important;
+  
+    }
+    .headerDropdownRows{
+      font-size: 12px !important;
+    }
+    .headerDropdownLink{
+      font-size: 8px !important;
+  
+    }
+    .headerDropdownList{
+      font-size: 8px !important;
+  
+    }
+    .nav-item {
+      background: #203546 !important;
+    }
+    .navbar-nav{
+      background: #203546 !important;
+  
+    }
+    .navbar-brand > img {
+      width: "100%";
+      height: "100%";
+      object-fit: contain;
+    }
+    .header {
+      height: 40px;
+    }
+    .headerImageContainer {
+      width: 200px;
+      /* height: 100px; */
+    }
+    .navbar-nav {
+      background: #203546;
+      
+    }
+    .headerImageContainer > img {
+      object-fit: contain !important;
+    }
+    .navbar-toggler {
+      padding: 0.1rem 0.3rem !important;
+      font-size: small;
+      margin-right: -30px;
+      color: white !important;
+    }
+    .navbar-toggler-icon{
+      border: white !important;
+      color: white !important;
+  
+    }
+  }
+
+
+  /* Hero.css */
+
+  .heroScreen {
+    background-image:url("her.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    
+  
+    min-height: 56.5rem;
+    
+  }
+  .formSubmitButton {
+    background-color: #017CC9;
+    
+    width: fit-content;
+    margin: 0 0 10px 0;
+  }
+  .formContainer {
+    border-radius: 20px;
+  }
+  .inputField {
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    
+    .formSubmitButton {
+      margin: 0;
+    }
+    .formContainerColumn{
+      display: flex;
+      justify-content: center;
+    }
+    .formContainer {
+      margin-bottom: 10px;
+      width:300px !important;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .heroInputButton{
+      width:260px !important
+    }
+    .inputField::placeholder{
+    }
+  }
+  
+  .PhoneInputCountry {
+    padding: 2px;
+  }
+  .PhoneInputInput {
+    height: 35px !important;
+    border: none;
+    outline: none;
+    background-color: #f4f4f4 !important;
+    padding-left: 5px;
+    border-radius: 5px;
+  }
+
+  /*Hero2.css*/
+
+  .acceptedBackgrounded {
+    background:  #203546;
+
+  }
+  
+  .CDRReportAcceptedHeading {
+    font-size: 36px;
+    font-family: Century Gothic;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+  }
+  .CDRReportAcceptParagraph {
+    font-family: Asap;
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .CDRReportAcceptedHeading {
+      font-size: 18px;
+    }
+    .CDRReportAcceptParagraph {
+      font-size: 12px;
+    }
+    .CDRReportAcceptParagraph > Button {
+      font-size: 10px;
+    }
+    .CDRReportAcceptButton {
+      font-size: 12px !important;
+    }
+  }
+  
+
+  /* Socials.css*/
+  .socialContainer {
+    top: 40%;
+    right: 1%;
+    width: fit-content;
+  }
+  
+  .chatWithUsContainer {
+    top: 85vh;
+    right: 10vw;
+    background: #461578;
+    color: white;
+    width: fit-content;
+  }
+  
+  .takeMeToTopContainer {
+    top: 80vh;
+    left: 10vh;
+    width: fit-content;
+  }
+  .iconContainer {
+    border-radius: 100%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #60269e;
+    cursor: pointer;
+  }
+  .iconContainer:hover {
+    color: #60269e;
+    transform: scale(1.02);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .socialContainer {
+      top: 40%;
+      right: 5%;
+      width: fit-content;
+    }
+    .takeMeToTopContainer {
+      top: 80vh;
+      left: 1vh;
+      width: fit-content;
+    }
+    .textParagraph{
+      font-size: 10px !important; 
+  
+    }
+    .headingTitle{
+      font-size: 12px !important; 
+  
+    }
+    .chatWithUsContainer {
+      display: none;
+      color: white;
+      width: fit-content;
+    }
+    .purpleHeading {
+      font-size: 20px !important;
+    }
+    .textParagraphP {
+      font-size: 10px !important;
+    }
+    .cvResumeImage{
+      height:200px !important
+    }
+    .anzoCardText{
+      font-size: 13px !important;
+    }
+    .mobileAnzoCard{
+      height:150px !important
+    }
+  }
+  
+
+  /*Not Found*/
+
+  
+@media screen and (max-width: 600px) {
+
+    .a404{
+        font-size: 30px !important;
+        margin-top: 30px ;
+    }
+    .sorry{
+        font-size: 15px !important;
+    }
+    
+    .link{
+        font-size: 10px !important;
+    }
+}
+  
+
+  /*Landing.css*/
+
+  .professionalServicesCard {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    border-radius: 25px;
+    height: 380px;
+    z-index: -1;
+  } 
+  
+  .cardHeading {
+    text-align: center;
+    color: #fa2545;
+    font-size: 18px;
+  }
+  
+  .cardParagraph {
+    text-align: center;
+    font-family: Century Gothic;
+    font-size: 18px;
+  }
+  .frequentlyAskedCard {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+  
+  .frequentlyAskedParagraph {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  
+  .frequentlyAskedRow {
+    padding: 30px 20px 0px 20px;
+  }
+  .takeHelpParagraph {
+    font-family: Arial;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #666666;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .takeHelpHeading {
+    font-size: 34px;
+    color: #370c64;
+    margin-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-weight: 700;
+  }
+  .bestCDRParagraph {
+    font-family: Arial;
+    font-size: 22px;
+    margin-top: 10px;
+    color: #666666;
+  }
+  .workProgressHeading {
+    font-size: 35px;
+    color: #370c64;
+    text-align: center;
+    font-family: Cambria;
+    font-weight: 700;
+  }
+  .stepsHeading {
+    color: #fa2545;
+    font-weight: 700;
+    margin-top: 100px;
+  }
+  .stepsSubHeading {
+    color: #000000;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  .stepsParagraph {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 18px;
+    color: #666666;
+  }
+  .mobileScreenSteps{
+    display:none
+  }
+  @media screen and (max-width: 600px) {
+   
+    .listText{
+      font-size: 10px; 
+  
+    }
+    .mobileScreenSteps{
+      display: block;
+    }
+  
+    .desktopScreenSteps{
+      display:none
+    }
+   .stepsTitle{
+  font-size: 12px !important;
+   }
+   .stepsDetails{
+  font-size: 10px !important;
+   }
+   .stepsInACircle{
+    height:60px !important;
+    width:60px !important;
+    font-size: 13px !important;
+   }
+  .landingFactorTitle{
+    font-size: 12px !important; 
+  
+  }
+  .landingFactorText{
+    font-size: 10px !important; 
+  
+  }
+    .takeHelpHeading {
+      font-size: 17px;
+    }
+    .bestCDRParagraph {
+      font-size: 12px;
+    }
+    .workProgressHeading {
+      font-size: 20px;
+    }
+    .stepsHeading {
+      font-size: 15px;
+    }
+    .stepsSubHeading {
+      font-size: 15px;
+    }
+    .stepsHeading {
+      margin-top: 0;
+    }
+    .stepsSubHeading {
+      margin-top: 10px;
+    }
+    .stepsParagraph {
+      font-size: 12px;
+    }
+    .getStartedLink > strong {
+      font-size: 12px;
+    }
+    .getStartedLink {
+      margin-top: 0 !important;
+    }
+    .professionalParagraph {
+      font-size: 12px !important;
+    }
+    .professionalServicesCard {
+      height: 250px;
+      padding: 3px 15px;
+    }
+    .professionalMobileImage {
+      height: 60% !important;
+      width: 30% !important;
+      border-radius: 4px !important;
+    }
+    .professionalMobileImage > img {
+      height: 70% !important;
+      width: 70% !important;
+    }
+    .cardHeading {
+      font-size: 12px;
+    }
+    .cardParagraph {
+      font-size: 12px;
+    }
+    .frequentlyAskedParagraph {
+      font-size: 12px !important;
+    }
+    .thousandsParagraph {
+      font-size: 14px !important;
+    }
+    .whatClientSayComponent {
+      height: 55vh !important;
+    }
+    .whatClientSayCard {
+      width: 70% !important;
+    }
+    .whatClientSayImage {
+      height: 100px !important;
+      width: 100px !important;
+      margin-top: -50px !important;
+    }
+    .whatClientSayLeftButton {
+      left: 3% !important;
+    }
+    .whatClientSayRightButton {
+      right: 3% !important;
+    }
+    .whatClientSaySaying {
+      font-size: 12px !important;
+    }
+    .whatClientSayName {
+      margin-top: 45px !important;
+    }
+  }
+
+
+  /*Services.css*/
+
+  @media screen and (max-width: 600px) {
+    .ourCDRServicesParagraph{
+font-size: 10px !important;
+    }
+    .ourCDRServicesTitle{
+        font-size: 12px !important;
+
+    }
+    .whatToOfferImage{
+        height:140px !important;
+        width:100px !important
+    }
+    .mobileScreenGuidelinesButton{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .structureImage{
+        height:300px !important
+    }
+}
+  
+
+/*CDR writing*/
+
+@media screen and (max-width: 600px) {
+  .ourCDRServicesParagraph{
+font-size: 10px !important;
+  }
+  .ourCDRServicesTitle{
+      font-size: 12px !important;
+
+  }
+  .thousandsCard{
+      height: 300px !important;
+  }
+  .searchInputField{
+      width: 300px !important;
+  }
+}
+
+
+/*Components Styles.css*/
+
+.professionalServicesCard {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  border-radius: 25px;
+  height: 380px;
+  z-index: -1;
+}
+
+.stepsSubHeading{
+  color:#203546 !important;
+}
+.stepsParagraph{
+  text-align: justify;
+}
+.cardHeading {
+  text-align: center;
+  color: #fa2545;
+  font-size: 18px;
+}
+
+.cardParagraph {
+  text-align: center;
+  font-family: Century Gothic;
+  font-size: 18px;
+}
+.frequentlyAskedCard {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.frequentlyAskedParagraph {
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.frequentlyAskedRow {
+  padding: 30px 20px 0px 20px;
+}
+.takeHelpParagraph {
+  font-family: Arial;
+  font-size: 20px;
+  margin-top: 10px;
+  color: #666666;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.takeHelpHeading {
+  font-size: 34px;
+  color: #370c64;
+  margin-left: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 700;
+}
+.bestCDRParagraph {
+  font-family: Arial;
+  font-size: 22px;
+  margin-top: 10px;
+  color: #666666;
+}
+.workProgressHeading {
+  font-size: 35px;
+  color: #370c64;
+  text-align: center;
+  font-family: Cambria;
+  font-weight: 700;
+}
+.stepsHeading {
+  color: #fa2545;
+  font-weight: 700;
+  margin-top: 100px;
+}
+.stepsSubHeading {
+  color: #000000;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.stepsParagraph {
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 18px;
+  color: #666666;
+}
+@media screen and (max-width: 600px) {
+  .takeHelpParagraph {
+    font-size: 15px;
+  }
+
+  .takeHelpHeading {
+    font-size: 17px;
+  }
+  .bestCDRParagraph {
+    font-size: 12px;
+  }
+  .workProgressHeading {
+    font-size: 20px;
+  }
+  .stepsHeading {
+    font-size: 15px;
+  }
+  .stepsSubHeading {
+    font-size: 15px;
+  }
+  .stepsHeading {
+    margin-top: 0;
+  }
+  .stepsSubHeading {
+    margin-top: 10px;
+  }
+  .stepsParagraph {
+    font-size: 10px !important;
+  }
+  .getStartedLink > strong {
+    font-size: 12px;
+  }
+  .getStartedLink {
+    margin-top: 0 !important;
+  }
+  .professionalParagraph {
+    font-size: 12px !important;
+  }
+  .professionalServicesCard {
+    height: 250px;
+    padding: 3px 15px;
+  }
+  .professionalMobileImage {
+    height: 60% !important;
+    width: 30% !important;
+    border-radius: 4px !important;
+  }
+  .professionalMobileImage > img {
+    height: 70% !important;
+    width: 70% !important;
+  }
+  .cardHeading {
+    font-size: 12px;
+  }
+  .cardParagraph {
+    font-size: 12px;
+  }
+  .frequentlyAskedParagraph {
+    font-size: 12px !important;
+  }
+  .thousandsParagraph {
+    font-size: 14px !important;
+  }
+  .whatClientSayComponent {
+    height: 55vh !important;
+  }
+  .whatClientSayCard {
+    width: 70% !important;
+  }
+  .whatClientSayImage {
+    height: 100px !important;
+    width: 100px !important;
+    margin-top: -50px !important;
+  }
+  .whatClientSayLeftButton {
+    left: 3% !important;
+  }
+  .whatClientSayRightButton {
+    right: 3% !important;
+  }
+  .whatClientSaySaying {
+    font-size: 12px !important;
+  }
+  .whatClientSayName {
+    margin-top: 45px !important;
+  }
+}
+
+
+/*ContactUs*/
+
+@media screen and (max-width: 600px) {
+  .contactUsBanner{
+      margin:0 !important;
+  }
+}
+
+/*FAQ.css*/
+
+.accordion-item:first-of-type .accordion-button {
+  border: none !important;
+}
+.pagination {
+  color: #370c64;
+  font-family: Arial;
+  font-size: 19px;
+  font-weight: 700;
+}
+.arrowContainer {
+  background-color: #fa2545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.accordion-button::after {
+  display: none;
+}
+.accordion-item {
+  border: 2px solid #370c64;
+  border-radius: 12px;
+  margin: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+  /* background: #370c64; */
+  color: white !important;
+  border: 2px solid #370c64 !important;
+  background-color: transparent !important;
+
+}
+.accordion-header{
+  background-color: transparent !important;
+
+}
+.accordion-button{
+  background-color: transparent !important;
+
+}
+
+.accordion-item:first-of-type .accordion-button {
+  border: none !important;
+}
+.accordion-item:first-of-type .accordion-button {
+  border-radius: 10px;
+}
+
+
+/*Pricing*/
+
+.changeToYellow:hover{
+  border-top:2px solid #FFAD05 !important;
+  transform: scale(1.03);
+}
+
+
+
+.changeToBlue:hover{
+  border-top:2px solid #017CC9 !important;
+  transform: scale(1.03);
+}
+
+
+
+.changeToRed:hover{
+  border-top:2px solid #D63E3E  !important;
+  transform: scale(1.03);}
+
+
+.changeToGreen:hover{
+  border-top:2px solid #049213  !important;
+  transform: scale(1.03);}
+
+@media screen and (max-width: 600px) {
+.spanfontSize{
+  font-size: 10px !important;
+}
+
+}
+
+
+/*Stage1*/
+
+
+
+@media screen and (max-width: 600px) {
+  .stage1123Image{
+      display: none;
+  }
+  .stepsOneImage{
+      height:100px !important
+  }
+}
