@@ -52,7 +52,7 @@ Chatra("pageView");
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="p:domain_verify" content="e4581bc81db8eda2fd8ab8306e420b39"/>
-  
+  <meta name="google-site-verification" content="HHmwlU63B0HUdwmsWjO3ejftL0QN5xQIvkxwkmljGoY" />
   
      
   </Head>
