@@ -7,10 +7,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Ouragents = () => {
   const dataList=[
-    {image:"/images/MeetOurAdvisors/male-1.png",title:`Anya Pathak`, data:`Talk with Anya`,phone:"61481615807"},
-    {image:`/images/MeetOurAdvisors/sarala.png`,title:`Sansha Pandey`, data:`Talk with Sansha`,phone:"61481612927"},
+    {image:"/images/MeetOurAdvisors/Sarala.png",title:`Anya Pathak`, data:`Talk with Anya`,phone:"61481615807"},
+    {image:`/images/MeetOurAdvisors/sasha.png`,title:`Sansha Pandey`, data:`Talk with Sansha`,phone:"61481612927"},
     {image:`images/MeetOurAdvisors/roshan.png`,title:`Sameer Thapa`, data:`Talk with Sameer`,phone:"61481615194"},
-    {image:`images/MeetOurAdvisors/roshan.png`,title:`Janvi Rai`, data:`Talk with Janvi`,phone:"61481612162"}]
+    {image:`images/MeetOurAdvisors/jenny.png`,title:`Janvi Rai`, data:`Talk with Janvi`,phone:"61481612162"}]
   return (
     <div>
        {/* <div className='d-flex flex-column justify-content-center align-items-center mt-5'>
@@ -34,16 +34,16 @@ const Ouragents = () => {
    <img src={d.image} alt="agents"/>
   
    <h3 style={{fontFamily:"Asap",fontWeight:"700",color:"#000"}}className="pt-4">{d.title} </h3>
-   <p style={{color:"#666666",fontFamily:"Asap"}}>CDR Agent</p>
-   <div className="d-flex flex-row pe-2">
+   <div style={{color:"#666666",fontFamily:"Asap"}}>CDR Agent</div>
+   <div className="d-flex flex-row pe-2 my-2">
      <FacebookIcon className='' style={{color:"#3B5998"}}/>
-     <LinkedInIcon className='' style={{color:"#3B5998"}}/>
-     <InstagramIcon  className='' style={{color:"#3B5998"}}/>
+     <LinkedInIcon className='' style={{color:"#0E76A8"}}/>
+     <InstagramIcon  className='' style={{color:"#405DE6"}}/>
  
    </div>
 
 
-   <div style={{backgroundColor:"#38A559", borderRadius:"20px",  }} className="px-3 pt-2" >
+   <div style={{backgroundColor:"#38A559", borderRadius:"10px",  }} className="px-3 pt-2" >
      <a href={`https://api.whatsapp.com/send?phone=${d.phone}`} style={{color:'white',textDecoration:'none'}}>
      <h6 style={{color:"#FFF",fontFamily:"Arial",fontWeight:"700"}}>
        <WhatsappOutlined/>
