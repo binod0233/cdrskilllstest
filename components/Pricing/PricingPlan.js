@@ -1,18 +1,72 @@
 import Chatra from "@chatra/chatra";
 import React, { useState } from "react";
 import { Col, Container, Row, Button } from "react-bootstrap";
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { CssBaseline, Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import CheckIcon from "@mui/icons-material/Check";
+
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: "#F5F5F5",
+    color: theme.palette.common.black,
+    fontFamily: "Asap",
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+    fontFamily: "Asap",
+  },
+}));
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  "&:nth-of-type(even)": {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  "&:last-child td, &:last-child th": {
+    border: 0,
+  },
+}));
+
+function createData(name, base, premium) {
+  return { name, base, premium };
+}
+
+const rows = [
+  createData("3 Career Episode"),
+  createData("Summary Statement"),
+  createData("CPD"),
+  createData("Delevery Date"),
+  createData("Quality Assured"),
+  createData("Plagiarism Free Reports"),
+  createData("Professional Writers"),
+
+  createData("File Status Update"),
+  createData("Handling Unlimited Comments from EA"),
+  createData("Review of Clients Project"),
+  createData("EA Portal Upload", "base"),
+  createData("Documentation Guideline Help", "base"),
+  createData("Rewrite any CE upon EA comment", "base"),
+  createData("Rewrite any project upon EA comment", "base", "premium"),
+  createData("3 Reports Inclusive", "base", "premium"),
+];
 
 const PricingPlan = () => {
-  const [openOne,setOpenOne] = useState(false)
-  const [openTwo,setOpenTwo] = useState(false)
-  const [openThree, setOpenThree] = useState(false)
-  const [openFour, setOpenFour] = useState(false)
+  const [openOne, setOpenOne] = useState(false);
+  const [openTwo, setOpenTwo] = useState(false);
+  const [openThree, setOpenThree] = useState(false);
+  const [openFour, setOpenFour] = useState(false);
 
-
-   const basicList = [
+  const basicList = [
     `3 Career Episode
   `,
     `Summary Statement
@@ -136,7 +190,8 @@ const PricingPlan = () => {
   return (
     <div>
       <Container>
-      <h2 className='mb-5'
+        <h2
+          className="mb-5"
           style={{
             color: "#203546",
             fontFamily: "Century Gothic",
@@ -146,18 +201,20 @@ const PricingPlan = () => {
         >
           Select Our Pricing Plan
         </h2>
-        <Row className='mb-5'>
-          
-          <Col className='px-1'>
-          <div
+        <Row className="mb-5">
+          <Col className="px-1">
+            <div
               className="changeToYellow px-4 py-5"
               style={{
+                background: "white",
+                borderRadius: "4px",
+                width: "271px",
+                boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.3)",
+                boxSizing: "border-box",
+                border: "3px solid #E9E9E9",
+                height: openOne ? "fit-content" : "478px",
                 display: "flex",
                 flexDirection: "column",
-                background: "white",
-                borderRadius: "3px",
-                boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.3)",
-                height:openOne?"fit-content":"350px",
               }}
             >
               <div className="d-flex justify-content-center align-items">
@@ -170,34 +227,35 @@ const PricingPlan = () => {
                 >
                   <path
                     d="M38.6204 13.6813C37.9338 13.5138 37.2918 13.3352 36.6442 13.2123C36.2311 13.1342 35.7956 13.1286 35.3714 13.1119C34.975 13.0951 34.9582 13.0951 34.9582 12.682C34.9582 12.1405 34.9471 11.599 34.9694 11.063C34.9806 10.756 34.8689 10.6667 34.573 10.6723C32.848 10.6834 31.1286 10.6778 29.4036 10.6778C29.2696 10.6778 29.1356 10.6778 28.996 10.6723C28.248 10.6388 27.8516 10.2424 27.846 9.48874C27.8348 8.32756 27.8404 7.1608 27.8404 5.99962C27.8404 5.35762 27.846 4.71004 27.846 4.06804C27.846 3.67726 27.8181 3.64934 27.4162 3.64934C27.031 3.64934 26.6458 3.64934 26.2661 3.64934C18.9585 3.64934 11.6453 3.64934 4.33768 3.64934C4.23161 3.64934 4.13112 3.65493 4.02505 3.64934C3.73476 3.62143 3.63985 3.761 3.64544 4.04013C3.6566 4.70446 3.65102 5.36878 3.65102 6.03311C3.65102 20.0119 3.65102 33.9852 3.65102 47.964C3.65102 48.6451 3.65102 48.6451 4.3321 48.6451C14.3529 48.6451 24.368 48.6451 34.3888 48.6451C34.4279 48.6451 34.4726 48.6451 34.5116 48.6451C34.9582 48.6395 34.9694 48.6228 34.9638 48.1929C34.9582 47.7854 34.9638 47.3834 34.9527 46.9759C34.9471 46.7526 35.0252 46.6577 35.2597 46.6577C36.2869 46.6633 37.3141 46.6633 38.3413 46.6577C38.5367 46.6577 38.6204 46.7303 38.6204 46.9312C38.6093 48.1259 38.6372 49.3206 38.5981 50.5153C38.559 51.5983 37.783 52.2794 36.6609 52.2794C32.848 52.2794 29.0407 52.2794 25.2278 52.285C17.574 52.285 9.92586 52.285 2.27212 52.285C2.07673 52.285 1.87575 52.2905 1.68036 52.2682C0.625252 52.1342 0.00558379 51.4197 0.00558379 50.3031C1.1927e-06 45.8091 0 41.3096 0 36.8156C0 25.3322 0 13.8488 0 2.35976C0 2.11413 -1.70534e-07 1.85733 0.039078 1.61728C0.189808 0.662653 0.854139 0.0708968 1.81993 0.0206534C1.94275 0.0150708 2.07114 0.0150717 2.19396 0.0150717C11.2043 0.0150717 20.2202 0.0150715 29.2305 0.00390625C30.0846 0.00390625 30.7713 0.277453 31.3742 0.880374C33.4733 2.97943 35.5891 5.06732 37.716 7.13289C38.3413 7.73581 38.6428 8.41688 38.6204 9.29335C38.5869 10.6611 38.6093 12.0344 38.6093 13.4077C38.6204 13.4915 38.6204 13.5864 38.6204 13.6813Z"
-                    fill="#FFAD05"
+                    fill="#049213"
                   />
                   <path
                     d="M35.3597 44.1122C30.888 44.1122 26.4108 44.1122 21.9391 44.1122C20.9733 44.1122 20.8617 44.0006 20.8617 43.0459C20.8617 42.5268 20.8282 42.0076 20.8728 41.4884C20.8952 41.2428 21.0012 40.9413 21.1743 40.7794C23.8707 38.217 27.0081 36.4473 30.6368 35.5764C30.8992 35.515 31.2286 35.5541 31.4742 35.6602C34.0589 36.7543 36.6325 36.7711 39.2117 35.649C39.5243 35.515 39.8258 35.4871 40.1496 35.5708C43.7336 36.5031 46.8598 38.2449 49.5451 40.7906C49.7572 40.9915 49.8409 41.2316 49.8409 41.5163C49.8409 42.0857 49.8409 42.6607 49.8409 43.2302C49.8354 43.928 49.6567 44.1122 48.9477 44.1122C44.4147 44.1178 39.8872 44.1122 35.3597 44.1122Z"
-                    fill="#FFAD05"
+                    fill="#049213"
                   />
                   <path
                     d="M41.9371 22.4866C41.831 23.1509 41.7305 23.8152 41.6077 24.474C41.563 24.6917 41.5798 24.848 41.764 24.9932C42.1492 25.2946 42.2497 25.7022 42.1492 26.1655C42.0487 26.6345 41.7807 26.9527 41.2951 27.042C41.0438 27.0867 41.0327 27.2765 41.0048 27.4607C40.8261 28.7782 40.3293 29.9561 39.5254 31.0112C38.5652 32.2617 37.3761 33.1326 35.7571 33.3057C34.4229 33.4508 33.2896 32.9986 32.2792 32.1668C30.8444 30.9945 30.0182 29.4816 29.7279 27.6728C29.6721 27.3211 29.5939 27.0867 29.1864 26.9638C28.4439 26.7349 28.2429 25.624 28.8403 25.0825C29.0915 24.8536 29.1194 24.6526 29.0468 24.3456C28.4383 21.7441 29.0357 19.4832 30.8947 17.5181C33.0663 15.2236 37.5212 14.7044 40.1618 17.9033C41.256 19.2319 41.8757 20.7392 41.9371 22.4866Z"
-                    fill="#FFAD05"
+                    fill="#049213"
                   />
                   <path
                     d="M15.9212 32.5413C18.1654 32.5413 20.404 32.5413 22.6482 32.5413C22.7543 32.5413 22.8547 32.5357 22.9608 32.5469C23.3293 32.5971 23.6028 32.9097 23.6028 33.2726C23.6028 33.6187 23.3349 33.9258 22.9776 33.9816C22.8659 33.9984 22.7487 33.9984 22.637 33.9984C18.2044 33.9984 13.7719 33.9984 9.33927 33.9984C9.16621 33.9984 8.98199 33.9928 8.81451 33.9593C8.47397 33.8867 8.273 33.6299 8.26183 33.2949C8.25625 32.9544 8.45722 32.6641 8.79218 32.5804C8.92058 32.5469 9.06014 32.5413 9.19413 32.5413C11.4327 32.5357 13.677 32.5357 15.9212 32.5413Z"
-                    fill="#FFAD05"
+                    fill="#049213"
                   />
                   <path
                     d="M15.9546 27.4453C13.7551 27.4453 11.5555 27.4453 9.356 27.4453C9.18853 27.4453 9.02105 27.4453 8.85915 27.4174C8.4907 27.356 8.26181 27.0825 8.26181 26.7308C8.25623 26.3679 8.49628 26.072 8.86473 26.0106C9.0043 25.9883 9.15503 25.9883 9.30018 25.9883C13.7328 25.9883 18.1598 25.9883 22.5923 25.9939C22.7654 25.9939 22.9496 26.005 23.1115 26.0553C23.4409 26.1502 23.6251 26.4405 23.5972 26.7643C23.5693 27.0992 23.3237 27.3783 22.9943 27.423C22.8436 27.4453 22.6817 27.4398 22.5309 27.4398C20.3314 27.4453 18.143 27.4453 15.9546 27.4453Z"
-                    fill="#FFAD05"
+                    fill="#049213"
                   />
                   <path
                     d="M15.9546 19.4401C18.1653 19.4401 20.3761 19.4401 22.5868 19.4401C22.7319 19.4401 22.8771 19.4401 23.0222 19.468C23.3907 19.5461 23.614 19.8253 23.6084 20.1714C23.5972 20.5343 23.3125 20.8413 22.9441 20.8804C22.8324 20.8915 22.7152 20.8915 22.6035 20.8915C18.2044 20.8915 13.7998 20.8915 9.40067 20.8915C9.22202 20.8915 9.04338 20.8915 8.8759 20.8636C8.47954 20.7911 8.25065 20.5008 8.27298 20.1211C8.29531 19.7415 8.55769 19.468 8.95406 19.4457C9.31693 19.4289 9.67979 19.4345 10.0427 19.4345C12.0133 19.4345 13.9896 19.4345 15.9602 19.4345C15.9546 19.4401 15.9546 19.4401 15.9546 19.4401Z"
-                    fill="#FFAD05"
+                    fill="#049213"
                   />
                 </svg>
               </div>
-            
-              <span className='mt-2'
+
+              <span
+                className="mt-2"
                 style={{
-                  color: "#FFAD05",
+                  color: "#049213",
                   fontWeight: "700",
                   fontFamily: "Asap",
                   textAlign: "center",
@@ -206,77 +264,154 @@ const PricingPlan = () => {
                 BASIC
               </span>
               <div className="d-flex justify-content-center align-items">
-              <span
-                style={{
-                  fontWeight: "700",
-                  fontSize: "15px",
-                  fontFamily: "Century Gothic",
-                  textAlign: "center",
-                  color:"#2D2046"
-                }}
-              >
-                $
-              </span>
-              <span
-                style={{
-                  fontWeight: "700",
-                  fontSize: "40px",
-                  fontFamily: "Century Gothic",
-                  textAlign: "center",
-                  color:"#2D2046"
-                }}
-              >
-                450
-              </span>
+                <span
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Century Gothic",
+                    textAlign: "center",
+                    color: "#2D2046",
+                  }}
+                >
+                  $ 450
+                </span>
               </div>
               <span
                 style={{
-                  fontWeight: "400",
-                  fontSize: "18px",
+                  fontWeight: "600",
+                  fontSize: "16px",
                   fontFamily: "Asap",
                   textAlign: "center",
-                  color:"#787878"
+                  color: "#7E7E7E;",
+                  lineHeight: "18px",
                 }}
               >
                 Delivery within 15 Days
               </span>
-              {openOne && <div>
-              {basicList.map((l,i) => (
-                  <Row key={i}>
-                    {" "}
-                    <div
-                      className="d-flex flex-row my-1 ms-md-2"
-                      style={{ color: "#2D2046" }}
-                    >
-                      <span className="me-2 ms-md-4 listText">
-                        <CheckCircleIcon />{" "}
-                      </span>
-                      <span className="listText spanfontSize">{l}</span>
-                    </div>
-              </Row>))}</div>}
-              
-              <Button onClick={() => Chatra("openChat", true)}className='mt-5' style={{border:"none",outline:"none",background:"#FFAD05",color:"white",fontWeight:"700"}}>
+              {openOne && (
+                <div>
+                  {basicList.map((l, i) => (
+                    <Row key={i}>
+                      {" "}
+                      <div
+                        className="d-flex flex-row my-1 ms-md-2"
+                        style={{ color: "#2D2046" }}
+                      >
+                        <span className="me-2 ms-md-4 listText">
+                          <CheckCircleIcon />{" "}
+                        </span>
+                        <span className="listText spanfontSize">{l}</span>
+                      </div>
+                    </Row>
+                  ))}
+                </div>
+              )}
+
+              <Button
+                onClick={() => Chatra("openChat", true)}
+                className="mt-5"
+                style={{
+                  border: "none",
+                  outline: "none",
+                  background: "#049213",
+                  color: "white",
+                  fontWeight: "700",
+                }}
+              >
                 Order Now
               </Button>
-          </div>
-          <Button style={{width:'100%',zIndex:'2',marginTop:'-45px',border:'none',padding:"0 0",background:'#FDE8BC',color:'#BF8715'}} onClick={()=>setOpenOne(!openOne)}>{openOne?<div>Explore Features <ExpandLessIcon /></div>:<div>Explore Features <ExpandMoreIcon /></div>}</Button>
-
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "600",
+                  fontSize: "16px",
+                  lineHeight: "18px",
+                  color: "#203546",
+                }}
+              >
+                Basic Includes:
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#999999",
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />3 Career Episode{" "}
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#999999",
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />
+                Summary Statement
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#999999",
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />
+                Plagiarism Free Reports
+              </Typography>
+            </div>
+            <Button
+              style={{
+                width: "100%",
+                zIndex: "2",
+                marginTop: "-45px",
+                border: "none",
+                padding: "0 0",
+                background: "#FDE8BC",
+                color: "#BF8715",
+              }}
+              onClick={() => setOpenOne(!openOne)}
+            >
+              {openOne ? (
+                <div>
+                  Explore Features <ExpandLessIcon />
+                </div>
+              ) : (
+                <div>
+                  Explore Features <ExpandMoreIcon />
+                </div>
+              )}
+            </Button>
           </Col>
-          <Col className='px-1'>
-          <div
+          <Col className="px-1">
+            <div
               className="changeToBlue px-4 py-5"
               style={{
                 display: "flex",
                 flexDirection: "column",
                 background: "white",
-                borderRadius: "3px",
-                boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.3)",
-                height:openTwo?"fit-content":"350px"
 
+                borderRadius: "4px",
+                width: "271px",
+                boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.3)",
+                boxSizing: "border-box",
+                border: "3px solid #E9E9E9",
+
+                height: openTwo ? "fit-content" : "478px",
               }}
             >
               <div className="d-flex justify-content-center align-items">
-              <svg
+                <svg
                   width="53"
                   height="56"
                   viewBox="0 0 53 56"
@@ -293,8 +428,9 @@ const PricingPlan = () => {
                   />
                 </svg>
               </div>
-            
-              <span className='mt-2'
+
+              <span
+                className="mt-2"
                 style={{
                   color: "#017CC9",
                   fontWeight: "700",
@@ -305,28 +441,17 @@ const PricingPlan = () => {
                 EXTENDED
               </span>
               <div className="d-flex justify-content-center align-items">
-              <span
-                style={{
-                  fontWeight: "700",
-                  fontSize: "15px",
-                  fontFamily: "Century Gothic",
-                  textAlign: "center",
-                  color:"#2D2046"
-                }}
-              >
-                $
-              </span>
-              <span
-                style={{
-                  fontWeight: "700",
-                  fontSize: "40px",
-                  fontFamily: "Century Gothic",
-                  textAlign: "center",
-                  color:"#2D2046"
-                }}
-              >
-               650
-              </span>
+                <span
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Century Gothic",
+                    textAlign: "center",
+                    color: "#2D2046",
+                  }}
+                >
+                  $ 650
+                </span>
               </div>
               <span
                 style={{
@@ -334,48 +459,132 @@ const PricingPlan = () => {
                   fontSize: "18px",
                   fontFamily: "Asap",
                   textAlign: "center",
-                  color:"#787878"
+                  color: "#787878",
                 }}
               >
                 Delivery within 10 Days
               </span>
-              {openTwo && <div>
-              {extendedList.map((l,i) => (
-                  <Row key={i}>
-                    {" "}
-                    <div
-                      className="d-flex flex-row my-1 ms-md-2"
-                      style={{ color: "#2D2046" }}
-                    >
-                      <span className="me-2 ms-md-4 listText">
-                        <CheckCircleIcon />{" "}
-                      </span>
-                      <span className="listText spanfontSize">{l}</span>
-                    </div>
-              </Row>))}</div>}
-              <Button onClick={() => Chatra("openChat", true)}className='mt-5' style={{border:"none",outline:"none",background:"#017CC9",color:"white",fontWeight:"700"}}>
+              {openTwo && (
+                <div>
+                  {extendedList.map((l, i) => (
+                    <Row key={i}>
+                      {" "}
+                      <div
+                        className="d-flex flex-row my-1 ms-md-2"
+                        style={{ color: "#2D2046" }}
+                      >
+                        <span className="me-2 ms-md-4 listText">
+                          <CheckCircleIcon />{" "}
+                        </span>
+                        <span className="listText spanfontSize">{l}</span>
+                      </div>
+                    </Row>
+                  ))}
+                </div>
+              )}
+              <Button
+                onClick={() => Chatra("openChat", true)}
+                className="mt-5"
+                style={{
+                  border: "none",
+                  outline: "none",
+                  background: "#017CC9",
+                  color: "white",
+                  fontWeight: "700",
+                }}
+              >
                 Order Now
               </Button>
-
-          </div>
-          <Button style={{width:'100%',zIndex:'2',marginTop:'-45px',border:'none',padding:"0 0",background:'#8AC7ED',color:'#0063A1'}} onClick={()=>setOpenTwo(!openTwo)}>{openTwo?<div>Explore Features <ExpandLessIcon /></div>:<div>Explore Features <ExpandMoreIcon /></div>}</Button>
-
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "600",
+                  fontSize: "16px",
+                  lineHeight: "18px",
+                  color: "#203546",
+                }}
+              >
+                Basic Includes:
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#999999",
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />3 Career Episode{" "}
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#999999",
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />
+                Summary Statement
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#999999",
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />
+                Plagiarism Free Reports
+              </Typography>
+            </div>
+            <Button
+              style={{
+                width: "100%",
+                zIndex: "2",
+                marginTop: "-45px",
+                border: "none",
+                padding: "0 0",
+                background: "#8AC7ED",
+                color: "#0063A1",
+              }}
+              onClick={() => setOpenTwo(!openTwo)}
+            >
+              {openTwo ? (
+                <div>
+                  Explore Features <ExpandLessIcon />
+                </div>
+              ) : (
+                <div>
+                  Explore Features <ExpandMoreIcon />
+                </div>
+              )}
+            </Button>
           </Col>
-          <Col className='px-1'>
-          <div
+          <Col className="px-1">
+            <div
               className="changeToRed px-4 py-5"
               style={{
                 display: "flex",
                 flexDirection: "column",
                 background: "white",
-                borderRadius: "3px",
+                borderRadius: "4px",
+                width: "271px",
                 boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.3)",
-                height:openThree?"fit-content":"350px"
-
+                boxSizing: "border-box",
+                border: "3px solid #E9E9E9",
+                height: openThree ? "fit-content" : "478px",
               }}
             >
               <div className="d-flex justify-content-center align-items">
-              <svg
+                <svg
                   width="43"
                   height="66"
                   viewBox="0 0 43 66"
@@ -400,8 +609,9 @@ const PricingPlan = () => {
                   />
                 </svg>
               </div>
-            
-              <span className='mt-2'
+
+              <span
+                className="mt-2"
                 style={{
                   color: "#D63E3E",
                   fontWeight: "700",
@@ -412,28 +622,17 @@ const PricingPlan = () => {
                 PREMIUM
               </span>
               <div className="d-flex justify-content-center align-items">
-              <span
-                style={{
-                  fontWeight: "700",
-                  fontSize: "15px",
-                  fontFamily: "Century Gothic",
-                  textAlign: "center",
-                  color:"#2D2046"
-                }}
-              >
-                $
-              </span>
-              <span
-                style={{
-                  fontWeight: "700",
-                  fontSize: "40px",
-                  fontFamily: "Century Gothic",
-                  textAlign: "center",
-                  color:"#2D2046"
-                }}
-              >
-               950
-              </span>
+                <span
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Century Gothic",
+                    textAlign: "center",
+                    color: "#2D2046",
+                  }}
+                >
+                  $ 950
+                </span>
               </div>
               <span
                 style={{
@@ -441,47 +640,133 @@ const PricingPlan = () => {
                   fontSize: "18px",
                   fontFamily: "Asap",
                   textAlign: "center",
-                  color:"#787878"
+                  color: "#787878",
                 }}
               >
                 Delivery within 7 Days
               </span>
-              {openThree && <div>
-              {premiumList.map((l,i) => (
-                  <Row key={i}>
-                    {" "}
-                    <div
-                      className="d-flex flex-row my-1 ms-md-2"
-                      style={{ color: "#2D2046" }}
-                    >
-                      <span className="me-2 ms-md-4 listText">
-                        <CheckCircleIcon />{" "}
-                      </span>
-                      <span className="listText spanfontSize">{l}</span>
-                    </div>
-              </Row>))}</div>}
-              <Button onClick={() => Chatra("openChat", true)}className='mt-5' style={{border:"none",outline:"none",background:"#D63E3E",color:"white",fontWeight:"700"}}>
+              {openThree && (
+                <div>
+                  {premiumList.map((l, i) => (
+                    <Row key={i}>
+                      {" "}
+                      <div
+                        className="d-flex flex-row my-1 ms-md-2"
+                        style={{ color: "#2D2046" }}
+                      >
+                        <span className="me-2 ms-md-4 listText">
+                          <CheckCircleIcon />{" "}
+                        </span>
+                        <span className="listText spanfontSize">{l}</span>
+                      </div>
+                    </Row>
+                  ))}
+                </div>
+              )}
+              <Button
+                onClick={() => Chatra("openChat", true)}
+                className="mt-5"
+                style={{
+                  border: "none",
+                  outline: "none",
+                  background: "#D63E3E",
+                  color: "white",
+                  fontWeight: "700",
+                }}
+              >
                 Order Now
               </Button>
-          </div>
-          <Button style={{width:'100%',zIndex:'2',marginTop:'-45px',border:'none',padding:"0 0",background:'#F5A7A7',color:'#D02A2A'}} onClick={()=>setOpenThree(!openThree)}>{openThree?<div>Explore Features <ExpandLessIcon /></div>:<div>Explore Features <ExpandMoreIcon /></div>}</Button>
-
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "600",
+                  fontSize: "16px",
+                  lineHeight: "18px",
+                  color: "#203546",
+                }}
+              >
+                Basic Includes:
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#999999",
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />
+                EA Portal Upload
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#999999",
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />
+                Documentation Guidance Help{" "}
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#999999",
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />
+                Rewrite any CE upon EA comment{" "}
+              </Typography>
+            </div>
+            <Button
+              style={{
+                width: "100%",
+                zIndex: "2",
+                marginTop: "-45px",
+                border: "none",
+                padding: "0 0",
+                background: "#F5A7A7",
+                color: "#D02A2A",
+              }}
+              onClick={() => setOpenThree(!openThree)}
+            >
+              {openThree ? (
+                <div>
+                  Explore Features <ExpandLessIcon />
+                </div>
+              ) : (
+                <div>
+                  Explore Features <ExpandMoreIcon />
+                </div>
+              )}
+            </Button>
           </Col>
-          <Col className='px-1'>
-          <div
+          <Col className="px-1">
+            <div
               className="changeToRed px-4 py-5"
               style={{
                 display: "flex",
                 flexDirection: "column",
-                background: "white",
-                borderRadius: "3px",
+                borderRadius: "4px",
+                width: "271px",
                 boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.3)",
-                height:openFour?"fit-content":"350px"
-
+                boxSizing: "border-box",
+                border: "3px solid #E9E9E9",
+                backgroundColor: "#31485A",
+                height: openFour ? "fit-content" : "478px",
               }}
             >
               <div className="d-flex justify-content-center align-items">
-              <svg
+                <svg
                   width="60"
                   height="49"
                   viewBox="0 0 60 49"
@@ -490,14 +775,15 @@ const PricingPlan = () => {
                 >
                   <path
                     d="M49.5 42.875H10.5C9.675 42.875 9 43.5641 9 44.4062V47.4688C9 48.3109 9.675 49 10.5 49H49.5C50.325 49 51 48.3109 51 47.4688V44.4062C51 43.5641 50.325 42.875 49.5 42.875ZM55.5 12.25C53.0156 12.25 51 14.3076 51 16.8438C51 17.5232 51.15 18.1549 51.4125 18.7387L44.625 22.8922C43.1813 23.7727 41.3156 23.275 40.4812 21.782L32.8406 8.13477C33.8438 7.29258 34.5 6.0293 34.5 4.59375C34.5 2.05762 32.4844 0 30 0C27.5156 0 25.5 2.05762 25.5 4.59375C25.5 6.0293 26.1563 7.29258 27.1594 8.13477L19.5187 21.782C18.6844 23.275 16.8094 23.7727 15.375 22.8922L8.59687 18.7387C8.85 18.1645 9.00937 17.5232 9.00937 16.8438C9.00937 14.3076 6.99375 12.25 4.50937 12.25C2.025 12.25 0 14.3076 0 16.8438C0 19.3799 2.01562 21.4375 4.5 21.4375C4.74375 21.4375 4.9875 21.3992 5.22188 21.3609L12 39.8125H48L54.7781 21.3609C55.0125 21.3992 55.2562 21.4375 55.5 21.4375C57.9844 21.4375 60 19.3799 60 16.8438C60 14.3076 57.9844 12.25 55.5 12.25Z"
-                    fill="#049213"
+                    fill="#FFFFFF"
                   />
                 </svg>
               </div>
-            
-              <span className='mt-2'
+
+              <span
+                className="mt-2"
                 style={{
-                  color: "#049213",
+                  color: "#FFFFFF",
                   fontWeight: "700",
                   fontFamily: "Asap",
                   textAlign: "center",
@@ -506,28 +792,17 @@ const PricingPlan = () => {
                 ROYAL
               </span>
               <div className="d-flex justify-content-center align-items">
-              <span
-                style={{
-                  fontWeight: "700",
-                  fontSize: "15px",
-                  fontFamily: "Century Gothic",
-                  textAlign: "center",
-                  color:"#2D2046"
-                }}
-              >
-                $
-              </span>
-              <span
-                style={{
-                  fontWeight: "700",
-                  fontSize: "40px",
-                  fontFamily: "Century Gothic",
-                  textAlign: "center",
-                  color:"#2D2046"
-                }}
-              >
-               1220
-              </span>
+                <span
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "40px",
+                    fontFamily: "Century Gothic",
+                    textAlign: "center",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  $ 1220
+                </span>
               </div>
               <span
                 style={{
@@ -535,33 +810,163 @@ const PricingPlan = () => {
                   fontSize: "18px",
                   fontFamily: "Asap",
                   textAlign: "center",
-                  color:"#787878"
+                  color: "#FFFFFF",
                 }}
               >
                 Delivery within 5 Days
               </span>
-              {openFour && <div>
-              {royalList.map((l,i) => (
-                  <Row key={i}>
-                    {" "}
-                    <div
-                      className="d-flex flex-row my-1 ms-md-2"
-                      style={{ color: "#2D2046" }}
-                    >
-                      <span className="me-2 ms-md-4 listText">
-                        <CheckCircleIcon />{" "}
-                      </span>
-                      <span className="listText spanfontSize">{l}</span>
-                    </div>
-              </Row>))}</div>}
-              <Button onClick={() => Chatra("openChat", true)}className='mt-5' style={{border:"none",outline:"none",background:"#049213",color:"white",fontWeight:"700"}}>
+              {openFour && (
+                <div>
+                  {royalList.map((l, i) => (
+                    <Row key={i}>
+                      {" "}
+                      <div
+                        className="d-flex flex-row my-1 ms-md-2"
+                        style={{ color: "#2D2046" }}
+                      >
+                        <span className="me-2 ms-md-4 listText">
+                          <CheckCircleIcon />{" "}
+                        </span>
+                        <span className="listText spanfontSize">{l}</span>
+                      </div>
+                    </Row>
+                  ))}
+                </div>
+              )}
+              <Button
+                onClick={() => Chatra("openChat", true)}
+                className="mt-5"
+                style={{
+                  border: "none",
+                  outline: "none",
+                  background: "#FFAD05",
+                  color: "white",
+                  fontWeight: "700",
+                }}
+              >
                 Order Now
               </Button>
-          </div>
-          <Button style={{width:'100%',zIndex:'2',marginTop:'-45px',border:'none',padding:"0 0",background:'#88DE91',color:'#00850D'}} onClick={()=>setOpenFour(!openFour)}>{openFour?<div>Explore Features <ExpandLessIcon /></div>:<div>Explore Features <ExpandMoreIcon /></div>}</Button>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "600",
+                  fontSize: "16px",
+                  lineHeight: "18px",
+                  color: "#FFFFFF",
+                }}
+              >
+                Basic Includes:
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#FFFFFF",
 
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />
+                Review of Clients Project
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#FFFFFF",
+
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />
+                File Status Update
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "17px",
+                  color: "#FFFFFF",
+
+                  fontStyle: "normal",
+                }}
+              >
+                <CheckIcon color="success" />3 Project Inclusive
+              </Typography>
+            </div>
+            <Button
+              style={{
+                width: "100%",
+                zIndex: "2",
+                marginTop: "-45px",
+                border: "none",
+                padding: "0 0",
+                background: "#88DE91",
+                color: "#00850D",
+              }}
+              onClick={() => setOpenFour(!openFour)}
+            >
+              {openFour ? (
+                <div>
+                  Explore Features <ExpandLessIcon />
+                </div>
+              ) : (
+                <div>
+                  Explore Features <ExpandMoreIcon />
+                </div>
+              )}
+            </Button>
           </Col>
         </Row>
+        <CssBaseline />
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Overview</StyledTableCell>
+                <StyledTableCell align="right">Basic</StyledTableCell>
+                <StyledTableCell align="right">Extended</StyledTableCell>
+                <StyledTableCell align="right">Premium</StyledTableCell>
+                <StyledTableCell align="right">Royal</StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => {
+                console.log("row", row.name.length);
+                return (
+                  <StyledTableRow key={row.name}>
+                    <StyledTableCell component="th" scope="row">
+                      {row.name}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      {row.base !== "base" ? (
+                        <CheckIcon color="success" />
+                      ) : null}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      {row.base !== "base" ? (
+                        <CheckIcon color="success" />
+                      ) : null}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      {row.premium !== "premium" ? (
+                        <CheckIcon color="success" />
+                      ) : null}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      <CheckIcon color="success" />
+                    </StyledTableCell>
+                  </StyledTableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </Container>
       {/* <Container>
         <h2
@@ -820,7 +1225,7 @@ const PricingPlan = () => {
               <span
                 className="listText"
                 style={{
-                  color: "#049213",
+                  color: "##FFFFFF",
                   fontWeight: "700",
                   fontFamily: "Asap",
                   textAlign: "center",
