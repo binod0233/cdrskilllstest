@@ -14,7 +14,7 @@ const Pricing = () => {
   return (
     <div>
       <Head>
-      <title>Pricing</title>
+        <title>Pricing</title>
         <meta name="description" content="Pricing" />
         <link rel="canonical" href={canonicalUrl} />
 
@@ -24,7 +24,7 @@ const Pricing = () => {
         description="Though you might not find us the cheapest CDR Report Writing Service out there but we can promise you that we are the best value for 
     money. We are professional CDR writers (and not some greedy company) who have come together to form this service. Since we are just 
     like you, we have kept the prices appropriately."
-        image="images/Pricing/affordable-price.png"
+        image="/images/Pricing/affordable-price.png"
         alt="affordable price"
       />
       <PricingPlan />
