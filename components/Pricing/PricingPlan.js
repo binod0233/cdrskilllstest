@@ -11,6 +11,38 @@ const PricingPlan = () => {
   const [openThree, setOpenThree] = useState(false)
   const [openFour, setOpenFour] = useState(false)
 
+  const pricingList=[
+   { title:"",
+    basic:true,extended:true,premium:true,royal:true},
+    { title:"",
+    basic:true,extended:true,premium:true,royal:true},
+    { title:"",
+    basic:true,extended:true,premium:true,royal:true},
+    { title:"",
+    basic:true,extended:true,premium:true,royal:true},
+    { title:"",
+    basic:true,extended:true,premium:true,royal:true},
+    { title:"",
+    basic:true,extended:true,premium:true,royal:true},
+    { title:"",
+    basic:true,extended:true,premium:true,royal:true},
+    { title:"",
+    basic:true,extended:true,premium:true,royal:true}
+    ,{ title:"",
+    basic:true,extended:true,premium:true,royal:true},
+    { title:"",
+    basic:true,extended:true,premium:true,royal:true},
+    { title:"",
+    basic:false,extended:false,premium:true,royal:true},
+    { title:"",
+    basic:false,extended:false,premium:true,royal:true},
+    { title:"",
+    basic:false,extended:false,premium:true,royal:true},
+    { title:"",
+    basic:false,extended:false,premium:false,royal:true},
+    { title:"",
+    basic:false,extended:false,premium:false,royal:true}
+  ]
 
    const basicList = [
     `3 Career Episode

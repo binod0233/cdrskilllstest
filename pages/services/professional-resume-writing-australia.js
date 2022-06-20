@@ -1,5 +1,6 @@
 import React from "react";
 import Head from 'next/head'
+import {useRouter} from 'next/router'
 import Con1 from "../../components/CDRReviewing/Con1";
 import Section1 from "../../components/CDRWriting/Section1";
 import Advantages from "../../components/CVResumeWriting/Advantages";
@@ -8,11 +9,15 @@ import Hero from "../../components/Hero";
 import Hero2 from "../../components/Hero2";
 
 const CVResumeWriting = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
       <Head>
            <title>Professional Resume Writing in Australia | CDR Skill Assessment</title>
              <meta name="description" content="Looking forward to get assistance of CDRskillassessment for your resume writing. Knowabout importance of resume and how professional prepare it." />
+             <link rel="canonical" href={canonicalUrl} />
            </Head>
      
       <Hero

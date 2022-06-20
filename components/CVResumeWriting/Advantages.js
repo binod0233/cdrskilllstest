@@ -5,7 +5,7 @@ import Headings from "../Headings";
 const Advantages = () => {
   const list = [
     {
-      image: "/images/CVResumeWriting/multilevel-checking.png",
+      image: "/images/CVResumeWriting/multilevel-checking.png", 
       title: "Multilevel checking",
       details: `To avoid a blatant rejection from Engineers Australia, we utilise multiple
     error detection methods and software
@@ -13,7 +13,7 @@ const Advantages = () => {
     CDR resume for Engineers Australia.`,
     },
     {
-      image: "/images/CVResumeWriting/provide-electronic.png",
+      image: "/images/CVResumeWriting/provide-electronic-service.png",
       title: "Provide electronic service",
       details: `To avoid a blatant rejection from 
     Engineers Australia, we utilise multiple 

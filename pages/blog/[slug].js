@@ -20,16 +20,17 @@ const SpecificBlog = () => {
   const [message, setMessage] = useState("");
   const [data, setData] = useState({});
   const [recentData, setRecentData] = useState([]);
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
 
   const submitFormhandler = (e) => {
     e.preventDefault();
 
     emailjs
     .sendForm(
-      "service_1id88yh",
-      "template_dgcdon2",
+      "service_swmc1ha",
+      "template_u77tatf",
       form.current,
-      "e8bqI-l1U0nY9GlSa"
+      "hWJYhr4QPZh-TxVMc"
     )
       .then(
         (result) => {
@@ -66,6 +67,8 @@ const SpecificBlog = () => {
       <Head>
            <title>{data?.title}</title>
              <meta name="description" content={data?.title} />
+             <link rel="canonical" href={canonicalUrl} />
+
            </Head>
       <Container>
         <div className="p-5">
@@ -186,6 +189,15 @@ const SpecificBlog = () => {
                   <div className="d-flex flex-column justify-content-center align-items-center">
                     <h2>Drop your Questions</h2>
                   </div>
+                  <Form.Group className="mb-3" controlId="fullName" style={{display:"none"}}>
+              <Form.Control
+                placeholder="Site Name"
+                value="Blog"
+                readOnly
+                className="inputField"
+                name="subject"
+              />
+            </Form.Group>
 
                   <Form.Group className="mb-3" controlId="fullName">
                     <Form.Control

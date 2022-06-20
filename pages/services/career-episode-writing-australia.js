@@ -1,20 +1,26 @@
 import React from "react";
+import {useRouter} from 'next/router'
 import Hero from "../../components/Hero";
-// import Meta from "../../components/Meta";
 import Section1 from "../../components/CDRWriting/Section1";
 import Section2 from "../../components/CareerEpisodeWriting/Section2";
 import CDRskillassessmentoptions from "../../components/CareerEpisodeWriting/CDRskillassessmentoptions";
 import Structure from "../../components/CareerEpisodeWriting/Structure";
 import Whatmakes from "../../components/CareerEpisodeWriting/Whatmakes";
 import Hero2 from "../../components/Hero2";
+import Head from "next/head";
 
 const CareerEpisodeWriting = () => {
+
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
-      {/* <Meta
-        title="Career Episode Wiring in Australia | CDR Skill Assessment"
-        description="Get yourself a perfect career episode report, know about career episode report writing process and how we highlight your degree and your projects in your report."
-      /> */}
+      <Head>
+        <title>CDR Three Career Episode Report Writing for Engineers Australia</title>
+        <meta name='description' content="Get your Three Career Episode Report  for CDR migration skill Assesment for Engineers Australia from Our Professional writers of Enginnering Backgrounds."/>
+        <link rel="canonical" href={canonicalUrl} />
+      </Head>
       <Hero
         title="Engineers Australia will reject career Episode 
 report not written in a perfect format."

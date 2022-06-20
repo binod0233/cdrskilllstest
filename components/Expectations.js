@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "./Headings";
 import Paragraphs from "./Paragraphs";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const Expectations = ({ list, title, details }) => {
   return (
@@ -11,13 +12,9 @@ const Expectations = ({ list, title, details }) => {
       {list?.map((l,i) => (
         <Row key={i}>
           <Col xs={1} className="pt-1">
-          <i
-                    className="fa-solid fa-circle-check"
-                    style={{
-                      float: "right" ,
-                      color: "#017CC9",
-                    }}
-                  ></i>
+          
+                  <CheckCircleIcon style={{float: "right" ,
+                      color: "#017CC9",}}/>
            
           </Col> 
           <Col xs={11}>

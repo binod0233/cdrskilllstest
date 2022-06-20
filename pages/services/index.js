@@ -1,5 +1,6 @@
 import React from "react";
-
+import Head from 'next/head'
+import {useRouter} from 'next/router'
 import CEs from "../../components/CDRServices/CEs";
 import Guidelines from "../../components/CDRServices/Guidelines";
 import Offer from "../../components/CDRServices/Offer";
@@ -10,8 +11,16 @@ import Occupational from "../../components/CDRServices/Occupational";
 import Hero2 from "../../components/Hero2";
 
 const CDRServices = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
   return (
     <div>
+       <Head>
+        <title>CDR Services</title>
+        <meta name='description' content="CDR Services | CDR Skill Assessment"/>
+        <link rel="canonical" href={canonicalUrl} />
+
+      </Head>
       <Serv1 />
       <OurServices />
       <Offer />

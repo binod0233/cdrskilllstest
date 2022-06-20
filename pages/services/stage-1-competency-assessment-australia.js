@@ -1,21 +1,26 @@
 import React from "react";
-
+import Head from 'next/head'
+import {useRouter} from 'next/router'
 import Choose from "../../components/CDRWriting/Choose";
 import Section1 from "../../components/CDRWriting/Section1";
 import Hero from "../../components/Hero";
 import Hero2 from "../../components/Hero2";
-// import Meta from "../../components/Meta";
 import EA from "../../components/Stage1Competencyassessment/EA";
 import Elements from "../../components/Stage1Competencyassessment/Elements";
 import OccupationalCategories from "../../components/Stage1Competencyassessment/OccupationalCategories";
 
 const Stage1CompetencyAssessment = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
+
   return (
     <div>
-      {/* <Meta
-        title="Stage 1 Competency Assessment Australia | CDR Skill Assessment"
-        description="Want to be a qualified engineer of Engineers Australia? We provide the best service for assisting engineers to prepare flawless stage 1 competency assessment. "
-      /> */}
+      <Head>
+        <title>Stage 1 Competency Assessment Australia | CDR Skill Assessment</title>
+        <meta name='description' content="Want to be a qualified engineer of Engineers Australia? We provide the best service for assisting engineers to prepare flawless stage 1 competency assessment."/>
+        <link rel="canonical" href={canonicalUrl} />
+      </Head>
       <Hero
         title="Get your Engineering qualification approved 
 by Engineers Australia through Stage 1 
@@ -45,7 +50,7 @@ Stage 1 Competency signifies you have a deep comprehension of the corpus of engi
 occupational category (Professional Engineer, Engineering Technologist, or Engineering Associate) and the capacity to 
 apply this knowledge to issues and circumstances that indicate practitioners in your professional category's duties.
 "
-        image="/images/Stage1Competencyassessment/com.png"
+        image="/images/Stage1CompetencyAssessment/com.png"
         alt="Competency-Assessment-Help-stage-1-yellow"
       />
       <OccupationalCategories />

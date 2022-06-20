@@ -22,10 +22,10 @@ const Contactus = () => {
 
     emailjs
     .sendForm(
-      "service_1id88yh",
-      "template_dgcdon2",
+      "service_swmc1ha",
+      "template_u77tatf",
       form.current,
-      "e8bqI-l1U0nY9GlSa"
+      "hWJYhr4QPZh-TxVMc"
     )
       .then(
         (result) => {
@@ -178,6 +178,15 @@ const Contactus = () => {
                 style={{boxShadow: "3px 3px 20px rgba(0, 0, 0, 0.25)"}}
                 className="bg-white p-5 my-3 mt-md-0"
               >
+                 <Form.Group className="mb-3" controlId="fullName" style={{display:"none"}}>
+              <Form.Control
+                placeholder="Site Name"
+                value="Contact Us"
+                readOnly
+                className="inputField"
+                name="subject"
+              />
+            </Form.Group>
                 <Form.Group className="mb-4" controlId="fullName">
                   <Form.Label style={{ fontWeight: "500", color: "#203546" }}>
                     Your Name

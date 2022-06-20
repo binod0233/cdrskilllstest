@@ -56,13 +56,13 @@ detection and removal before presenting to Engineers Australia"
             <Paragraphs
               data="We provide our clients with an electronic 
     report of plagiarized content found in the 
-    CDR for Engineers Australia, and we do 
+    CDR Skill Assessment Australia, and we do 
     not charge just for checking plagiarism."
             />
           </Col>
           <Col className="px-5">
             <img
-              src="/images/CDRPlagiarismCheckingandRemoval/Provide-electronic-service.png"
+              src="/images/CDRPlagiarismCheckingandRemoval/provide-electronic-service.png"
               alt="use-australian"
               className="img-fluid"
             />

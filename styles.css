@@ -305,8 +305,8 @@ a{
   }
   .iconContainer {
     border-radius: 100%;
-    width: 26px;
-    height: 26px;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,7 +316,7 @@ a{
   }
   .iconContainer:hover {
     color: #60269e;
-    transform: scale(1.02);
+    transform: scale(1.03);
   }
   
   @media screen and (max-width: 600px) {

@@ -2,13 +2,20 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Hero from "../components/Hero";
 import Head from 'next/head'
+import {useRouter} from 'next/router'
+
 
 const RefundPolicy = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
       <Head>
       <title>Refund Policy</title>
         <meta name="description" content="Refund Policy" />
+        <link rel="canonical" href={canonicalUrl} />
+
       </Head>
       <Hero />
 

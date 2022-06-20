@@ -3,14 +3,21 @@ import Div1 from "../components/FAQ/Div1";
 import Hero3 from "../components/FAQ/Hero3";
 import PricingPlan from "../components/Pricing/PricingPlan";
 import Head from 'next/head'
+import {useRouter} from 'next/router'
+
 
 const Pricing = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
+
   return (
     <div>
-      {/* <Meta title="Pricing" /> */}
       <Head>
       <title>Pricing</title>
         <meta name="description" content="Pricing" />
+        <link rel="canonical" href={canonicalUrl} />
+
       </Head>
       <Div1
         title="Pricing"

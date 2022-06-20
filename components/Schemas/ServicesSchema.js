@@ -12,14 +12,14 @@ const ServicesSchema = ({ image, name, description }) => {
             "@context": "http://schema.org",
             "@type": "Product",
             name: "CDR Report Writing Services for Engineers Australia",
-            image: "https://cdrforengineer.com/images/n2.png",
+            image: "https://cdrskillassessment.com/images/n2.png",
             description:
               "We provide personalised CDR reports prepared by CDR experts based on your degree and career.",
-            url: "https://cdrforengineer.com/services/cdr-writing-service-australia/",
+            url: "https://cdrskillassessment.com/services/cdr-writing-service-australia/",
             brand: {
               "@type": "Brand",
               name: "CDRforengineer",
-              logo: "https://cdrforengineer.com/images/logo.png",
+              logo: "https://cdrskillassessment.com/images/logo.png",
             },
             offers: {
               "@type": "Offer",

@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head"
+import {useRouter} from 'next/router'
 import Choose from "../../components/CDRWriting/Choose";
 import Section1 from "../../components/CDRWriting/Section1";
 import Hero from "../../components/Hero";
@@ -9,16 +10,21 @@ import Tables from "../../components/SummaryStatementWriting/Tables";
 import Tips from "../../components/SummaryStatementWriting/Tips";
 
 const SummaryStatementWriting = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
       
       <Head>
            <title>Summary Statement Writing Australia | CDR Skill Assessment</title>
              <meta name="description" content="Looking forward to appoint summary statement writing service provider. Know about summary statement and how our skilled writer demonstrates your skills and features." />
+             <link rel="canonical" href={canonicalUrl} />
+
            </Head>
       <Hero
         title="A page-long Summary Statement is the 
-‘Heart’ of CDR for Engineers Australia"
+‘Heart’ of CDR Skill Assessments Australia"
         details="CDR Summary Statement for Engineers Australia is centred on the significant 
 focal section of three career experiences. Our writers are skilled at aiding to 
 write the ideal summary statement of your professional experience.

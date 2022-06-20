@@ -13,10 +13,10 @@ const Drop = () => {
 
     emailjs
     .sendForm(
-      "service_1id88yh",
-      "template_dgcdon2",
+      "service_swmc1ha",
+      "template_u77tatf",
       form.current,
-      "e8bqI-l1U0nY9GlSa"
+      "hWJYhr4QPZh-TxVMc"
     )
       .then(
         (result) => {
@@ -66,6 +66,15 @@ const Drop = () => {
             <div className="d-flex flex-column justify-content-center align-items-center">
               <h2>Drop your Questions</h2>
             </div>
+            <Form.Group className="mb-3" controlId="subject" style={{display:"none"}}>
+              <Form.Control
+                placeholder="Site Name"
+                value="FAQ"
+                readOnly
+                className="inputField"
+                name="subject"
+              />
+            </Form.Group>
 
             <Form.Group className="mb-3" controlId="fullName">
               <Form.Control

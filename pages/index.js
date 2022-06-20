@@ -1,5 +1,6 @@
 import React from "react";
-
+import Head from 'next/head'
+import {useRouter} from 'next/router'
 import About from "../components/Landing/About";
 import Factors from "../components/Landing/Factors";
 import Hero2 from "../components/Hero2";
@@ -7,16 +8,20 @@ import Steps from "../components/Landing/Steps";
 import Approval from "../components/Landing/Approval";
 import Faq from "../components/Landing/Faq";
 import Hero from "../components/Hero";
-// import Meta from "../components/Meta";
 
 const Landing = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
-      {/* <Meta
-        title="Best CDR Writing Service | CDR Skill Assessment"
-        description="Want to get your CDR report approved by Engineers Australia in first go? Prepare your personalized report with all the mandatory components and plagiarism free"
-      /> */}
+      
+ <Head>
+        <title>Best CDR Writing Service | CDR Skill Assessment</title>
+        <meta name="description" content="Want to get your CDR report approved by Engineers Australia in first go? Prepare your personalized report with all the mandatory components and plagiarism free" />
+        <link rel="canonical" href={canonicalUrl} />
 
+      </Head>
       <Hero
         title="Get CDR Report approved by Engineers 
 Australia On your first attempt."

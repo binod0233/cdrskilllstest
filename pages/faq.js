@@ -1,12 +1,16 @@
 import React from "react";
 // import MarkupSchema from "../components/Schemas/MarkupSchema";
 import Head from 'next/head'
+import {useRouter} from 'next/router'
 import ListofFAQ from "../components/FAQ/ListofFAQ";
 import Hero3 from "../components/FAQ/Hero3";
 import Drop from "../components/FAQ/Drop";
 import Div1 from "../components/FAQ/Div1";
 
 const FAQ = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   const listgroup = [
     {
       title:
@@ -78,6 +82,8 @@ const FAQ = () => {
       <Head>
       <title>FAQ</title>
         <meta name="description" content="FAQ" />
+        <link rel="canonical" href={canonicalUrl} />
+
       </Head>
       <Div1
         title="Frequently Asked Questions"

@@ -8,13 +8,20 @@ import Hero2 from "../../components/Hero2";
 import FrequentlyAsked from "../../components/Samples/FrequentlyAsked";
 import SampleList from "../../components/Samples/SampleList";
 import WantTo from "../../components/Samples/WantTo";
+import { useRouter } from "next/router";
 
 const Samples = () => {
+  const router = useRouter()
+
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
        <Head>
            <title>Learn about various CDR report services we provide to different engineers and how we follow guidelines in MSA to prepare your report.</title>
              <meta name="description" content="Learn about various CDR report services we provide to different engineers and how we follow guidelines in MSA to prepare your report." />
+             <link rel="canonical" href={canonicalUrl} />
+
            </Head>
       <Hero
         title="CDRskillassessment’s CDR reviewing service 
@@ -50,7 +57,7 @@ the CDR Report Samples as just a guide to learn the regulations and requirements
       <WhyRely />
       <FrequentlyAsked />
       <Hero2
-        title="Choose the best reviewing service provider to review your CDR for Engineers Australia"
+        title="Choose the best reviewing service provider to review your CDR Skill Assessments Australia"
         data="Engineers who wish to pursue an engineering career in Australia should write a CDR report to demonstrate skills, knowledge 
 and experience to Engineers Australia. We have dedicated engineering teams with years of experience in CDR 
 Reviewing Service for engineers in Australia."

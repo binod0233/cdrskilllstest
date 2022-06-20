@@ -6,7 +6,6 @@ import Section1 from "../../components/CDRWriting/Section1";
 import Expectations from "../../components/Expectations";
 import Headings from "../../components/Headings";
 import Hero2 from "../../components/Hero2";
-// import Meta from "../../components/Meta";
 import Paragraphs from "../../components/Paragraphs";
 
 const SpecificAnzsco = () => {
@@ -523,9 +522,9 @@ const SpecificAnzsco = () => {
       secondTitle: `Skill Assessment Authority`,
       secondDescription: `EA (Engineers Australia) / AIM`,
       thirdTitle: `Specialisations of Civil Engineer:`,
-      thirdDescription: `Airfield Engineer Officer (Air Force)
+      thirdDescription: [`Airfield Engineer Officer (Air Force)
       Hydraulics Engineer
-      `,
+      `],
       occupationTitle: `On the Occupation Lists`,
       occupationList: [
         `489 (S/T) Occupations List
@@ -554,7 +553,7 @@ const SpecificAnzsco = () => {
       occupationsTitle: `Occupations in this Group.`,
       occupationDescription: (
         <div>
-          `• 233211 StructuralEngineer <br />
+          • 233211 StructuralEngineer <br />
           • 233212 Geotechnical Engineer
           <br />
           • 233213 Quantity Surveyor
@@ -567,23 +566,23 @@ const SpecificAnzsco = () => {
       ),
       exceptionstitle: "Exceptions for Unit Group 2332.",
       exceptions: [
-        `	•	Australian Graduate exceptions apply in some states/territories
+        `Australian Graduate exceptions apply in some states/territories
       `,
-        `•	Priority Skilled Lists may apply a specific requirement in some states
+        `Priority Skilled Lists may apply a specific requirement in some states
       `,
-        `•	Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
       
       `,
       ],
       requirementtitle: `English Requirement`,
       requirement: [
-        `•	IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
         `,
-        `•	OET result with a minimum grade B in all sections;
+        `OET result with a minimum grade B in all sections;
         `,
-        `	TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
         `,
-        `•	PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
         
 `,
       ],
@@ -595,15 +594,15 @@ const SpecificAnzsco = () => {
       ],
       tasks: [
         `Transport engineers design the physical aspect of transportation systems.`,
-        `•Transport  engineers  take  account  into  the  increasing  population  and  need  for change to access present and future travel flow patterns.`,
-        `•Transport engineers estimate preparing detailed cost plans.`,
-        `•Transport  engineers  study architectural  engineering  drawings  and  specifications to estimate total cost as toolsto assist in budgetary control.`,
-        `•Transport  engineers  establish  detailed  programs  for  the  coordination  of  site activities.`,
-        `•Transport   engineers   organize   and   direct   site   labour   and   the   delivery   of construction materials, plant and equipment.`,
-        `•Transport   engineers   determine   construction   methods,   materials   and   quality standardsof transportation infrastructure.`,
-        `•Transport engineers draft and interpret specifications, drawings, plans construction methods and procedures.`,
-        ` •Transport  engineershave  knowledge  of  static  and  dynamic  load  analysis  of transportation systems.`,
-        `•Transport engineers  design  structures  that  do  not  implode,  flex,  twist  or  hake  in unfavourable ways`,
+        `Transport  engineers  take  account  into  the  increasing  population  and  need  for change to access present and future travel flow patterns.`,
+        `Transport engineers estimate preparing detailed cost plans.`,
+        `Transport  engineers  study architectural  engineering  drawings  and  specifications to estimate total cost as toolsto assist in budgetary control.`,
+        `Transport  engineers  establish  detailed  programs  for  the  coordination  of  site activities.`,
+        `Transport   engineers   organize   and   direct   site   labour   and   the   delivery   of construction materials, plant and equipment.`,
+        `Transport   engineers   determine   construction   methods,   materials   and   quality standardsof transportation infrastructure.`,
+        `Transport engineers draft and interpret specifications, drawings, plans construction methods and procedures.`,
+        `Transport  engineershave  knowledge  of  static  and  dynamic  load  analysis  of transportation systems.`,
+        `Transport engineers  design  structures  that  do  not  implode,  flex,  twist  or  hake  in unfavourable ways`,
       ],
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
       hero2Description: `We are here to answer any of your questions and to offer you the most satisfactory service possible. In case of any inconvenience, feel free to contact our experts.`,
@@ -793,113 +792,113 @@ const SpecificAnzsco = () => {
       hero2Description: `We are here to answer any of your questions and to offer you the most satisfactory service possible. In case of any inconvenience, feel free to contact our experts.`,
       hero2ButtonName: `Contact an Expert`,
     },
-//     industrialEngineer: {
-//       title: `ANZSCO 233511-Industrial Engineer`,
-//       titleDescription: `Industrial engineers  establish  practices  to  recommend  improvement  in  commercial quality and efficiency of commercial production in an industrial environment. Industrial engineer  reviews  and  investigates the utilisationof  personnel  and  logistics’  current operational  process.   Industrial  engineers  determine the materials  and  equipment required to constructplantsand equipment.It is possible that registration or licensing will be required.`,
-//       image: `/images/SpecificAnzsco/industrialEngineer.png`,
-//       skillTitle: `Skill Level`,
-//       skillDescription: `Level 1 or Equivalent`,
-//       secondTitle: `Skill Assessment Authority`,
-//       secondDescription: `EA (Engineers Australia) / AIM`,
-//       thirdTitle: `Specialisations of Civil Engineer:`,
-//       thirdDescription: [
-//         `•Engineering Assurance Engineer`,
-//         `•Integrated Logistics Support Engineer`,
-//         `•Process Engineer (Industrial)
-//       `,
-//       ],
-//       occupationTitle: `On the Occupation Lists`,
-//       occupationList: [
-//         `489 (S/T) Occupations List
-//       `,
-//         `482 TSS Visa Medium Term List
-//       `,
-//         `407 Training visa occupations List
-//       `,
-//         `482 TSS Visa Regional Occupation List
-//       `,
-//         `189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
-//       `,
-//         `190 State/Territory Sponsored 
-//       `,
-//         `186 ENS Visa Occupations List
-//       `,
-//         `187 RSMS Visa Occupations List
-//       `,
-//         `491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
-//       `,
-//         `494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
-//       `,
-//       ],
+    industrialEngineer: {
+      title: `ANZSCO 233511-Industrial Engineer`,
+      titleDescription: `Industrial engineers  establish  practices  to  recommend  improvement  in  commercial quality and efficiency of commercial production in an industrial environment. Industrial engineer  reviews  and  investigates the utilisationof  personnel  and  logistics’  current operational  process.   Industrial  engineers  determine the materials  and  equipment required to constructplantsand equipment.It is possible that registration or licensing will be required.`,
+      image: `/images/SpecificAnzsco/industrialEngineer.png`,
+      skillTitle: `Skill Level`,
+      skillDescription: `Level 1 or Equivalent`,
+      secondTitle: `Skill Assessment Authority`,
+      secondDescription: `EA (Engineers Australia) / AIM`,
+      thirdTitle: `Specialisations of Civil Engineer:`,
+      thirdDescription: [
+        `•Engineering Assurance Engineer`,
+        `•Integrated Logistics Support Engineer`,
+        `•Process Engineer (Industrial)
+      `,
+      ],
+      occupationTitle: `On the Occupation Lists`,
+      occupationList: [
+        `489 (S/T) Occupations List
+      `,
+        `482 TSS Visa Medium Term List
+      `,
+        `407 Training visa occupations List
+      `,
+        `482 TSS Visa Regional Occupation List
+      `,
+        `189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
+      `,
+        `190 State/Territory Sponsored 
+      `,
+        `186 ENS Visa Occupations List
+      `,
+        `187 RSMS Visa Occupations List
+      `,
+        `491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
+      `,
+        `494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
+      `,
+      ],
 
-//       notoccuoationtitle: "Not on the Occupation Listof Industrial Engineers:",
-//       notoccupation: "482 TSS Visa Short Term List",
+      notoccuoationtitle: "Not on the Occupation Listof Industrial Engineers:",
+      notoccupation: "482 TSS Visa Short Term List",
 
-//       visaprovisiontitle: "Visa Provisionfor Industrial Engineer",
-//       visaprovision:
-//         "Since the occupation is listed on the MLTSSL as a high-demand occupation in Australia, any visas in the General Skilled Migration (GSM) Program can be applied.Ticketsin this category  include Skilled  Independent  Subclass  189,  Skilled  Work  Regional  Subclass  491 and  Skilled  Nominated  Subclass  190.  Furthermore,  if  you  have  a  definite  job  offer,  you may be able to apply for severalemployer-sponsored visas.",
+      visaprovisiontitle: "Visa Provisionfor Industrial Engineer",
+      visaprovision:
+        "Since the occupation is listed on the MLTSSL as a high-demand occupation in Australia, any visas in the General Skilled Migration (GSM) Program can be applied.Ticketsin this category  include Skilled  Independent  Subclass  189,  Skilled  Work  Regional  Subclass  491 and  Skilled  Nominated  Subclass  190.  Furthermore,  if  you  have  a  definite  job  offer,  you may be able to apply for severalemployer-sponsored visas.",
 
-//       unitTitle: `Unit Group 2332: Civil Engineering Professionals.`,
-//       unitDescription: `Industrial,  Mechanical  and  Production  Engineers  are involvedinthe construction, operation,  logistics  and maintenance  of  mechanical  and  process  plants.Industrial, Mechanical  and  Production  Engineers  ensure  the usageof  resources  is  cost-effective.Industrial,  Mechanical  and  Production  Engineer,installs  and  establishes  programs to coordinatemanufacturing activities. Registration or licensing may be required.`,
-//       skillleveltitle: "Skill Levelrequired for Industrial Engineer.",
-//       skilllevel:
-//         "Most  occupations  in  this  unit  group  have  a skill  levelcommensurate  with  a bachelor’sdegree or higher qualification. At least five years of relevant experience and/or relevant vendor  certification  may  substitute  for  the  formal  qualification.  In  some  instances, relevant experience and/or on-the-job training may be required in addition to the formal qualification (ANZSCO Skill Level 1).",
+      unitTitle: `Unit Group 2332: Civil Engineering Professionals.`,
+      unitDescription: `Industrial,  Mechanical  and  Production  Engineers  are involvedinthe construction, operation,  logistics  and maintenance  of  mechanical  and  process  plants.Industrial, Mechanical  and  Production  Engineers  ensure  the usageof  resources  is  cost-effective.Industrial,  Mechanical  and  Production  Engineer,installs  and  establishes  programs to coordinatemanufacturing activities. Registration or licensing may be required.`,
+      skillleveltitle: "Skill Levelrequired for Industrial Engineer.",
+      skilllevel:
+        "Most  occupations  in  this  unit  group  have  a skill  levelcommensurate  with  a bachelor’sdegree or higher qualification. At least five years of relevant experience and/or relevant vendor  certification  may  substitute  for  the  formal  qualification.  In  some  instances, relevant experience and/or on-the-job training may be required in addition to the formal qualification (ANZSCO Skill Level 1).",
 
-//       occupationsTitle: `Occupations in this Group.`,
-//       occupationDescription: (
-//         <div>
-//           233511 Industrial Engineer.
-//           <br />
-//           • 233512 Mechanical Engineer
-//           <br />
-//           • 233513 Production or Plant Engineer.
-//           <br />
-//         </div>
-//       ),
-//       exceptionstitle: "Exceptions for Unit Group 2335",
-//       exceptions: [
-//         `Australian Graduate exceptions apply in some states/territories
-//       `,
-//         `Priority Skilled Lists may apply a specific requirement in some states
-//       `,
-//         `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
+      occupationsTitle: `Occupations in this Group.`,
+      occupationDescription: (
+        <div>
+          233511 Industrial Engineer.
+          <br />
+          • 233512 Mechanical Engineer
+          <br />
+          • 233513 Production or Plant Engineer.
+          <br />
+        </div>
+      ),
+      exceptionstitle: "Exceptions for Unit Group 2335",
+      exceptions: [
+        `Australian Graduate exceptions apply in some states/territories
+      `,
+        `Priority Skilled Lists may apply a specific requirement in some states
+      `,
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
       
-//       `,
-//       ],
+      `,
+      ],
 
-//       languagetitle: "Language proficiency required for Civil Engineer.",
-//       language: [
-//         `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
-// `,
-//         `OET result with a minimum grade B in all sections;
-// `,
-//         `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
-// `,
-//         `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
-// `,
-//       ],
+      languagetitle: "Language proficiency required for Civil Engineer.",
+      language: [
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+`,
+        `OET result with a minimum grade B in all sections;
+`,
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+`,
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+`,
+      ],
 
-//       tasktitle: [
-//         "Industrial Engineers are responsible for the following tasks:",
-//       ],
-//       tasks: [
-//         `Industrial engineers carry out inspections to ensure optimum performance.`,
-//         `Industrial engineers direct the maintenance and coordinate the requirementsfor new designs,surveys and schedules.`,
-//         `Industrial engineers develop specifications for the manufacture of products in the industry.`,
-//         `Industrial engineers determine materials and equipment required to constructplant and equipment.`,
-//         `Industrial engineers use various methods of material flow, piping and check capacities and layout plan for the construction and operation of industrial plants andsystems.`,
-//         `Industrial Engineer establishes standards and policies based on engineering principles and safety regulationsfor installation, modification, quality control, testingand maintenance of industrial plants and systems.`,
-//         `Delivery of materials, plantsand equipment is organisedand managed by industrial engineers.`,
-//         `Industrial engineer manages project labour in industry.`,
-//         `To determine the functions and responsibilities of workers and work units, industrial engineers developfunctional statementsand organisational charts.`,
-//         `Industrial engineerreviews project information, functional statementsand organisation to identify areas of duplication.`,
-//         `To develop labour utilisation standards, industrial engineers establishwork measurement programs and analysework samples.`,
-//         `To determine optimum worker and equipment efficiencies,industrial engineers analyseworkforce utilisation, facility layout, operational data and production schedules.`,
-//       ],
-//       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
-//       hero2Description: `We are here to answer any of your questions and to offer you the most satisfactory service possible. In case of any inconvenience, feel free to contact our experts.`,
-//       hero2ButtonName: `Contact an Expert`,
-//     },
+      tasktitle: [
+        "Industrial Engineers are responsible for the following tasks:",
+      ],
+      tasks: [
+        `Industrial engineers carry out inspections to ensure optimum performance.`,
+        `Industrial engineers direct the maintenance and coordinate the requirementsfor new designs,surveys and schedules.`,
+        `Industrial engineers develop specifications for the manufacture of products in the industry.`,
+        `Industrial engineers determine materials and equipment required to constructplant and equipment.`,
+        `Industrial engineers use various methods of material flow, piping and check capacities and layout plan for the construction and operation of industrial plants andsystems.`,
+        `Industrial Engineer establishes standards and policies based on engineering principles and safety regulationsfor installation, modification, quality control, testingand maintenance of industrial plants and systems.`,
+        `Delivery of materials, plantsand equipment is organisedand managed by industrial engineers.`,
+        `Industrial engineer manages project labour in industry.`,
+        `To determine the functions and responsibilities of workers and work units, industrial engineers developfunctional statementsand organisational charts.`,
+        `Industrial engineerreviews project information, functional statementsand organisation to identify areas of duplication.`,
+        `To develop labour utilisation standards, industrial engineers establishwork measurement programs and analysework samples.`,
+        `To determine optimum worker and equipment efficiencies,industrial engineers analyseworkforce utilisation, facility layout, operational data and production schedules.`,
+      ],
+      hero2Title: `Want to know more? Our experts will clear your Doubt.`,
+      hero2Description: `We are here to answer any of your questions and to offer you the most satisfactory service possible. In case of any inconvenience, feel free to contact our experts.`,
+      hero2ButtonName: `Contact an Expert`,
+    },
     mechanicalEngineer: {
       title: `ANZSCO 233512-Mechanical Engineer`,
       titleDescription: `Mechanical   engineers   plan   the   assembly   of   different   systems   required   for   the commissioning   of   mechanical   process   plants.   Mechanical   engineer   designs   and supervises  the  assembly,  erection,  operation  and  maintenance  of  mechanical  and process plants and installations.It is possible that registration or licensing will be required`,
@@ -4191,7 +4190,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
 <Headings
               title={allData.transportEngineer.thirdTitle}
             />
-            {allData.transportEngineer.thirdDescription.map((t,i)=>
+            {allData.transportEngineer.thirdDescription?.map((t,i)=>
              <Paragraphs key={i}
              data={t}
            />)
@@ -4259,11 +4258,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             list={allData.transportEngineer.exceptions}
           />
 
-<Expectations
-            title={allData.transportEngineer.languagetitle}
-            
-            list={allData.transportEngineer.language}
-          />
+
 
 <Expectations
             title={allData.transportEngineer.tasktitle}
@@ -5385,30 +5380,30 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
 {anzsco === "anzsco-233914-engineering-technologist" && (
         <>
           <Section1
-            title={allData.environmentalEngineer.title}
-            data={allData.environmentalEngineer.titleDescription}
-            image={allData.environmentalEngineer.image}
+            title={allData.engineeringTechnologist.title}
+            data={allData.engineeringTechnologist.titleDescription}
+            image={allData.engineeringTechnologist.image}
           />
           <Container>
             <Headings
-              title={allData.environmentalEngineer.skillTitle}
+              title={allData.engineeringTechnologist.skillTitle}
             />
             <Paragraphs
-              data={allData.environmentalEngineer.skillDescription}
+              data={allData.engineeringTechnologist.skillDescription}
             />
 
             <Headings
-              title={allData.environmentalEngineer.secondTitle}
+              title={allData.engineeringTechnologist.secondTitle}
             />
             <Paragraphs
-              data={allData.environmentalEngineer.secondDescription}
+              data={allData.engineeringTechnologist.secondDescription}
             />
             
             <Headings
-              title={allData.environmentalEngineer.occupationTitle}
+              title={allData.engineeringTechnologist.occupationTitle}
             />
 
-            {allData.environmentalEngineer.occupationList?.map((l,i) => (
+            {allData.engineeringTechnologist.occupationList?.map((l,i) => (
               <Row key={i}>
                 <Col xs={1} className="pt-1">
                   <img
@@ -5423,63 +5418,63 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               </Row>
             ))}
              <Headings
-              title={allData.environmentalEngineer.notoccuoationtitle}
+              title={allData.engineeringTechnologist.notoccuoationtitle}
             />
             <Paragraphs
-              data={allData.environmentalEngineer.notoccupation}
+              data={allData.engineeringTechnologist.notoccupation}
             />
 
 <Headings
-              title={allData.environmentalEngineer.visaprovisiontitle}
+              title={allData.engineeringTechnologist.visaprovisiontitle}
             />
             <Paragraphs
-              data={allData.environmentalEngineer.visaprovision}
+              data={allData.engineeringTechnologist.visaprovision}
             />
 
             <Headings
-              title={allData.environmentalEngineer.unitTitle}
+              title={allData.engineeringTechnologist.unitTitle}
             />
             <Paragraphs
-              data={allData.environmentalEngineer.unitDescription}
+              data={allData.engineeringTechnologist.unitDescription}
             />
 
 <Headings
-              title={allData.environmentalEngineer.skillleveltitle}
+              title={allData.engineeringTechnologist.skillleveltitle}
             />
             <Paragraphs
-              data={allData.environmentalEngineer.skilllevel}
+              data={allData.engineeringTechnologist.skilllevel}
             />
 
             <Headings
-              title={allData.environmentalEngineer.occupationsTitle}
+              title={allData.engineeringTechnologist.occupationsTitle}
             />
             <Paragraphs
               data={
-                allData.environmentalEngineer.occupationDescription
+                allData.engineeringTechnologist.occupationDescription
               }
             />
           </Container>
           <Expectations
-            title={allData.environmentalEngineer.exceptionstitle}
+            title={allData.engineeringTechnologist.exceptionstitle}
             
-            list={allData.environmentalEngineer.exceptions}
+            list={allData.engineeringTechnologist.exceptions}
           />
 
 <Expectations
-            title={allData.environmentalEngineer.languagetitle}
+            title={allData.engineeringTechnologist.languagetitle}
             
-            list={allData.environmentalEngineer.language}
+            list={allData.engineeringTechnologist.language}
           />
 
 <Expectations
-            title={allData.environmentalEngineer.tasktitle}
+            title={allData.engineeringTechnologist.tasktitle}
             
-            list={allData.environmentalEngineer.tasks}
+            list={allData.engineeringTechnologist.tasks}
           />
           <Hero2
-            title={allData.environmentalEngineer.hero2Title}
-            data={allData.environmentalEngineer.hero2Description}
-            buttonName={allData.environmentalEngineer.hero2ButtonName}
+            title={allData.engineeringTechnologist.hero2Title}
+            data={allData.engineeringTechnologist.hero2Description}
+            buttonName={allData.engineeringTechnologist.hero2ButtonName}
           />
         </>
       )}

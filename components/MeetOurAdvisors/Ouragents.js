@@ -23,7 +23,7 @@ const Ouragents = () => {
         <h1 style={{color:" #203546",fontFamily:"Century Gothic",fontWeight:"700",textAlign:"center"}}>
           Our Agents
 </h1>
-<p style={{color:"#666",fontFamily:"Asap", fontWeight:"400",textAlign:"center",paddingTop:"20px"}} className="pb-5"> Professionalism at the core - Quality in work while keeping care of your wallet - Thinking ahead of time
+<p style={{color:"#666",fontFamily:"Asap", fontWeight:"400",textAlign:"center",paddingTop:"20px"}} className="pb-5">Having a hard time creating a perfect CDR Report?Meet Our Agents Our CDR writing experts are ready to help you achieve your CDR assessment goals by offering you a top-notch CDR report within a short period of time. Get an original, high-quality, plagiarism-free CDR Report to Engineers Australia from our professional writers. Explore our CDR services and get a chance to pursue your dream career in Australia with a 100% approval rate!
  </p>
 
         <Row>

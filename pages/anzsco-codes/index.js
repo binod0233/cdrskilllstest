@@ -9,7 +9,7 @@ import Paragraphs from "../../components/Paragraphs";
 
 const Anzsco = () => {
   return (
-    <div className="pt-3">
+    <div className="">
       {/* <Meta
         title="Engineer Australia ANZSCO | CDR Skill Assessment"
         description="Learn about various ANZSCO codes used for classifications of occupations and select the appropriate ANZSCO code that matches your career."

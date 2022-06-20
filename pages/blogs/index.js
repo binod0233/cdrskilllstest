@@ -3,12 +3,21 @@ import ALLBLOGS from "../../components/Blogs/ALLBLOGS";
 import BlogsCategories from "../../components/Blogs/BlogsCategories";
 import RecentBlogs from "../../components/Blogs/RecentBlogs";
 import Hero3 from "../../components/FAQ/Hero3";
-// import Meta from "../../components/Meta";
+import {useRouter} from 'next/router'
+import Head from "next/head";
 
 const Blogs = () => {
+  const router = useRouter();
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div className='pt-5 pt-md-0'>
-      {/* <Meta title="Blogs" /> */}
+       <Head>
+        <title>Blogs | CDR Skill Assessment</title>
+        <meta name='description' content="Articles on and about cdr with cdrskillassessment | CDR Skill Assessment"/>
+        <link rel="canonical" href={canonicalUrl} />
+
+      </Head>
       <BlogsCategories />
       <ALLBLOGS />
       <RecentBlogs />

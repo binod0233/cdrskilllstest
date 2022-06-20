@@ -1,10 +1,23 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Hero from "../components/Hero";
+import {useRouter} from 'next/router'
+import Head from 'next/head'
+
+
 
 const PrivacyPolicy = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
+      <Head>
+        <title>Privacy Policy | CDR Skill Assessment</title>
+        <meta name="description" content="Privacy Policy | CDR Skill Assessment" />
+        <link rel="canonical" href={canonicalUrl} />
+
+      </Head>
       <Hero />
       <Container>
         <h1

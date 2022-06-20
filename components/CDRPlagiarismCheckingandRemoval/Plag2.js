@@ -32,7 +32,7 @@ with plagiarism-free CDR"
               }}
             ></i>
             AI-based plagiarism detection tool to check for plagiarism in your
-            CDR for Engineers Australia.
+            CDR Skill Assessment Australia.
           </li>
           <li className="ourCDRServicesParagraph">
             {" "}

@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {useRouter} from 'next/router'
 import { Container, Row, Col } from "react-bootstrap";
+import Head from "next/head";
 
 const BlogCategoryScreen = () => {
   const router = useRouter()
   const type = router.query.type
   const [data, setData] = useState([]);
   const [recentData, setRecentData] = useState([]);
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   const getBlogList = () => {
     axios
       .get(
@@ -29,6 +32,14 @@ const BlogCategoryScreen = () => {
   }, []);
   return (
     <div>
+
+<Head>
+        <title>{type} | CDR Skill Assessment</title>
+        <meta name='description' content="Articles on and about cdr with cdrskillassessment | CDR Skill Assessment"/>
+        <link rel="canonical" href={canonicalUrl} />
+
+      </Head>
+
       <Container>
         <h1
           style={{

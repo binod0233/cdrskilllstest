@@ -59,7 +59,7 @@ leadership. CDRXpert has reviewed over 250 CDRs and has effectively offered the 
             for plagiarism detection. The most difficult step is eliminating the
             stolen text from the CDR report while essentially keeping its core
             substance. Only professional writers with more than five years of
-            experience in Australia review CDR for Engineers.
+            experience in Australia review CDR Skill Assessments.
           </p>
         </Col>
       </Row>
@@ -134,7 +134,7 @@ leadership. CDRXpert has reviewed over 250 CDRs and has effectively offered the 
             for plagiarism detection. The most difficult step is eliminating the
             stolen text from the CDR report while essentially keeping its core
             substance. Only professional writers with more than five years of
-            experience in Australia review CDR for Engineers.
+            experience in Australia review CDR Skill Assessments.
           </p>
         </Col>
       </Row>

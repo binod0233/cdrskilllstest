@@ -17,10 +17,10 @@ const Hero = ({ title, details }) => {
 
     emailjs
     .sendForm(
-      "service_1id88yh",
-      "template_dgcdon2",
+      "service_swmc1ha",
+      "template_u77tatf",
       form.current,
-      "e8bqI-l1U0nY9GlSa"
+      "hWJYhr4QPZh-TxVMc"
     )
       .then(
         (result) => {
@@ -117,6 +117,7 @@ const Hero = ({ title, details }) => {
               <div className="d-flex flex-column justify-content-center align-items-center">
                 <h2>Get Instant help</h2>
               </div>
+              
 
               <Form.Group className="mb-3" controlId="fullName">
                 <Form.Control

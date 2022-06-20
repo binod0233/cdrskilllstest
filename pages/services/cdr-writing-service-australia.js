@@ -1,5 +1,5 @@
 import React from "react";
-
+import {useRouter} from 'next/router'
 import Beforeutakehelp from "../../components/CDRWriting/Beforeutakehelp";
 import Choose from "../../components/CDRWriting/Choose";
 import DOu from "../../components/CDRWriting/DOu";
@@ -8,17 +8,20 @@ import Wh from "../../components/CDRWriting/Wh";
 import Whatdoes from "../../components/CDRWriting/Whatdoes";
 import Hero from "../../components/Hero";
 import Hero2 from "../../components/Hero2";
-// import Meta from "../../components/Meta";
+import Head from "next/head";
 
 const CDRWriting = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
-      {/* <Meta
-        title="CDR Report Writing For Engineers | CDR Skill Assessment"
-        description="Looking for a CDR reports writing Service Provider in Australia? Let us help you prepare your CDR report with 100% approval from Engineers Australia. 
+     <Head>
+        <title>High-Quality CDR Report Writing Service for Engineers Australia</title>
+        <meta name='description' content="Engineering Applicants seeking the best service provider for CDR Writing? Grab your high-quality CDR Report to get 100 % Approval from Engineers Australia."/>
+        <link rel="canonical" href={canonicalUrl} />
 
-"
-      /> */}
+      </Head>
       <Hero
         title="CDR reports reviewed by CDRskillassessment 
 has never been rejected by Engineers 
@@ -30,7 +33,7 @@ CDR. Our team of expert writers are ready to assist you; you are one click away.
       <Section1
         title="Positive assessment of your CDR report by Engineers Australia."
         data="CDRskillassessment ensures an impeccable CDR report based on the specific format described by Engineers Australia in the MSA 
-booklet. With a high success record of Competency Demonstration Report, CDR, approval from Engineers Australia, CDR For Engineer
+booklet. With a high success record of Competency Demonstration Report, CDR, approval from Engineers Australia, CDR Skill Assessment
 provide the best CDR Writing Service for Engineers in Australia. Engineers Australia will review CDRreport submitted by engineering 
 applicants who wish to migrate to Australia for skilled work.
 Our comprehensive CDR report writing services for engineers include a detailed Curriculum Vitae, three Career Episodes (CEs), a 

@@ -7,7 +7,7 @@ const AnzoCard = ({ image, title, code, link }) => {
       className="p-0 d-flex flex-column rounded my-md-4 my-2"
       style={{ borderRadius: "15px", zIndex: "-1" }}
     >
-      {/* <Link href={link}>
+      <Link href={link}>
         <a>
         <div className="mobileAnzoCard" style={{ width: "100%", height: "200px" }}>
           <img
@@ -56,7 +56,7 @@ const AnzoCard = ({ image, title, code, link }) => {
           </div>
         </div>
         </a>
-      </Link> */}
+      </Link>
     </div>
   );
 };

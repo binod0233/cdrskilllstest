@@ -15,6 +15,8 @@ const Socials = () => {
             src="/images/facebook.png"
             alt="facebook icon"
             className="img-fluid"
+            style={{borderRadius:'100%',height:'40px'}}
+
           />
         </a>
 
@@ -28,7 +30,7 @@ const Socials = () => {
             src="/images/what.jpg"
             alt="whatsapp icon"
             
-            style={{borderRadius:'100%',height:'30px'}}
+            style={{borderRadius:'100%',height:'40px'}}
           />
         </a>
       </div>

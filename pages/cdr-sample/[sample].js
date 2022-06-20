@@ -8,10 +8,13 @@ import Paragraphs from "../../components/Paragraphs";
 import CDRSample from "../../components/SpecificSample/CDRSample";
 import OurStrength from "../../components/SpecificSample/OurStrength";
 import SampleFor from "../../components/SpecificSample/SampleFor";
+import Head from "next/head";
 
 const SpecificSample = () => {
   const router = useRouter()
   const sample  = router.query.sample
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   const allData = {
     engineeringManager: {
       title: "CDR Samples for Engineering Manager : ANZSCO 133211",
@@ -4081,6 +4084,230 @@ const SpecificSample = () => {
   };
   return (
     <div>
+      <>
+        {sample === "engineering-manager" && (
+         <Head>
+         <title>CDR Sample For Engineering Manager | CDR Skill Assessment</title>
+         <meta name='description' content='CDR Sample For Engineering Manager | CDR Skill Assessment'/>
+         <link rel="canonical" href={canonicalUrl} />
+
+       </Head>
+        )}
+
+        {sample === "chemical-engineer" && (
+          <Head>
+          <title>CDR Sample for Chemical Engineer | CDR Skill Assessment</title>
+          <meta name='description' content='CDR Sample for Chemical Engineer | CDR Skill Assessment'/>
+          <link rel="canonical" href={canonicalUrl} />
+
+        </Head>
+                 )}
+
+        {sample === "material-engineer" && (
+           <Head>
+           <title>CDR Samples For Material Engineer | CDR Skill Assessment</title>
+           <meta name='description' content='CDR Samples For Material Engineer | CDR Skill Assessment'/>
+           <link rel="canonical" href={canonicalUrl} />
+
+         </Head>
+
+        )}
+
+        {sample === "civil-engineer" && (
+          <Head>
+          <title>CDR Samples For Civil Engineer | CDR Skill Assessment</title>
+          <meta name='description' content='CDR Samples For Civil Engineer | CDR Skill Assessment'/>
+          <link rel="canonical" href={canonicalUrl} />
+
+        </Head>
+          
+        )}
+
+        {sample === "geotechnical-engineer" && (
+
+<Head>
+<title>CDR Samples For Geotechnical Engineer | CDR Skill Assessment</title>
+<meta name='description' content='CDR Samples For Geotechnical Engineer | CDR Skill Assessment'/>
+<link rel="canonical" href={canonicalUrl} />
+
+</Head>
+         
+        )}
+
+        {sample === "structural-engineer" && (
+          <Head>
+          <title>CDR Samples For Structural Engineer | CDR Skill Assessment</title>
+          <meta name='description' content='CDR Samples For Structural Engineer | CDR Skill Assessment'/>
+          <link rel="canonical" href={canonicalUrl} />
+
+          </Head>
+
+        )}
+
+        {sample === "transport-engnieer" && (
+             <Head>
+             <title>CDR Samples For Transport Engineer | CDR Skill Assessment</title>
+             <meta name='description' content='CDR Samples For Transport Engineer | CDR Skill Assessment'/>
+             <link rel="canonical" href={canonicalUrl} />
+
+             </Head>
+
+         
+        )}
+
+        {sample === "electrical-engineer" && (
+
+<Head>
+<title>CDR Samples For Electrical Engineer | CDR Skill Assessment</title>
+<meta name='description' content='CDR Samples For Electrical Engineer | CDR Skill Assessment'/>
+<link rel="canonical" href={canonicalUrl} />
+
+</Head>
+         
+        )}
+
+        {sample === "electronics-engineer" && (
+          
+<Head>
+<title>CDR Samples For Electronics Engineer | CDR Skill Assessment</title>
+<meta name='description' content='CDR Samples For Electronics Engineer | CDR Skill Assessment'/>
+<link rel="canonical" href={canonicalUrl} />
+
+</Head>
+        
+        )}
+
+        {sample === "industrial-engineer" && (
+          <Head>
+          <title>CDR Samples For Industrial Engineer | CDR Skill Assessment</title>
+          <meta name='description' content='CDR Samples For Industrial Engineer | CDR Skill Assessment'/>
+          <link rel="canonical" href={canonicalUrl} />
+
+          </Head>
+
+        )}
+
+        {sample === "mechanical-engineer" && (
+           <Head>
+           <title>CDR Samples For Mechanical Engineer | CDR Skill Assessment</title>
+           <meta name='description' content='CDR Samples For Mechanical Engineer | CDR Skill Assessment'/>
+           <link rel="canonical" href={canonicalUrl} />
+
+           </Head>
+
+        )}
+
+        {sample === "production-engineer" && (
+           <Head>
+           <title>CDR Samples For Production or Plant Engineer | CDR Skill Assessment</title>
+           <meta name='description' content='CDR Samples For Production or Plant Engineer | CDR Skill Assessment'/>
+           <link rel="canonical" href={canonicalUrl} />
+</Head>
+          
+        )}
+
+        {sample === "mining-engineer" && (
+          <Head>
+          <title>CDR Samples For Mining Engineer | CDR Skill Assessment</title>
+          <meta name='description' content='CDR Samples For Mining Engineer | CDR Skill Assessment'/>
+          <link rel="canonical" href={canonicalUrl} />
+
+          </Head>
+         
+        )}
+
+        {sample === "petroleum-engineer" && (
+          <Head>
+          <title>CDR Samples For Petroleum Engineer | CDR Skill Assessment</title>
+          <meta name='description' content='CDR Samples For Petroleum Engineer | CDR Skill Assessment'/>
+          <link rel="canonical" href={canonicalUrl} />
+
+          </Head>
+
+        
+        )}
+
+        {sample === "aeronautical-engineer" && (
+            <Head>
+            <title>CDR Samples For Aeronautical Engineer | CDR Skill Assessment</title>
+            <meta name='description' content='CDR Samples For Aeronautical Engineer | CDR Skill Assessment'/>
+            <link rel="canonical" href={canonicalUrl} />
+
+            </Head>
+
+        )}
+
+        {sample === "biomedical-engineer" && (
+             <Head>
+             <title>CDR Samples For Biomedical Engineer | CDR Skill Assessment</title>
+             <meta name='description' content='CDR Samples For Biomedical Engineer | CDR Skill Assessment'/>
+             <link rel="canonical" href={canonicalUrl} />
+
+             </Head>
+       
+        )}
+
+        {sample === "engineering-technologist" && (
+          <Head>
+          <title>CDR Samples For Engineering Techonologist | CDR Skill Assessment</title>
+          <meta name='description' content='CDR Samples For Engineering Techonologist | CDR Skill Assessment'/>
+          <link rel="canonical" href={canonicalUrl} />
+
+          </Head>
+         
+        )}
+
+        {sample === "environmental-engineer" && (
+          <Head>
+          <title>CDR Samples For Environmental Engineer | CDR Skill Assessment</title>
+          <meta name='description' content='CDR Samples For Environmental Engineer | CDR Skill Assessment'/>
+          <link rel="canonical" href={canonicalUrl} />
+
+          </Head>
+
+        )}
+
+        {sample === "engineering-professionals" && (
+
+<Head>
+<title>CDR Samples For Engineering Professionals | CDR Skill Assessment</title>
+<meta name='description' content='CDR Samples For Engineering Professionals | CDR Skill Assessment'/>
+<link rel="canonical" href={canonicalUrl} />
+
+</Head>
+        
+        )}
+
+        {sample === "computer-network-and-system-engineer" && (
+          <Head>
+          <title>CDR Samples For Computer Network and System Engineer | CDR Skill Assessment</title>
+          <meta name='description' content='CDR Samples For Computer Network and System Engineer | CDR Skill Assessment'/>
+          <link rel="canonical" href={canonicalUrl} />
+
+          </Head>
+         
+        )}
+
+        {sample === "telecommunication-engineer" && (
+          <Head>
+          <title>CDR Samples For Telecommuninication Field Engineer | CDR Skill Assessment</title>
+          <meta name='description' content='CDR Samples For Telecommuninication Field Engineer | CDR Skill Assessment'/>
+          <link rel="canonical" href={canonicalUrl} />
+
+          </Head>
+
+        )}
+
+        {sample === "electrical-engineering" && (
+           <Head>
+           <title>CDR Samples For Electrical Engineering Draftsperson | CDR Skill Assessment</title>
+           <meta name='description' content='CDR Samples For Electrical Engineering Draftsperson | CDR Skill Assessment'/>
+           <link rel="canonical" href={canonicalUrl} />
+
+           </Head>
+         
+        )}
+      </>
       {sample === "engineering-manager" && (
         <>
           <Section1
@@ -4836,7 +5063,7 @@ const SpecificSample = () => {
       )}
       <OurStrength />
       <Hero2
-        title="Choose the best reviewing service provider to review your CDR for Engineers Australia"
+        title="Choose the best reviewing service provider to review your CDR Skill Assessments Australia"
         data="Engineers who wish to pursue an engineering career in Australia should write a CDR report to demonstrate skills, knowledge 
 and experience to Engineers Australia. We have dedicated engineering teams with years of experience in CDR 
 Reviewing Service for engineers in Australia."

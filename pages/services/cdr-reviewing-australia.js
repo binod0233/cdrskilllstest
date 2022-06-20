@@ -1,4 +1,5 @@
 import React from "react";
+import {useRouter} from 'next/router'
 import { Container } from "react-bootstrap";
 import Head from "next/head"
 import Con1 from "../../components/CDRReviewing/Con1";
@@ -9,15 +10,19 @@ import Expectations from "../../components/Expectations";
 import Headings from "../../components/Headings";
 import Hero from "../../components/Hero";
 import Hero2 from "../../components/Hero2";
-// import Meta from "../../components/Meta";
 import Paragraphs from "../../components/Paragraphs";
 const CDRReviewing = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
       
        <Head>
            <title>Best CDR Reviewing Service in Australia | CDR Skill Assessment</title>
              <meta name="description" content="CDRskillassessment is the best CDR report reviewing service provider in Australia, our professional team review your CDR report to prevent rejection from EA." />
+             <link rel="canonical" href={canonicalUrl} />
+
            </Head>
       <Hero
         title="CDRskillassessment’s CDR reviewing service 
@@ -36,7 +41,7 @@ Episodes and Summary Statement, is not enough to get the desired result from EA.
 want to have their CDR reviewed to ensure the quality of the CDR report and prevent CDR rejection in any regard from Engineers 
 Australia. Experts at CDRskillassessment provide an experienced CDR Reviewing service to avoid rejection from EA, backed by our 
 years of experience preparing CDR for hundreds of clients.
-In our service of reviewing CDR for engineers in Australia, we pay close attention to various factors and ensure that no stone is left 
+In our service of reviewing CDR Skill Assessments in Australia, we pay close attention to various factors and ensure that no stone is left 
 unturned in ensuring that your CDR report is of the most excellent quality. There are a variety of reasons why CDR gets rejection 
 by EA. The use of irregular tables, computations, copying content from pre-published resources, neglecting minute aspects of the 
 firm, missing the project objectives, or misrepresenting engineering activities in the career episode are causes of CDR rejection. 

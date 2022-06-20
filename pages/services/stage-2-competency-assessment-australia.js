@@ -6,14 +6,19 @@ import Hero2 from "../../components/Hero2";
 import Expectations from "../../components/Expectations";
 import Fourunits from "../../components/Stage2Competencyassessment/Fourunits";
 import RequiredDocuments from "../../components/Stage2Competencyassessment/RequiredDocuments";
-// import Meta from "../../components/Meta";
+import {useRouter} from 'next/router'
+
 
 const Stage2CometencyAssessment = () => {
+        const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
                <Head>
            <title>Stage 2 Competency Assessment Australia | CDR Skill Assessment</title>
              <meta name="description" content="Want to be a chartered member of Engineers Australia? Our professional writers prepare Stage 2 Competency Assessment displaying your skills on field of work." />
+             <link rel="canonical" href={canonicalUrl} />
            </Head>
       <Hero
         title="Be a Chartered Member of Engineers Australia 

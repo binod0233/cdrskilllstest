@@ -6,6 +6,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const ALLBLOGS = () => {
+ 
   const [data, setData] = useState([]);
   const getBlogList = () => {
     axios

@@ -8,14 +8,14 @@ const EA = () => {
     <Container className="py-5">
       <Headings title="Do you need Stage 1 Competency  Assessment to be a member of  EA?" />
       <Paragraphs data="Is your Engineering qualification accredited by Engineers Australia?" />
-      <Row>
+      {/* <Row>
         <img
           src="/images/Stage1CompetencyAssessment/123.JPG"
           alt="steps 1 2 3"
           className="stage1123Image"
         />
-      </Row>
-      <Row className="px-5 py-1 desktopScreenSteps">
+      </Row>  */}
+      {/* <Row className="px-5 py-1 desktopScreenSteps">
         <Col md={4} className="px-4">
           <div className="cpdWritingCard p-2 my-3 my-md-0 CPDCard">
             <p
@@ -73,7 +73,7 @@ const EA = () => {
             </p>
           </div>
         </Col>
-      </Row>
+      </Row> */}
       <Row className='mobileScreenSteps'>
       <Col md={4} className="px-4">
         <div className="d-flex justify-content-center">

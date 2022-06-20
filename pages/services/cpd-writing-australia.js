@@ -1,4 +1,5 @@
 import React from "react";
+import {useRouter} from 'next/router'
 import { Container } from "react-bootstrap";
 import Head from "next/head"
 import Section1 from "../../components/CDRWriting/Section1";
@@ -11,11 +12,16 @@ import Hero from "../../components/Hero";
 import Hero2 from "../../components/Hero2";
 import Paragraphs from "../../components/Paragraphs";
 const CPDWriting = () => {
+  const router = useRouter()
+  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+
   return (
     <div>
          <Head>
            <title>Best CPD Writing Service in Australia | CDR Skill Assessment</title>
              <meta name="description" content="Looking forward to appoint CPD writers from CDRskillassessment. Know how our experienced writer prepare flawless CPD report displaying your development." />
+             <link rel="canonical" href={canonicalUrl} />
+
            </Head>
       <Hero
         title="Engineers Australia has never rejected 
