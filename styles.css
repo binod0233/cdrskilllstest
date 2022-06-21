@@ -195,7 +195,9 @@ a {
   background-color: #f4f4f4;
   border-radius: 5px;
 }
-
+.iconContainer{
+  width:40px !important;
+}
 @media screen and (max-width: 600px) {
   .formSubmitButton {
     margin: 0;
@@ -208,6 +210,7 @@ a {
     right: 1%;
     width: fit-content;
   }
+  
   
   .chatWithUsContainer {
     top: 85vh;
