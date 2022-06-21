@@ -87,23 +87,7 @@ const ALLBLOGS = () => {
                   >
                     {d.title}
                   </h1>
-                  {/* <div
-                    style={{
-                      height: "40px",
-                    }}
-                  >
-                    <p
-                      className="textParagraphP"
-                      style={{
-                        color: "#666666",
-                        fontSize: "15px",
-                        fontFamily: "Arial",
-                        overflow: "hidden",
-                        whiteSpace: "nowrap",
-                        textOverflow: "ellipsis",
-                      }}
-                    ></p>
-                  </div> */}
+                  
                 </Row>
                 <Row className="d-flex justify-content-center align-items-center px-3">
                   <Button

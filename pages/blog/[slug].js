@@ -74,21 +74,7 @@ const SpecificBlog = () => {
         <div className="p-5">
           <Headings title={data?.title} />
 
-          {/* <button
-            style={{
-              background: "#017CC9",
-              color: "#FFF",
-              borderRadius: "5px",
-              padding: "3px 11px ",
-              fontWeight: "600",
-              border: "none",
-              outline: "none",
-              fontSize: "25px",
-              marginTop: "30px",
-            }}
-          >
-            Table of Contents
-          </button> */}
+          
           <Row>
             <img src={data?.image} alt={data?.title} className="img-fluid" />
           </Row>
@@ -310,23 +296,7 @@ const SpecificBlog = () => {
                     >
                       {d.title}
                     </h1>
-                    {/* <div
-                    style={{
-                      height: "40px",
-                    }}
-                  >
-                    <p
-                      className="textParagraphP"
-                      style={{
-                        color: "#666666",
-                        fontSize: "15px",
-                        fontFamily: "Arial",
-                        overflow: "hidden",
-                        whiteSpace: "nowrap",
-                        textOverflow: "ellipsis",
-                      }}
-                    ></p>
-                  </div> */}
+                   
                   </Row>
                   <Row className="d-flex justify-content-center align-items-center px-3">
                     <Button

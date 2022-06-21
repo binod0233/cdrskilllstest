@@ -8,72 +8,8 @@ const EA = () => {
     <Container className="py-5">
       <Headings title="Do you need Stage 1 Competency  Assessment to be a member of  EA?" />
       <Paragraphs data="Is your Engineering qualification accredited by Engineers Australia?" />
-      {/* <Row>
-        <img
-          src="/images/Stage1CompetencyAssessment/123.JPG"
-          alt="steps 1 2 3"
-          className="stage1123Image"
-        />
-      </Row>  */}
-      {/* <Row className="px-5 py-1 desktopScreenSteps">
-        <Col md={4} className="px-4">
-          <div className="cpdWritingCard p-2 my-3 my-md-0 CPDCard">
-            <p
-              className=" my-3 my-md-2 ourCDRServicesParagraph"
-              style={{
-                textAlign: "center",
-                fontFamily: "Asap",
-                color: "#666666",
-              }}
-            >
-              <strong>
-                If you hold an Australian Engineering qualification that has not
-                been accreted by Engineers Australia,{" "}
-              </strong>
-              you need to show your competency through Stage 1 Assessment.
-            </p>
-          </div>
-        </Col>
-        <Col md={4} className="px-3">
-          <div className="cpdWritingCard p-2 my-3 my-md-0 CPDCard">
-            <p
-              className=" my-3 my-md-2 ourCDRServicesParagraph"
-              style={{
-                textAlign: "center",
-                fontFamily: "Asap",
-                color: "#666666",
-              }}
-            >
-              <strong>
-                {" "}
-                If you hold engineering qualifications from overseas countries
-                that are not recognised by Engineers Australia,{" "}
-              </strong>
-              to be a member you need to show your competency through Stage 1
-              Assessment.
-            </p>
-          </div>
-        </Col>
-        <Col md={4} className="px-3">
-          <div className="cpdWritingCard p-2 my-3 my-md-0 CPDCard">
-            <p
-              className=" my-3 my-md-2 ourCDRServicesParagraph"
-              style={{
-                textAlign: "center",
-                fontFamily: "Asap",
-                color: "#666666",
-              }}
-            >
-              <strong>
-                {" "}
-                If you hold an undergraduate engineering-related degree but do
-                not have a post-graduate engineering qualification,{" "}
-              </strong>
-              you need to show your competency through Stage 1 Assessment.
-            </p>
-          </div>
-        </Col>
-      </Row> */}
+     
+    
       <Row className='mobileScreenSteps'>
       <Col md={4} className="px-4">
         <div className="d-flex justify-content-center">

@@ -34,7 +34,6 @@ prescribed by Engineers Australia. Contact us; we are eager to help you. "
       <Approval />
       <Steps />
       <Faq />
-      {/* <Reviews /> */}
       <Hero2
         title="We Ensure positive Assessment from Engineers Australia	"
         data="Professional services are available at the most competitive pricing through different relevant packages. Our writers will ensure 

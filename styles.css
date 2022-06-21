@@ -200,86 +200,7 @@ a {
   .formSubmitButton {
     margin: 0;
   }
-/*   
-  .formContainer {
-    border-radius: 20px;
-  }
-  .inputField {
-    border: none;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-  }
-  
-  @media screen and (max-width: 600px) {
-    
-    .formSubmitButton {
-      margin: 0;
-    }
-    .formContainerColumn{
-      display: flex;
-      justify-content: center;
-    }
-    .formContainer {
-      margin-bottom: 10px;
-      width:300px !important;
-      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .heroInputButton{
-      width:260px !important
-    }
-    .inputField::placeholder{
-    }
-  }
-  
-  .PhoneInputCountry {
-    padding: 2px;
-  }
-  .PhoneInputInput {
-    height: 35px !important;
-    border: none;
-    outline: none;
-    background-color: #f4f4f4 !important;
-    padding-left: 5px;
-    border-radius: 5px;
-  }
 
-  /*Hero2.css*/
-
-  /* .acceptedBackgrounded {
-    background:  #203546;
-
-  }
-  
-  .CDRReportAcceptedHeading {
-    font-size: 36px;
-    font-family: Century Gothic;
-    color: white;
-    text-align: center;
-    font-weight: 700;
-  }
-  .CDRReportAcceptParagraph {
-    font-family: Asap;
-    font-size: 20px;
-    margin-top: 10px;
-    color: white;
-    text-align: center;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .CDRReportAcceptedHeading {
-      font-size: 18px;
-    }
-    .CDRReportAcceptParagraph {
-      font-size: 12px;
-    }
-    .CDRReportAcceptParagraph > Button {
-      font-size: 10px;
-    }
-    .CDRReportAcceptButton {
-      font-size: 12px !important;
-    }
-  }
-  
 
   /* Socials.css*/
   .socialContainer {
@@ -300,20 +221,13 @@ a {
     top: 80vh;
     left: 10vh;
     width: fit-content;
-  } */
-  /* .iconContainer { */
-    /* border-radius: 100%; */
-    /* width: 40px; */
-    /* height: 40px; */ */
-  /* } */
+  }
+ 
   .formContainerColumn {
     display: flex;
     justify-content: center;
   }
-  /* .iconContainer:hover {
-    color: #60269e;
-    transform: scale(1.03);
-  } */
+ 
   .formContainer {
     margin-bottom: 10px;
     width: 300px !important;
@@ -322,8 +236,7 @@ a {
   .heroInputButton {
     width: 260px !important;
   }
-  /* .inputField::placeholder {
-  } */
+ 
 }
 
 .PhoneInputCountry {

@@ -77,14 +77,7 @@ const ListofFAQ = ({ listgroup }) => {
               <Accordion.Item className="my-4" key={index} eventKey={index}>
                 <Accordion.Header>
                   <div className="d-flex">
-                    {/* <div
-                style={{
-                  color: "#370C64",
-                  fontFamily: "Arial",
-                  fontSize: "19px",
-                  fontWeight: "700",
-                }}
-              ></div> */}
+                    
                     <div
                       style={{
                         color: "#000",

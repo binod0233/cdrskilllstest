@@ -42,7 +42,6 @@ const RecentBlogs = () => {
             <>
               <Col className="pt-md-5">
                 <Headings title={data[0].title} />
-                {/* <Paragraphs data={parse(data[0].content)} /> */}
                 <button
                   style={{
                     background: "#017CC9",
