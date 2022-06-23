@@ -1,10 +1,12 @@
 import React from "react";
-import ALLBLOGS from "../../components/Blogs/ALLBLOGS";
+import { Suspense } from 'react';
+// import ALLBLOGS from "../../components/Blogs/ALLBLOGS";
 import BlogsCategories from "../../components/Blogs/BlogsCategories";
 import RecentBlogs from "../../components/Blogs/RecentBlogs";
 import Hero3 from "../../components/FAQ/Hero3";
 import {useRouter} from 'next/router'
 import Head from "next/head";
+const ALLBLOGS = React.lazy(() => import('../../components/Blogs/ALLBLOGS'));
 
 const Blogs = () => {
   const router = useRouter();
@@ -19,7 +21,8 @@ const Blogs = () => {
 
       </Head>
       <BlogsCategories />
-      <ALLBLOGS />
+      <Suspense fallback={<div>Loading...</div>}><ALLBLOGS /></Suspense>
+      
       <RecentBlogs />
       <Hero3
         title="Stay connected with CDRskillassessment! Contact us via our Social Channels"

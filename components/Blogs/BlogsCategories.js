@@ -15,7 +15,7 @@ const BlogsCategories = () => {
     },
     {
       image: "/images/Blogs/per.png",
-      title: `Australia Migration `,
+      title: `Australian Migration `,
       paragraph: `Check our Blogs written by Experienced 
       Bloggers. Blogs related to CDR Service, 
       Australia Migration & Skill Assessment. 

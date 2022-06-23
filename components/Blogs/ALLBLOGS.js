@@ -35,6 +35,7 @@ const ALLBLOGS = () => {
           ALL BLOGS
         </h1>
         <Row>
+          
           {data?.map((d) => (
             <Col key={d._id} md={4} xs={12} className="px-1 py-3">
               <div

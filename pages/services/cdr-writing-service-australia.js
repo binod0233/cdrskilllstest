@@ -9,13 +9,41 @@ import Whatdoes from "../../components/CDRWriting/Whatdoes";
 import Hero from "../../components/Hero";
 import Hero2 from "../../components/Hero2";
 import Head from "next/head";
+import Script from 'next/script'
 
 const CDRWriting = () => {
   const router = useRouter()
   const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
-
+const  schemaData= {
+  "@context": "http://schema.org",
+  "@type": "Product",
+  name: "CDR Report Writing Services for Engineers Australia",
+  image: "https://cdrskillassessment.com/images/n2.png",
+  description:
+    "We provide personalised CDR reports prepared by CDR experts based on your degree and career.",
+  url: "https://cdrskillassessment.com/services/cdr-writing-service-australia/",
+  brand: {
+    "@type": "Brand",
+    name: "cdrskillassessment",
+    logo: "https://cdrskillassessment.com/images/logo.png",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "Negotiable",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 10,
+    bestRating: 10,
+    worstRating: 7,
+    ratingCount: 20,
+  },
+}
   return (
     <div>
+       <Script type="application/ld+json">
+      {JSON.stringify(schemaData)}
+</Script>
      <Head>
         <title>High-Quality CDR Report Writing Service for Engineers Australia</title>
         <meta name='description' content="Engineering Applicants seeking the best service provider for CDR Writing? Grab your high-quality CDR Report to get 100 % Approval from Engineers Australia."/>
