@@ -1,17 +1,21 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useRouter } from "next/router";
-import Head from "next/head"
+import Head from "next/head";
 import Section1 from "../../components/CDRWriting/Section1";
 import Expectations from "../../components/Expectations";
 import Headings from "../../components/Headings";
 import Hero2 from "../../components/Hero2";
 import Paragraphs from "../../components/Paragraphs";
+import { Stack } from "@mui/material";
 
 const SpecificAnzsco = () => {
-  const router = useRouter()
-  const  anzsco  = router.query.anzsco
-  const canonicalUrl = (`https://cdrskillassessment.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+  const router = useRouter();
+  const anzsco = router.query.anzsco;
+  const canonicalUrl = (
+    `https://cdrskillassessment.com` +
+    (router.asPath === "/" ? "" : router.asPath)
+  ).split("?")[0];
 
   const allData = {
     engineeringManager: {
@@ -117,27 +121,27 @@ const SpecificAnzsco = () => {
       occupationsTitle: `Occupations in this Group.`,
       occupationDescription: (
         <div>
-          Chemical engineer ANZSCO code 233111 <br />
-          Material Engineer ANZSCO code 233112
+          • Chemical engineer ANZSCO code 233111 <br />
+          • Material Engineer ANZSCO code 233112
         </div>
       ),
       exceptionstitle: "Exceptions",
       exceptions: [
-        `•	Australian Graduate exceptions apply in some states/territories`,
-        `•	Priority Skilled Lists may apply a specific requirement in some states
+        `Australian Graduate exceptions apply in some states/territories`,
+        `Priority Skilled Lists may apply a specific requirement in some states
       `,
-        `•	Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
       `,
       ],
       requirementtitle: `English Requirement`,
       requirement: [
-        `•	IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
         `,
-        `•	OET result with a minimum grade B in all sections;
+        `OET result with a minimum grade B in all sections;
         `,
-        `	TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
         `,
-        `•	PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
         
 `,
       ],
@@ -146,25 +150,25 @@ const SpecificAnzsco = () => {
         "Engineering Managers are responsible for the following tasks:",
       ],
       tasks: [
-        `•	Chemical engineers design chemical process systems and planning control systems for operations such as removing and separating components, effecting chemical changes, testing and evaluating fuels, transferring heat, and controlling the storage and handling of solids, liquids, and gases.
+        `Chemical engineers design chemical process systems and planning control systems for operations such as removing and separating components, effecting chemical changes, testing and evaluating fuels, transferring heat, and controlling the storage and handling of solids, liquids, and gases.
 `,
-        `•	Chemical engineers maintain regular communication with material producers, such as metals, ceramics, polymers, cement, and elastomers, throughout the exploration and assessment of materials suited for specific product applications.
+        `Chemical engineers maintain regular communication with material producers, such as metals, ceramics, polymers, cement, and elastomers, throughout the exploration and assessment of materials suited for specific product applications.
 `,
-        `•	Chemical engineers met the requirement by using appropriate materials and equipment.
+        `Chemical engineers met the requirement by using appropriate materials and equipment.
 `,
-        `•	It’s the Chemical engineer’s duty to plan and carry out laboratory operations for the development of new materials, as well as fabrication techniques for new materials to meet manufacturing cost and performance criteria.
+        `It’s the Chemical engineer’s duty to plan and carry out laboratory operations for the development of new materials, as well as fabrication techniques for new materials to meet manufacturing cost and performance criteria.
 `,
-        `•	Checking equipment operation and maintenance to ensure optimal efficiency under safe operating circumstances is the responsibility of chemical engineers.
+        `Checking equipment operation and maintenance to ensure optimal efficiency under safe operating circumstances is the responsibility of chemical engineers.
 `,
-        `•	Chemical engineers ensure the proper materials and equipment are utilised and meet standards.
+        `Chemical engineers ensure the proper materials and equipment are utilised and meet standards.
 `,
-        `•	Chemical engineer investigates product use and pollution control issues.
+        `Chemical engineer investigates product use and pollution control issues.
 `,
-        `•	Examining new product plans and giving material selection suggestions based on design criteria and considerations such as strength, weight, and cost falls under civil engineering.
+        `Examining new product plans and giving material selection suggestions based on design criteria and considerations such as strength, weight, and cost falls under civil engineering.
 `,
-        `•	It’s the Chemical engineer’s duty to plan and carry out laboratory operations for the development of new materials, as well as fabrication techniques for new materials to meet manufacturing cost and performance criteria.
+        `It’s the Chemical engineer’s duty to plan and carry out laboratory operations for the development of new materials, as well as fabrication techniques for new materials to meet manufacturing cost and performance criteria.
 `,
-        `•	Chemical engineers review product failure data and conduct laboratory testing to determine or rule out potential reasons and provide advice on how to resolve any issues.
+        `Chemical engineers review product failure data and conduct laboratory testing to determine or rule out potential reasons and provide advice on how to resolve any issues.
 `,
       ],
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
@@ -228,65 +232,65 @@ const SpecificAnzsco = () => {
       ),
       exceptionstitle: "Exceptions for Unit Group 2332.",
       exceptions: [
-        `	•	Australian Graduate exceptions apply in some states/territories
+        `Australian Graduate exceptions apply in some states/territories
       `,
-        `•	Priority Skilled Lists may apply a specific requirement in some states
+        `Priority Skilled Lists may apply a specific requirement in some states
       `,
-        `•	Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
       
       `,
       ],
       requirementtitle: `English Requirement`,
       requirement: [
-        `•	IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
         `,
-        `•	OET result with a minimum grade B in all sections;
+        `OET result with a minimum grade B in all sections;
         `,
-        `	TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
         `,
-        `•	PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
         
 `,
       ],
       languagetitle: "Language proficiency required for Civil Engineer.",
       language: [
-        `•	IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
 `,
-        `•	OET result with a minimum grade B in all sections;
+        `OET result with a minimum grade B in all sections;
 `,
-        `•	TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
 `,
-        `•	PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
 `,
       ],
 
       tasktitle: ["Civil Engineers are responsible for the following tasks:"],
       tasks: [
-        `•	Civil engineers examine architecture and engineering drawings to determine overall costs and produce thorough cost plans and forecasts to aid in budgetary management.
+        `Civil engineers examine architecture and engineering drawings to determine overall costs and produce thorough cost plans and forecasts to aid in budgetary management.
 `,
-        `•	On-site workers are managed and workflow is directed by civil engineers.
+        `On-site workers are managed and workflow is directed by civil engineers.
 `,
-        `•	Civil engineer is responsible for delivery of building supplies, plant and equipment.
+        `Civil engineer is responsible for delivery of building supplies, plant and equipment.
 `,
-        `•	Civil engineers develop comprehensive strategies for site activity. 
+        `Civil engineers develop comprehensive strategies for site activity. 
 `,
-        `•	Civil engineers design and modify manufacturing variants.
+        `Civil engineers design and modify manufacturing variants.
 `,
-        `•	Observe design modifications, determine cost consequences, and quantify, value, and manage design variants.
+        `Observe design modifications, determine cost consequences, and quantify, value, and manage design variants.
 `,
-        `•	Construction techniques, materials, and quality standards are to be written by Civil engineers and 
+        `Construction techniques, materials, and quality standards are to be written by Civil engineers and 
 `,
-        `•	Civil engineers interpret specifications, drawings, plans, construction methods, and processes of building plants.
+        `Civil engineers interpret specifications, drawings, plans, construction methods, and processes of building plants.
 `,
-        `•	Civil engineers evaluate soil’s safe loading after construction.
+        `Civil engineers evaluate soil’s safe loading after construction.
 `,
-        `•	Civil engineers assess the strength, and comprehensibility of soil and rock by collecting soil and rock samples at various depths throughout sites. 
+        `Civil engineers assess the strength, and comprehensibility of soil and rock by collecting soil and rock samples at various depths throughout sites. 
 `,
-        `•	Civil engineers design structures that do not implode, flex, twist or hake in unfavourable ways
+        `Civil engineers design structures that do not implode, flex, twist or hake in unfavourable ways
 `,
-        `•	Civil engineers have knowledge of static and dynamic load analysis of structural systems.
+        `Civil engineers have knowledge of static and dynamic load analysis of structural systems.
 `,
-        `•	Development of physical features of transport networks such as highways, railways, urban transit, air travel, logistics delivery systems, and terminals are done by Civil engineers.
+        `Development of physical features of transport networks such as highways, railways, urban transit, air travel, logistics delivery systems, and terminals are done by Civil engineers.
 `,
       ],
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
@@ -334,7 +338,7 @@ const SpecificAnzsco = () => {
       occupationsTitle: `Occupations in this Group.`,
       occupationDescription: (
         <div>
-          `• 233211 StructuralEngineer <br />
+          • 233211 StructuralEngineer <br />
           • 233212 Geotechnical Engineer
           <br />
           • 233213 Quantity Surveyor
@@ -347,35 +351,35 @@ const SpecificAnzsco = () => {
       ),
       exceptionstitle: "Exceptions for Unit Group 2332.",
       exceptions: [
-        `	•	Australian Graduate exceptions apply in some states/territories
+        `Australian Graduate exceptions apply in some states/territories
       `,
-        `•	Priority Skilled Lists may apply a specific requirement in some states
+        `Priority Skilled Lists may apply a specific requirement in some states
       `,
-        `•	Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
       
       `,
       ],
       requirementtitle: `English Requirement`,
       requirement: [
-        `•	IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
         `,
-        `•	OET result with a minimum grade B in all sections;
+        `OET result with a minimum grade B in all sections;
         `,
-        `	TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
         `,
-        `•	PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
         
 `,
       ],
       languagetitle: "Language proficiency required for Geotechnical Engineer.",
       language: [
-        `•	IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
 `,
-        `•	OET result with a minimum grade B in all sections;
+        `OET result with a minimum grade B in all sections;
 `,
-        `•	TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
 `,
-        `•	PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
 `,
       ],
 
@@ -383,23 +387,23 @@ const SpecificAnzsco = () => {
         "Geotechnical Engineers are responsible for the following tasks:",
       ],
       tasks: [
-        `•	Geotechnical engineers collect soil and rock samples at various depths across sites.
+        `Geotechnical engineers collect soil and rock samples at various depths across sites.
 `,
-        `•	Geotechnical engineers test samples to determine strength, compressibility and other factors that affect the behaviour of soil and rock when a structure is imposed and determine the safe loading for the soil.
+        `Geotechnical engineers test samples to determine strength, compressibility and other factors that affect the behaviour of soil and rock when a structure is imposed and determine the safe loading for the soil.
 `,
-        `•	Increasing population and need for change are considered when geotechnical engineers assess present and future travel flow patterns.
+        `Increasing population and need for change are considered when geotechnical engineers assess present and future travel flow patterns.
 `,
-        `•	Geotechnical engineers monitor changes to designs.
+        `Geotechnical engineers monitor changes to designs.
 `,
-        `•	Geotechnical engineers assess effects on cost measuring, valuing and negotiating variations to designs.
+        `Geotechnical engineers assess effects on cost measuring, valuing and negotiating variations to designs.
 `,
-        `•	Geotechnical engineerstudies architectural and engineering drawings and specifications to estimate total costs, and prepare detailed cost plans and estimates as tools to assist in budgetary control.
+        `Geotechnical engineerstudies architectural and engineering drawings and specifications to estimate total costs, and prepare detailed cost plans and estimates as tools to assist in budgetary control.
 `,
-        `•	Geotechnical engineers organise and direct site labour. 
+        `Geotechnical engineers organise and direct site labour. 
 `,
-        `•	The delivery of construction materials, plant and equipment and establishing detailed programs to coordinate site activities is the responsibility of geotechnical engineers.
+        `The delivery of construction materials, plant and equipment and establishing detailed programs to coordinate site activities is the responsibility of geotechnical engineers.
 `,
-        `•	Geotechnical engineers interpret specifications, drawings, plans, construction methods, and processes of building plants.
+        `Geotechnical engineers interpret specifications, drawings, plans, construction methods, and processes of building plants.
 `,
       ],
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
@@ -447,7 +451,7 @@ const SpecificAnzsco = () => {
       occupationsTitle: `Occupations in this Group.`,
       occupationDescription: (
         <div>
-          `• 233211 StructuralEngineer <br />
+          • 233211 StructuralEngineer <br />
           • 233212 Geotechnical Engineer
           <br />
           • 233213 Quantity Surveyor
@@ -460,35 +464,35 @@ const SpecificAnzsco = () => {
       ),
       exceptionstitle: "Exceptions for Unit Group 2332.",
       exceptions: [
-        `	•	Australian Graduate exceptions apply in some states/territories
+        `Australian Graduate exceptions apply in some states/territories
       `,
-        `•	Priority Skilled Lists may apply a specific requirement in some states
+        `Priority Skilled Lists may apply a specific requirement in some states
       `,
-        `•	Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
       
       `,
       ],
       requirementtitle: `English Requirement`,
       requirement: [
-        `•	IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
         `,
-        `•	OET result with a minimum grade B in all sections;
+        `OET result with a minimum grade B in all sections;
         `,
-        `	TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
         `,
-        `•	PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
         
 `,
       ],
       languagetitle: "Language proficiency required for Geotechnical Engineer.",
       language: [
-        `•	IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
 `,
-        `•	OET result with a minimum grade B in all sections;
+        `OET result with a minimum grade B in all sections;
 `,
-        `•	TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
 `,
-        `•	PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
 `,
       ],
 
@@ -496,17 +500,17 @@ const SpecificAnzsco = () => {
         "StructuralEngineersare responsible for the following tasks:",
       ],
       tasks: [
-        `•Structuralengineers   examine   architecture   and   engineering   drawings   to determine overall  costs  and producethorough  cost  plans  and  forecasts forbudgetary management.•Structuralengineer  is  responsible  for deliveringbuilding  supplies,  plant  and equipment.`,
-        `•Structuralengineers develop comprehensive strategies for site activity. `,
-        `•Structural engineersdesign and modify manufacturing variants.`,
-        `•Observe  design  modifications,  determine  cost  consequences,  quantify,  value, and manage design variants.`,
-        `•Construction techniques, materials, and quality standardsare to be written by Structural engineersand `,
-        `•Structural engineers interpret specifications, drawings, plans, construction methods, and processesof building plants.`,
-        `•Structuralengineers evaluate soil’s safe loading after construction.`,
-        `•Structuralengineersassess soil  and  rock's  strength  and  comprehensibilityby collecting soil and rock samples at various depths throughout sites.`,
-        ` •Structural  engineersdesign  structures  that donot  implode,  flex,  twistor  hake  in unfavourable ways`,
-        `•Structural engineers have knowledge of static and dynamic load analysis of structural systems.`,
-        `•Development of physical features of transport networks such as highways, railways, urban transit, air travel,logistics delivery systems, and terminalsare done by Structural engineers.
+        `Structuralengineers   examine   architecture   and   engineering   drawings   to determine overall  costs  and producethorough  cost  plans  and  forecasts forbudgetary management.•Structuralengineer  is  responsible  for deliveringbuilding  supplies,  plant  and equipment.`,
+        `Structuralengineers develop comprehensive strategies for site activity. `,
+        `Structural engineersdesign and modify manufacturing variants.`,
+        `Observe  design  modifications,  determine  cost  consequences,  quantify,  value, and manage design variants.`,
+        `Construction techniques, materials, and quality standardsare to be written by Structural engineersand `,
+        `Structural engineers interpret specifications, drawings, plans, construction methods, and processesof building plants.`,
+        `Structuralengineers evaluate soil’s safe loading after construction.`,
+        `Structuralengineersassess soil  and  rock's  strength  and  comprehensibilityby collecting soil and rock samples at various depths throughout sites.`,
+        `Structural  engineersdesign  structures  that donot  implode,  flex,  twistor  hake  in unfavourable ways`,
+        `Structural engineers have knowledge of static and dynamic load analysis of structural systems.`,
+        `Development of physical features of transport networks such as highways, railways, urban transit, air travel,logistics delivery systems, and terminalsare done by Structural engineers.
 `,
       ],
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
@@ -652,23 +656,23 @@ const SpecificAnzsco = () => {
 
       exceptionstitle: "Exceptions for Unit Group 2332.",
       exceptions: [
-        `	•	Australian Graduate exceptions apply in some states/territories
+        `Australian Graduate exceptions apply in some states/territories
       `,
-        `•	Priority Skilled Lists may apply a specific requirement in some states
+        `Priority Skilled Lists may apply a specific requirement in some states
       `,
-        `•	Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
       
       `,
       ],
       requirementtitle: `English Requirement`,
       requirement: [
-        `•	IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
         `,
-        `•	OET result with a minimum grade B in all sections;
+        `OET result with a minimum grade B in all sections;
         `,
-        `	TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
         `,
-        `•	PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
         
 `,
       ],
@@ -679,23 +683,23 @@ const SpecificAnzsco = () => {
         "Electrical Engineers  are responsible for the following tasks:",
       ],
       tasks: [
-        `•	Electrical engineers plan and design power generating equipment and power stations to utilize generated electric power.
+        `Electrical engineers plan and design power generating equipment and power stations to utilize generated electric power.
 `,
-        `•	Electrical engineers determine the efficient type and arrangement of circuits, transformers, circuit-breakers, transmission lines and other equipment.
+        `Electrical engineers determine the efficient type and arrangement of circuits, transformers, circuit-breakers, transmission lines and other equipment.
 `,
-        `•	Electrical engineers work to innovate and invent components, equipment and appliances to generate and utilize electric power.
+        `Electrical engineers work to innovate and invent components, equipment and appliances to generate and utilize electric power.
 `,
-        `•	Electrical engineersinterpret specifications, drawings, standards and regulations relating to electric power equipment and its use.
+        `Electrical engineersinterpret specifications, drawings, standards and regulations relating to electric power equipment and its use.
 `,
-        `•	Resources used in the supply of electrical components, machines, appliances and equipment are organized and managed by electric engineers.
+        `Resources used in the supply of electrical components, machines, appliances and equipment are organized and managed by electric engineers.
 `,
-        `•	Electrical engineers establish delivery and installation schedules for machines, switchgear, cables and fittings.
+        `Electrical engineers establish delivery and installation schedules for machines, switchgear, cables and fittings.
 `,
-        `•	Operation and maintenance of power stations are the responsibility of electrical engineers.
+        `Operation and maintenance of power stations are the responsibility of electrical engineers.
 `,
-        `•	Electrical engineers supervise the operation of generation, transmission and distribution from industrial electric plants.
+        `Electrical engineers supervise the operation of generation, transmission and distribution from industrial electric plants.
 `,
-        `•	Electrical engineers design, install and control signalling equipment for road, rail and air traffic.
+        `Electrical engineers design, install and control signalling equipment for road, rail and air traffic.
 `,
       ],
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
@@ -810,25 +814,25 @@ const SpecificAnzsco = () => {
       occupationTitle: `On the Occupation Lists`,
       occupationList: [
         `489 (S/T) Occupations List
-      `,
+          `,
         `482 TSS Visa Medium Term List
-      `,
+          `,
         `407 Training visa occupations List
-      `,
+          `,
         `482 TSS Visa Regional Occupation List
-      `,
+          `,
         `189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
-      `,
-        `190 State/Territory Sponsored 
-      `,
+          `,
+        `190 State/Territory Sponsored
+          `,
         `186 ENS Visa Occupations List
-      `,
+          `,
         `187 RSMS Visa Occupations List
-      `,
+          `,
         `491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
-      `,
+          `,
         `494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
-      `,
+          `,
       ],
 
       notoccuoationtitle: "Not on the Occupation Listof Industrial Engineers:",
@@ -847,7 +851,7 @@ const SpecificAnzsco = () => {
       occupationsTitle: `Occupations in this Group.`,
       occupationDescription: (
         <div>
-          233511 Industrial Engineer.
+          • 233511 Industrial Engineer.
           <br />
           • 233512 Mechanical Engineer
           <br />
@@ -858,24 +862,24 @@ const SpecificAnzsco = () => {
       exceptionstitle: "Exceptions for Unit Group 2335",
       exceptions: [
         `Australian Graduate exceptions apply in some states/territories
-      `,
+          `,
         `Priority Skilled Lists may apply a specific requirement in some states
-      `,
+          `,
         `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
-      
-      `,
+
+          `,
       ],
 
       languagetitle: "Language proficiency required for Civil Engineer.",
       language: [
         `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
-`,
+    `,
         `OET result with a minimum grade B in all sections;
-`,
+    `,
         `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
-`,
+    `,
         `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
-`,
+    `,
       ],
 
       tasktitle: [
@@ -1069,7 +1073,7 @@ const SpecificAnzsco = () => {
       occupationsTitle: `Occupations in this Group.`,
       occupationDescription: (
         <div>
-          233511 Industrial Engineer.
+          • 233511 Industrial Engineer.
           <br />
           • 233512 Mechanical Engineer
           <br />
@@ -1830,9 +1834,9 @@ const SpecificAnzsco = () => {
       secondDescription: `EA (Engineers Australia) / AIM`,
       thirdTitle: `Alternative Title of Agriculture Engineer:`,
       thirdDescription: [
-        `•Bioengineer`,
-        `•Clinical Engineer`,
-        `•Medical Engineer`,
+        `• Bioengineer`,
+        `• Clinical Engineer`,
+        `• Medical Engineer`,
       ],
       occupationTitle: `On the Occupation Lists`,
       occupationList: [
@@ -2219,11 +2223,11 @@ const SpecificAnzsco = () => {
       occupationsTitle: `Occupations in this Group.`,
       occupationDescription: (
         <div>
-          • • 263111 Computer Network and Systems Engineer
+          • 263111 Computer Network and Systems Engineer
           <br />
-          • • 263112 Network Administrator
+          • 263112 Network Administrator
           <br />
-          • • 263113 Network Analyst
+          • 263113 Network Analyst
           <br />
         </div>
       ),
@@ -2908,7 +2912,7 @@ const SpecificAnzsco = () => {
       
       `,
       thirdDescription: [
-        ` Electrical Engineering Laboratory Technician
+        `Electrical Engineering Laboratory Technician
        `,
         `Electrical Instrument Technician
       `,
@@ -3136,15 +3140,24 @@ const SpecificAnzsco = () => {
       occupationTitle: `On the Occupation List of Naval Architect / Marine Designer`,
       occupationList: [
         `489 (S/T) Occupations List
-        `,`482 TSS Visa Medium Term List
-        `,`407 Training visa occupations List
-        `,`482 TSS Visa Regional Occupation List
-        `,`189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
-        `,`190 State/Territory Sponsored 
-        `,`186 ENS Visa Occupations List
-        `,`187 RSMS Visa Occupations List
-        `,`491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
-        `,`494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
+        `,
+        `482 TSS Visa Medium Term List
+        `,
+        `407 Training visa occupations List
+        `,
+        `482 TSS Visa Regional Occupation List
+        `,
+        `189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
+        `,
+        `190 State/Territory Sponsored 
+        `,
+        `186 ENS Visa Occupations List
+        `,
+        `187 RSMS Visa Occupations List
+        `,
+        `491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
+        `,
+        `494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
         `,
       ],
 
@@ -3167,10 +3180,8 @@ const SpecificAnzsco = () => {
       occupationDescription: (
         <div>
           • 233911 Aeronautical Engineer
-
           <br />
           • 233912 Agricultural Engineer
-
           <br />
           • 233913 Biomedical Engineer
           <br />• 233914 Engineering Technologist
@@ -3178,15 +3189,16 @@ const SpecificAnzsco = () => {
           • 233915 Environmental Engineer
           <br />
           • 233916 Naval Architect / Marine Designer
-          <br />•	233999 Engineering Professionals nec
-
+          <br />• 233999 Engineering Professionals nec
         </div>
       ),
       exceptionstitle: "Exceptions for Unit Group 2339.",
       exceptions: [
         `Australian Graduate exceptions apply in some states/territories.
-        `,`Priority Skilled Lists may apply a specific requirement in some states.
-        `,`Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
+        `,
+        `Priority Skilled Lists may apply a specific requirement in some states.
+        `,
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
         
       `,
       ],
@@ -3195,9 +3207,12 @@ const SpecificAnzsco = () => {
         "Language proficiency to be eligible for Naval Architect / Marine Designer.",
       language: [
         `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
-        `,`OET result with a minimum grade B in all sections;
-        `,`TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
-        `,`PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `,
+        `OET result with a minimum grade B in all sections;
+        `,
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `,
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
 `,
       ],
 
@@ -3208,11 +3223,16 @@ const SpecificAnzsco = () => {
       ],
       tasks: [
         `Naval Architect / Marine Designer prepares the flow of the project by portraying tasks in a diagram.
-        `,`Naval Architect / Marine Designer carries out required calculations for the hull structure. 
-        `,`Naval Architect / Marine Designer develop standards and regulations for testing, modification, development, quality, control, tracking, maintenance, and inspection.
-        `,`Naval Architect / Marine Designer prepare the Nesting for the cutting of steel plate for generating the bills of materials by using the auto nesting software. 
-        `,`Naval Architect / Marine Designer develop the package of workshop document which includes the documents of drawing issued to the production departments for building the unit.
-        `,`Naval Architect / Marine Designer creates the drawings of the working process for the fabrication of the unit by showing the plan of assembly and methods of building for the hull units.
+        `,
+        `Naval Architect / Marine Designer carries out required calculations for the hull structure. 
+        `,
+        `Naval Architect / Marine Designer develop standards and regulations for testing, modification, development, quality, control, tracking, maintenance, and inspection.
+        `,
+        `Naval Architect / Marine Designer prepare the Nesting for the cutting of steel plate for generating the bills of materials by using the auto nesting software. 
+        `,
+        `Naval Architect / Marine Designer develop the package of workshop document which includes the documents of drawing issued to the production departments for building the unit.
+        `,
+        `Naval Architect / Marine Designer creates the drawings of the working process for the fabrication of the unit by showing the plan of assembly and methods of building for the hull units.
         `,
       ],
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
@@ -3230,63 +3250,71 @@ const SpecificAnzsco = () => {
       secondTitle: `Skill Assessment Authority`,
       secondDescription: `EA (Engineers Australia) / AIM`,
       thirdTitle: ``,
-      thirdDescription: [
-        
-      ],
+      thirdDescription: [],
       occupationTitle: `On the Occupation List`,
       occupationList: [
         `489 (S/T) Occupations List
-        `,`482 TSS Visa Medium Term List
-        `,`407 Training visa occupations List
-        `,`482 TSS Visa Regional Occupation List
-        `,`189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
-        `,`190 State/Territory Sponsored 
-        `,`186 ENS Visa Occupations List
-        `,`187 RSMS Visa Occupations List
-        `,`491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
-        `,`494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
+        `,
+        `482 TSS Visa Medium Term List
+        `,
+        `407 Training visa occupations List
+        `,
+        `482 TSS Visa Regional Occupation List
+        `,
+        `189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
+        `,
+        `190 State/Territory Sponsored 
+        `,
+        `186 ENS Visa Occupations List
+        `,
+        `187 RSMS Visa Occupations List
+        `,
+        `491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
+        `,
+        `494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
         `,
       ],
 
-      notoccuoationtitle:
-        "Not on the Occupation List",
+      notoccuoationtitle: "Not on the Occupation List",
       notoccupation: "482 TSS Visa Short Term List",
 
-      visaprovisiontitle:
-        "Visa Provision",
+      visaprovisiontitle: "Visa Provision",
       visaprovision: `Since the occupation is listed on the MLTSSL as a high-demand occupation in Australia, any visas in the General Skilled Migration (GSM) Program can be applied for. Visas in this category include Skilled Independent Subclass 189, Skilled Work Regional Subclass 491 and Skilled Nominated Subclass 190. Furthermore, if you have a definite job offer, you may be able to apply for several employer-sponsored visas.
       `,
 
       unitTitle: `Unit Group 3124: Electronic Engineering Draftspersons and Technicians`,
       unitDescription: `Electronic Engineering Draftspersons and Technicians inspecting designs and finished products for compliance with specifications, drawings, contracts and regulations.
       `,
-      skillleveltitle:
-        "Skill Level",
+      skillleveltitle: "Skill Level",
       skilllevel:
         "Most occupations in this unit group have a skill level commensurate with a bachelor’s degree or higher qualification. At least five years of relevant experience and/or relevant vendor certification may substitute for the formal qualification. In some instances, relevant experience and/or on-the-job training may be required in addition to the formal qualification (ANZSCO Skill Level 1). Registration or licensing may be required.",
 
       occupationsTitle: `Occupations in this Group`,
       occupationDescription: (
         <div>
-          • Engineering Manager ANZSCO 133211 
-<br/>
+          • Engineering Manager ANZSCO 133211
+          <br />
         </div>
       ),
       exceptionstitle: "Exceptions",
       exceptions: [
         `Australian Graduate exceptions apply in some states/territories
-        `,`Priority Skilled Lists may apply a specific requirement in some states
-        `,`Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
+        `,
+        `Priority Skilled Lists may apply a specific requirement in some states
+        `,
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
         `,
       ],
 
-      languagetitle:
-        "Language proficiency.",
+      languagetitle: "Language proficiency.",
       language: [
         `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
-        `,`OET result with a minimum grade B in all sections;
-        `,`TOEFL IBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
-        `,`PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall
+        `,
+        `OET result with a minimum grade B in all sections;
+        `,
+        `TOEFL IBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `,
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall
         `,
       ],
 
@@ -3297,11 +3325,16 @@ const SpecificAnzsco = () => {
       ],
       tasks: [
         `Electronic Engineering Draftspersons and Technicians prepare drawings, modelling, plans and integration for electronic engineering systems.
-        `,`Electronic Engineering Draftspersons and Technicians develop, construct and test electronic equipment and associated circuitry in accordance with technical requirements.
-        `,`Electronic Engineering Draftspersons and Technicians install, test, verification, repair and modify electronic equipment and record graph results.
-        `,`Electronic Engineering Draftspersons and Technicians estimating material costs and quantities.
-        `,`Electronic Engineering Draftspersons and Technicians evaluating the performance of equipment.
-        `,`Electronic Engineering Draftspersons and Technicians inspecting designs and finished products for compliance with specifications, drawings, contracts and regulations.
+        `,
+        `Electronic Engineering Draftspersons and Technicians develop, construct and test electronic equipment and associated circuitry in accordance with technical requirements.
+        `,
+        `Electronic Engineering Draftspersons and Technicians install, test, verification, repair and modify electronic equipment and record graph results.
+        `,
+        `Electronic Engineering Draftspersons and Technicians estimating material costs and quantities.
+        `,
+        `Electronic Engineering Draftspersons and Technicians evaluating the performance of equipment.
+        `,
+        `Electronic Engineering Draftspersons and Technicians inspecting designs and finished products for compliance with specifications, drawings, contracts and regulations.
         `,
       ],
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
@@ -3321,20 +3354,29 @@ const SpecificAnzsco = () => {
       thirdDescription: [
         `Mud Engineer,
         Petrophysical Engineer
-        `
+        `,
       ],
       occupationTitle: `On the Occupation List`,
       occupationList: [
         `489 (S/T) Occupations List
-        `,`482 TSS Visa Medium Term List
-        `,`407 Training visa occupations List
-        `,`482 TSS Visa Regional Occupation List
-        `,`189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
-        `,`190 State/Territory Sponsored 
-        `,`186 ENS Visa Occupations List
-        `,`187 RSMS Visa Occupations List
-        `,`491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
-        `,`494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
+        `,
+        `482 TSS Visa Medium Term List
+        `,
+        `407 Training visa occupations List
+        `,
+        `482 TSS Visa Regional Occupation List
+        `,
+        `189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
+        `,
+        `190 State/Territory Sponsored 
+        `,
+        `186 ENS Visa Occupations List
+        `,
+        `187 RSMS Visa Occupations List
+        `,
+        `491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
+        `,
+        `494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
         `,
       ],
 
@@ -3352,24 +3394,25 @@ const SpecificAnzsco = () => {
       `,
       skillleveltitle:
         "Skill Level required for Pe Telecommunications Network Planner",
-      skilllevel:
-        `Most occupations in this unit group have a skill level commensurate with a bachelor’s degree or higher qualification. At least five years of relevant experience and/or relevant vendor certification may substitute for the formal qualification. In some instances, relevant experience and/or on-the-job training may be required in addition to the formal qualification (ANZSCO Skill Level 1).
+      skilllevel: `Most occupations in this unit group have a skill level commensurate with a bachelor’s degree or higher qualification. At least five years of relevant experience and/or relevant vendor certification may substitute for the formal qualification. In some instances, relevant experience and/or on-the-job training may be required in addition to the formal qualification (ANZSCO Skill Level 1).
         `,
 
       occupationsTitle: `Occupations in this Group`,
       occupationDescription: (
         <div>
-          • 233611 Mining Engineer (excluding Petroleum)<br/>
+          • 233611 Mining Engineer (excluding Petroleum)
+          <br />
           • 233612 Petroleum Engineer
-
-<br/>
+          <br />
         </div>
       ),
       exceptionstitle: "Exceptions",
       exceptions: [
         `Australian Graduate exceptions apply in some states/territories
-        `,`Priority Skilled Lists may apply a specific requirement in some states
-        `,`Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
+        `,
+        `Priority Skilled Lists may apply a specific requirement in some states
+        `,
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher.
         `,
       ],
 
@@ -3377,9 +3420,12 @@ const SpecificAnzsco = () => {
         "Required level of Language proficiency for Telecommunications Network Planner",
       language: [
         `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
-        `,`OET result with a minimum grade B in all sections;
-        `,`TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
-        `,`PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `,
+        `OET result with a minimum grade B in all sections;
+        `,
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `,
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
         `,
       ],
 
@@ -3389,13 +3435,20 @@ const SpecificAnzsco = () => {
       ],
       tasks: [
         `Telecommunications Network Planner installs, maintains, repairs and diagnose malfunctions of microwave, telemetry, multiplexing, satellite and other radio and electromagnetic wave communication systems.
-        `,`Telecommunications Network Planner work in configuring and integrating network and telecommunications technology with computer software, hardware, desktops, peripherals, databases and operating systems.
-        `,`Telecommunications Network Planner develop and record logs of the details, locations and status of inventories, parts, equipment and instruments. 
-        `,`Telecommunications Network Planner maintains the documentation of communication policies, procedures, guidelines and regulations, and quality standards.
-        `,`Telecommunications Network Planner provides technical advice and information. 
-        `,`Telecommunications Network Planner monitors the performance of complex telecommunications networks and equipment.
-        `,`Telecommunications Network Planner plans the development of customer access telecommunications network infrastructure.
-        `,`Telecommunications Network Planners are responsible for liaising with vendors, suppliers, service providers and external resources and monitoring contractual obligations and performance delivery.
+        `,
+        `Telecommunications Network Planner work in configuring and integrating network and telecommunications technology with computer software, hardware, desktops, peripherals, databases and operating systems.
+        `,
+        `Telecommunications Network Planner develop and record logs of the details, locations and status of inventories, parts, equipment and instruments. 
+        `,
+        `Telecommunications Network Planner maintains the documentation of communication policies, procedures, guidelines and regulations, and quality standards.
+        `,
+        `Telecommunications Network Planner provides technical advice and information. 
+        `,
+        `Telecommunications Network Planner monitors the performance of complex telecommunications networks and equipment.
+        `,
+        `Telecommunications Network Planner plans the development of customer access telecommunications network infrastructure.
+        `,
+        `Telecommunications Network Planners are responsible for liaising with vendors, suppliers, service providers and external resources and monitoring contractual obligations and performance delivery.
         `,
       ],
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
@@ -3417,20 +3470,29 @@ const SpecificAnzsco = () => {
       thirdDescription: [
         `Mud Engineer,
         Petrophysical Engineer
-        `
+        `,
       ],
       occupationTitle: `On the Occupation List Telecommunications Technical Officer or Technologist`,
       occupationList: [
         `489 (S/T) Occupations List
-        `,`482 TSS Visa Medium Term List
-        `,`407 Training visa occupations List
-        `,`482 TSS Visa Regional Occupation List
-        `,`189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
-        `,`190 State/Territory Sponsored 
-        `,`186 ENS Visa Occupations List
-        `,`187 RSMS Visa Occupations List
-        `,`491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
-        `,`494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
+        `,
+        `482 TSS Visa Medium Term List
+        `,
+        `407 Training visa occupations List
+        `,
+        `482 TSS Visa Regional Occupation List
+        `,
+        `189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
+        `,
+        `190 State/Territory Sponsored 
+        `,
+        `186 ENS Visa Occupations List
+        `,
+        `187 RSMS Visa Occupations List
+        `,
+        `491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
+        `,
+        `494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
          `,
       ],
 
@@ -3448,37 +3510,41 @@ const SpecificAnzsco = () => {
       `,
       skillleveltitle:
         "Skill Level required for Telecommunications Technical Officer or Technologist",
-      skilllevel:
-        `Most occupations in this unit group have a skill level commensurate with a bachelor’s degree or higher qualification. At least five years of relevant experience and/or relevant vendor certification may substitute for the formal qualification. In some instances, relevant experience and/or on-the-job training may be required in addition to the formal qualification (ANZSCO Skill Level 1).
+      skilllevel: `Most occupations in this unit group have a skill level commensurate with a bachelor’s degree or higher qualification. At least five years of relevant experience and/or relevant vendor certification may substitute for the formal qualification. In some instances, relevant experience and/or on-the-job training may be required in addition to the formal qualification (ANZSCO Skill Level 1).
         `,
 
       occupationsTitle: `Occupations in this Group`,
       occupationDescription: (
         <div>
-          • 313211 Radiocommunications Technician.
-          • 313212 Telecommunications Field Engineer.
-          • 313213 Telecommunications Network Planner.
+          • 313211 Radiocommunications Technician. <br/>
+          • 313212 Telecommunications<br/>
+          Field Engineer. <br/>
+          • 313213 Telecommunications Network Planner. <br/>
           • 313214 Telecommunications Technical Officer or Technologist.
-
-
-<br/>
+          <br />
         </div>
       ),
       exceptionstitle: "Exceptions",
       exceptions: [
         `Australian Graduate exceptions apply in some states/territories
-        `,`Priority Skilled Lists may apply a specific requirement in some states
-        `,`Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher`,
+        `,
+        `Priority Skilled Lists may apply a specific requirement in some states
+        `,
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher`,
       ],
 
       languagetitle:
         "Required level of Language proficiency for Telecommunications Technical Officer or Technologist.",
       language: [
         `
-        `,`IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
-        `,`OET result with a minimum grade B in all sections;
-        `,`TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
-        `,`PTE Academic `,
+        `,
+        `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
+        `,
+        `OET result with a minimum grade B in all sections;
+        `,
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `,
+        `PTE Academic `,
       ],
 
       tasktitle: [
@@ -3488,13 +3554,20 @@ const SpecificAnzsco = () => {
       ],
       tasks: [
         `Telecommunications Technical Officer or Technologist installs, maintains, repairs and diagnose malfunctions of microwave, telemetry, multiplexing, satellite and other radio and electromagnetic wave communication systems.
-        `,`Telecommunications Technical Officer or Technologist work in configuring and integrating network and telecommunications technology with computer software, hardware, desktops, peripherals, databases and operating systems.
-        `,`Telecommunications Technical Officer or Technologist develop and record logs of the details, locations and status of inventories, parts, equipment and instruments. 
-        `,`Telecommunications Technical Officer or Technologist maintains the documentation of communication policies, procedures, guidelines and regulations, and quality standards.
-        `,`Telecommunications Technical Officer or Technologist provides technical advice and information. 
-        `,`Telecommunications Technical Officer or Technologist monitors the performance of complex telecommunications networks and equipment.
-        `,`Telecommunications Technical Officer or Technologist plans the development of customer access telecommunications network infrastructure.
-        `,`Telecommunications Network Planners are responsible for liaising with vendors, suppliers, service providers and external resources and monitoring contractual obligations and performance delivery.
+        `,
+        `Telecommunications Technical Officer or Technologist work in configuring and integrating network and telecommunications technology with computer software, hardware, desktops, peripherals, databases and operating systems.
+        `,
+        `Telecommunications Technical Officer or Technologist develop and record logs of the details, locations and status of inventories, parts, equipment and instruments. 
+        `,
+        `Telecommunications Technical Officer or Technologist maintains the documentation of communication policies, procedures, guidelines and regulations, and quality standards.
+        `,
+        `Telecommunications Technical Officer or Technologist provides technical advice and information. 
+        `,
+        `Telecommunications Technical Officer or Technologist monitors the performance of complex telecommunications networks and equipment.
+        `,
+        `Telecommunications Technical Officer or Technologist plans the development of customer access telecommunications network infrastructure.
+        `,
+        `Telecommunications Network Planners are responsible for liaising with vendors, suppliers, service providers and external resources and monitoring contractual obligations and performance delivery.
         `,
       ],
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
@@ -3513,23 +3586,33 @@ const SpecificAnzsco = () => {
       thirdTitle: `Specialisations of Building and Engineering Technicians nec:
       `,
       thirdDescription: [
-        `Automation Technician`,`
-        Biomedical Technician
+        `Automation Technician`,
         `
+        Biomedical Technician
+        `,
       ],
       occupationTitle: `On the Occupation List of Building and Engineering Technicians nec:
       `,
       occupationList: [
         `489 (S/T) Occupations List
-       `,`482 TSS Visa Medium Term List
-        `,`407 Training visa occupations List
-        `,`482 TSS Visa Regional Occupation List
-        `,`189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
-        `,`190 State/Territory Sponsored 
-        `,`186 ENS Visa Occupations List
-        `,`187 RSMS Visa Occupations List
-        `,`491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
-        `,`494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
+       `,
+        `482 TSS Visa Medium Term List
+        `,
+        `407 Training visa occupations List
+        `,
+        `482 TSS Visa Regional Occupation List
+        `,
+        `189 Skilled Independent and Family Sponsored 489 Occupations List and 485 Graduate Work Stream
+        `,
+        `190 State/Territory Sponsored 
+        `,
+        `186 ENS Visa Occupations List
+        `,
+        `187 RSMS Visa Occupations List
+        `,
+        `491 – Skilled Work Regional (provisional) visa (subclass 491) Occupation List
+        `,
+        `494 – Skilled Employer-Sponsored Regional (provisional) (subclass 494) – Employer-sponsored stream
          `,
       ],
 
@@ -3546,43 +3629,40 @@ const SpecificAnzsco = () => {
       unitDescription: `Other Building and Engineering Technicians nec unit group covers Building and Engineering Technicians not elsewhere classified. It includes Maintenance Planners, Metallurgical or Materials Technicians, and Mine Deputies. It is possible that registration or licensing will be required. `,
       skillleveltitle:
         "Skill Level required for Building and Engineering Technicians nec.",
-      skilllevel:
-        `Most occupations in this unit group have a skill level commensurate with a bachelor’s degree or higher qualification. At least five years of relevant experience and/or relevant vendor certification may substitute for the formal qualification. In some instances, relevant experience and/or on-the-job training may be required in addition to the formal qualification (ANZSCO Skill Level 1).
+      skilllevel: `Most occupations in this unit group have a skill level commensurate with a bachelor’s degree or higher qualification. At least five years of relevant experience and/or relevant vendor certification may substitute for the formal qualification. In some instances, relevant experience and/or on-the-job training may be required in addition to the formal qualification (ANZSCO Skill Level 1).
         `,
 
       occupationsTitle: `Occupations in this 3129 Unit Group.`,
       occupationDescription: (
         <div>
-         
-         • 312911 Maintenance Planner.
-         • 312912 Metallurgical or Materials Technician.
-         • 312913 Mine Deputy.
-         • 312914 Other Draftsperson.
-         • 312999 Building and Engineering Technicians nec.
-
-
-
-<br/>
+          • 312911 Maintenance Planner. • 312912 Metallurgical or Materials
+          Technician. • 312913 Mine Deputy. • 312914 Other Draftsperson. •
+          312999 Building and Engineering Technicians nec.
+          <br />
         </div>
       ),
       exceptionstitle: "Exceptions",
       exceptions: [
         `Australian Graduate exceptions apply in some states/territories
-        `,`Priority Skilled Lists may apply a specific requirement in some states
-        `,`Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher`,
+        `,
+        `Priority Skilled Lists may apply a specific requirement in some states
+        `,
+        `Countries free from submitting IELTS or OET include the UK, Canada, New Zealand, US, and Ireland. Where mandatory licensing or registration is required, you must demonstrate a level of English sufficient to meet licensing / registration or a minimum IELTS, or equivalent, whichever is higher`,
       ],
 
       languagetitle:
         "Language proficiency to be eligible for Building and Engineering Technicians nec.",
       language: [
         `IELTS result with a minimum score of 6 (L, R, W), 7 in speaking and 7 overall;
-        `,`OET result with a minimum grade B in all sections;
-        `,`TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
-        `,`PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
+        `,
+        `OET result with a minimum grade B in all sections;
+        `,
+        `TOEFL iBT with a minimum score (L:12 R:13 W:21 S:23 overall L93);
+        `,
+        `PTE Academic with a min score of 50 (L, R, W), 65 in speaking and 65 overall.
         `,
       ],
 
-     
       hero2Title: `Want to know more? Our experts will clear your Doubt.`,
       hero2Description: `We are here to answer any of your questions and to offer you the most satisfactory service possible. In case of any inconvenience, feel free to contact our experts.`,
       hero2ButtonName: `Contact an Expert`,
@@ -3590,256 +3670,283 @@ const SpecificAnzsco = () => {
   };
 
   return (
-    <div className='mt-4 mt-md-0'>
+    <div className="mt-4 mt-md-0">
       <div>
         {anzsco === "anzsco-133211-engineering-manager" && (
-          
           <Head>
-      <title>Engineering Manager | Unit Group 1332 | ANZSCO 133211</title>
-        <meta name="description" content="Engineering Manager | Unit Group 1332 | ANZSCO 133211" />
-        <link rel="canonical" href={canonicalUrl} />
-
-      </Head>
+            <title>Engineering Manager | Unit Group 1332 | ANZSCO 133211</title>
+            <meta
+              name="description"
+              content="Engineering Manager | Unit Group 1332 | ANZSCO 133211"
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233111-chemical-engineer" && (
-           <Head>
-           <title>Chemical Engineer | Unit Group 2331 | ANZSCO 233111</title>
-             <meta name="description" content="Occupational Unit Group 2331 Chemical and Materials Engineer. ANZSCO 233111 PR Visa for Chemical Engineer." />
-             <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-         
+          <Head>
+            <title>Chemical Engineer | Unit Group 2331 | ANZSCO 233111</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2331 Chemical and Materials Engineer. ANZSCO 233111 PR Visa for Chemical Engineer."
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233211-civil-engineer" && (
           <Head>
-          <title>Civil Engineer ANZSCO 233211</title>
-            <meta name="description" content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233211 PR Visa for Civil Engineer." />
+            <title>Civil Engineer ANZSCO 233211</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233211 PR Visa for Civil Engineer."
+            />
             <link rel="canonical" href={canonicalUrl} />
-
           </Head>
         )}
         {anzsco === "anzsco-233212-geo-technical-engineer" && (
-           <Head>
-           <title>Geo technical Engineer ANZSCO 233212</title>
-             <meta name="description" content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233212 PR Visa for Geo-Technical Engineer." />
-             <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-          
+          <Head>
+            <title>Geo technical Engineer ANZSCO 233212</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233212 PR Visa for Geo-Technical Engineer."
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233214-structural-engineer" && (
           <Head>
-          <title>Structural Engineer ANZSCO 233214</title>
-            <meta name="description" content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233214 PR Visa for Structural Engineer." />
+            <title>Structural Engineer ANZSCO 233214</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233214 PR Visa for Structural Engineer."
+            />
             <link rel="canonical" href={canonicalUrl} />
-
           </Head>
-
         )}
         {anzsco === "anzsco-233215-transport-engineer" && (
-           <Head>
-           <title>Transport Engineer ANZSCO 233215</title>
-             <meta name="description" content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233215 PR Visa for Transport Engineer." />
-             <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-
+          <Head>
+            <title>Transport Engineer ANZSCO 233215</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233215 PR Visa for Transport Engineer."
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233311-electrical-engineer" && (
           <Head>
-          <title>Electrical Engineer ANZSCO 233311</title>
-            <meta name="description" content="Occupational Unit Group 2333 Electrical Engineers. 
+            <title>Electrical Engineer ANZSCO 233311</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2333 Electrical Engineers. 
 
-ANZSCO 233311 PR Visa for Electrical Engineer." />
-                  <link rel="canonical" href={canonicalUrl} />
-
+ANZSCO 233311 PR Visa for Electrical Engineer."
+            />
+            <link rel="canonical" href={canonicalUrl} />
           </Head>
-          
         )}
         {anzsco === "anzsco-233411-electronics-engineer" && (
-           <Head>
-           <title>Electronics Engineer ANZSCO 233411</title>
-             <meta name="description" content="Occupational Unit Group 2334 Electronics Engineer. 
+          <Head>
+            <title>Electronics Engineer ANZSCO 233411</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2334 Electronics Engineer. 
 
-ANZSCO 233411 PR Visa for Electronics Engineer." />
-                  <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-         
+ANZSCO 233411 PR Visa for Electronics Engineer."
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233511-industrial-engineer" && (
-
-<Head>
-<title>Industrial Engineer ANZSCO 233511</title>
-  <meta name="description" content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233511 PR Visa for Industrial Engineer" />
-  <link rel="canonical" href={canonicalUrl} />
-
-</Head>
-          
+          <Head>
+            <title>Industrial Engineer ANZSCO 233511</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233511 PR Visa for Industrial Engineer"
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233512-mechanical-engineer" && (
           <Head>
-          <title>Mechanical Engineer ANZSCO 233512</title>
-            <meta name="description" content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233512 PR Visa for Mechanical Engineers." />
+            <title>Mechanical Engineer ANZSCO 233512</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233512 PR Visa for Mechanical Engineers."
+            />
             <link rel="canonical" href={canonicalUrl} />
-
           </Head>
-         
         )}
         {anzsco === "anzsco-233513-production-or-plant-engineer" && (
-           <Head>
-           <title>Production or plant Engineer ANZSCO 233513</title>
-             <meta name="description" content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233513 PR Visa for Production or Plant engineers" />
-             <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-
+          <Head>
+            <title>Production or plant Engineer ANZSCO 233513</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233513 PR Visa for Production or Plant engineers"
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233611-mining-engineer" && (
-            <Head>
+          <Head>
             <title>Mining Engineer ANZSCO 233611</title>
-              <meta name="description" content="Occupational Unit Group 2336 Mining Engineers ANZSCO 233611 PR Visa for Mining Engineers." />
-              <link rel="canonical" href={canonicalUrl} />
-
-            </Head>
-          
+            <meta
+              name="description"
+              content="Occupational Unit Group 2336 Mining Engineers ANZSCO 233611 PR Visa for Mining Engineers."
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233612-petroleum-engineer" && (
-           <Head>
-           <title>Petroleum Engineer ANZSCO 233612</title>
-             <meta name="description" content="Occupational Unit Group 2336 Mining Engineers ANZSCO 233612 PR Visa for Petroleum Engineers." />
-             <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-          
+          <Head>
+            <title>Petroleum Engineer ANZSCO 233612</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2336 Mining Engineers ANZSCO 233612 PR Visa for Petroleum Engineers."
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233911-aeronautical-engineer" && (
           <Head>
-          <title>Aeronautical Engineer ANZSCO 233911</title>
-            <meta name="description" content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233911 PR Visa for Aeronautical Engineer" />
+            <title>Aeronautical Engineer ANZSCO 233911</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233911 PR Visa for Aeronautical Engineer"
+            />
             <link rel="canonical" href={canonicalUrl} />
-
           </Head>
-
         )}
         {anzsco === "anzsco-233912-agricultural-engineer" && (
-           <Head>
-           <title>Agricultural Engineer ANZSCO 233912</title>
-             <meta name="description" content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233912 PR Visa for Agriculture Engineer" />
-             <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-         
+          <Head>
+            <title>Agricultural Engineer ANZSCO 233912</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233912 PR Visa for Agriculture Engineer"
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233913-biomedical-engineer" && (
-          
           <Head>
-           <title>Biomedical Engineer ANZSCO 233913</title>
-             <meta name="description" content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233913 PR Visa for Biomedical Engineer" />
-             <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
+            <title>Biomedical Engineer ANZSCO 233913</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233913 PR Visa for Biomedical Engineer"
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233914-engineering-technologist" && (
-           <Head>
-           <title>Engineering technologist ANZSCO 233914</title>
-             <meta name="description" content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233914 PR Visa for Engineering Technologists" />
-             <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-        
+          <Head>
+            <title>Engineering technologist ANZSCO 233914</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233914 PR Visa for Engineering Technologists"
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "anzsco-233915-environmental-engineer" && (
           <Head>
-          <title>Environmental Engineer ANZSCO 233915</title>
-            <meta name="description" content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233915 PR Visa for Environmental Engineer." />
+            <title>Environmental Engineer ANZSCO 233915</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233915 PR Visa for Environmental Engineer."
+            />
             <link rel="canonical" href={canonicalUrl} />
-
           </Head>
-         
         )}
         {anzsco === "anzsco-233999-engineering-professionals-nec" && (
           <Head>
-          <title>Engineering professionals nec ANZSCO 233999</title>
-            <meta name="description" content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233999 PR Visa for Engineering Professionals." />
+            <title>Engineering professionals nec ANZSCO 233999</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233999 PR Visa for Engineering Professionals."
+            />
             <link rel="canonical" href={canonicalUrl} />
-
           </Head>
-         
         )}
         {anzsco === "computer-networks-and-system-engineers-anzsco-263111" && (
-           <Head>
-           <title>Computer Network and Systems Engineers ANZSCO 263111</title>
-             <meta name="description" content="Occupational Unit Group 2631 Other Computer Network Professionals ANZSCO 263111 PR Visa for Computer Network and Systems Engineer." />
-             <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-          
+          <Head>
+            <title>Computer Network and Systems Engineers ANZSCO 263111</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 2631 Other Computer Network Professionals ANZSCO 263111 PR Visa for Computer Network and Systems Engineer."
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}{" "}
         {anzsco === "telecommunication-engineers-anzsco-263311" && (
-            <Head>
+          <Head>
             <title>Telecommunications Engineer ANZSCO 263311</title>
-              <meta name="description" content="Occupational Unit Group 2633 Telecommunications Engineering Professionals ANZSCO 263311 PR Visa for Telecommunications Engineer." />
-              <link rel="canonical" href={canonicalUrl} />
-
-            </Head>
-          
+            <meta
+              name="description"
+              content="Occupational Unit Group 2633 Telecommunications Engineering Professionals ANZSCO 263311 PR Visa for Telecommunications Engineer."
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}{" "}
         {anzsco === "telecommunication-network-engineers-anzsco-263312" && (
-         
           <Head>
             <title>Telecommunications Network Engineers ANZSCO 263312</title>
-              <meta name="description" content="Telecommunications Network Engineers ANZSCO 263312" />
-              <link rel="canonical" href={canonicalUrl} />
-
-            </Head>
+            <meta
+              name="description"
+              content="Telecommunications Network Engineers ANZSCO 263312"
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}{" "}
         {anzsco === "civil-engineering-draftsperson-anzsco-312211" && (
           <Head>
-          <title>Civil Engineering Draftsperson ANZSCO 312211</title>
-            <meta name="description" content="Occupational Unit Group 3122 Civil Engineering Draftsperson and Technician ANZSCO 312211PR Visa for Civil Engineering Draftsperson." />
+            <title>Civil Engineering Draftsperson ANZSCO 312211</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 3122 Civil Engineering Draftsperson and Technician ANZSCO 312211PR Visa for Civil Engineering Draftsperson."
+            />
             <link rel="canonical" href={canonicalUrl} />
-
           </Head>
-         
         )}{" "}
         {anzsco === "civil-engineering-technician-anzsco-312212" && (
           <Head>
-          <title>Civil Engineering Technician ANZSCO 312212</title>
-            <meta name="description" content="Occupational Unit Group 3122 Civil Engineering Draftsperson and Technician ANZSCO 312212PR Visa for Civil Engineering Technician ." />
+            <title>Civil Engineering Technician ANZSCO 312212</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 3122 Civil Engineering Draftsperson and Technician ANZSCO 312212PR Visa for Civil Engineering Technician ."
+            />
             <link rel="canonical" href={canonicalUrl} />
-
-</Head>
-         
+          </Head>
         )}{" "}
         {anzsco === "electrical-engineering-draftsperson-anzsco-312311" && (
           <Head>
-          <title>Electrical Engineering Draftsperson ANZSCO 312311</title>
-            <meta name="description" content="Occupational Unit Group 3123 Electrical Engineering Draftsperson and Technician ANZSCO 312311PR Visa for Electrical Engineering Draftsperson." />
+            <title>Electrical Engineering Draftsperson ANZSCO 312311</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 3123 Electrical Engineering Draftsperson and Technician ANZSCO 312311PR Visa for Electrical Engineering Draftsperson."
+            />
             <link rel="canonical" href={canonicalUrl} />
-
           </Head>
-         
         )}{" "}
         {anzsco === "electrical-engineering-technician-anzsco-312312" && (
-           <Head>
-           <title>Electrical Engineering Technician ANZSCO 312312</title>
-             <meta name="description" content="Occupational Unit Group 3123 Electrical Engineering Draftsperson and Technician ANZSCO 312312PR Visa for Electrical Engineering Technician." />
-             <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-         
+          <Head>
+            <title>Electrical Engineering Technician ANZSCO 312312</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 3123 Electrical Engineering Draftsperson and Technician ANZSCO 312312PR Visa for Electrical Engineering Technician."
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
         {anzsco === "telecommunication-field-engineer-anzsco-313212" && (
-           <Head>
-           <title>Telecommunications Field Engineer ANZSCO 313212</title>
-             <meta name="description" content="Occupational Unit Group 3132 Telecommunications Technical 
+          <Head>
+            <title>Telecommunications Field Engineer ANZSCO 313212</title>
+            <meta
+              name="description"
+              content="Occupational Unit Group 3132 Telecommunications Technical 
 
-Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
-                   <link rel="canonical" href={canonicalUrl} />
-
-           </Head>
-         
+Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
+            />
+            <link rel="canonical" href={canonicalUrl} />
+          </Head>
         )}
       </div>
 
@@ -3862,19 +3969,15 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
 
             <Headings title={allData.engineeringManager.occupationTitle} />
 
-            {allData.engineeringManager.occupationList.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.engineeringManager.occupationList.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
 
             <Headings title={allData.engineeringManager.unitTitle} />
@@ -3917,19 +4020,15 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
 
             <Headings title={allData.chemicalEngineer.occupationTitle} />
 
-            {allData.chemicalEngineer.occupationList.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.chemicalEngineer.occupationList.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
 
             <Headings title={allData.chemicalEngineer.unitTitle} />
@@ -3969,19 +4068,15 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
 
             <Headings title={allData.civilEngineer.occupationTitle} />
 
-            {allData.civilEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.civilEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
 
             <Headings title={allData.civilEngineer.unitTitle} />
@@ -4021,19 +4116,15 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
 
             <Headings title={allData.materialsEngineer.occupationTitle} />
 
-            {allData.materialsEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.materialsEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
 
             <Headings title={allData.materialsEngineer.unitTitle} />
@@ -4075,19 +4166,15 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
 
             <Headings title={allData.geotechnicalEngineer.occupationTitle} />
 
-            {allData.geotechnicalEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.geotechnicalEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
 
             <Headings title={allData.geotechnicalEngineer.unitTitle} />
@@ -4129,19 +4216,15 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
 
             <Headings title={allData.structuralEngineer.occupationTitle} />
 
-            {allData.structuralEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.structuralEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
 
             <Headings title={allData.structuralEngineer.unitTitle} />
@@ -4164,8 +4247,8 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           />
         </>
       )}
-     
-       {anzsco === "anzsco-233215-transport-engineer" && (
+
+      {anzsco === "anzsco-233215-transport-engineer" && (
         <>
           <Section1
             title={allData.transportEngineer.title}
@@ -4173,96 +4256,54 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.transportEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.transportEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.transportEngineer.skillDescription}
-            />
+            <Headings title={allData.transportEngineer.skillTitle} />
+            <Paragraphs data={allData.transportEngineer.skillDescription} />
 
-            <Headings
-              title={allData.transportEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.transportEngineer.secondDescription}
-            />
+            <Headings title={allData.transportEngineer.secondTitle} />
+            <Paragraphs data={allData.transportEngineer.secondDescription} />
 
-<Headings
-              title={allData.transportEngineer.thirdTitle}
-            />
-            {allData.transportEngineer.thirdDescription?.map((t,i)=>
-             <Paragraphs key={i}
-             data={t}
-           />)
-            }
-           
-            
-            <Headings
-              title={allData.transportEngineer.occupationTitle}
-            />
-
-            {allData.transportEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.transportEngineer.thirdTitle} />
+            {allData.transportEngineer.thirdDescription.map((t, i) => (
+              <Paragraphs key={i} data={t} />
             ))}
-             <Headings
-              title={allData.transportEngineer.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.transportEngineer.notoccupation}
-            />
 
-<Headings
-              title={allData.transportEngineer.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.transportEngineer.visaprovision}
-            />
+            <Headings title={allData.transportEngineer.occupationTitle} />
 
-            <Headings
-              title={allData.transportEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.transportEngineer.unitDescription}
-            />
+            {allData.transportEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                /> 
+                <Paragraphs data={l} />
+              </Stack>
+            ))}
+            <Headings title={allData.transportEngineer.notoccuoationtitle} />
+            <Paragraphs data={allData.transportEngineer.notoccupation} />
 
-<Headings
-              title={allData.transportEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.transportEngineer.skilllevel}
-            />
+            <Headings title={allData.transportEngineer.visaprovisiontitle} />
+            <Paragraphs data={allData.transportEngineer.visaprovision} />
 
-            <Headings
-              title={allData.transportEngineer.occupationsTitle}
-            />
+            <Headings title={allData.transportEngineer.unitTitle} />
+            <Paragraphs data={allData.transportEngineer.unitDescription} />
+
+            <Headings title={allData.transportEngineer.skillleveltitle} />
+            <Paragraphs data={allData.transportEngineer.skilllevel} />
+
+            <Headings title={allData.transportEngineer.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.transportEngineer.occupationDescription
-              }
+              data={allData.transportEngineer.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.transportEngineer.exceptionstitle}
-            
             list={allData.transportEngineer.exceptions}
           />
 
 
-
-<Expectations
+          <Expectations
             title={allData.transportEngineer.tasktitle}
-            
             list={allData.transportEngineer.tasks}
           />
           <Hero2
@@ -4271,9 +4312,9 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             buttonName={allData.transportEngineer.hero2ButtonName}
           />
         </>
-      )} 
-      
-       {anzsco === "anzsco-233311-electrical-engineer" && (
+      )}
+
+      {anzsco === "anzsco-233311-electrical-engineer" && (
         <>
           <Section1
             title={allData.electricalEngineer.title}
@@ -4281,88 +4322,48 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.electricalEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.electricalEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.electricalEngineer.skillDescription}
-            />
+            <Headings title={allData.electricalEngineer.skillTitle} />
+            <Paragraphs data={allData.electricalEngineer.skillDescription} />
 
-            <Headings
-              title={allData.electricalEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.electricalEngineer.secondDescription}
-            />
+            <Headings title={allData.electricalEngineer.secondTitle} />
+            <Paragraphs data={allData.electricalEngineer.secondDescription} />
 
+            <Headings title={allData.electricalEngineer?.occupationTitle} />
 
-           
-            
-            <Headings
-              title={allData.electricalEngineer?.occupationTitle}
-            />
-
-            {allData.electricalEngineer?.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.electricalEngineer?.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-             <Headings
-              title={allData.electricalEngineer?.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.electricalEngineer?.notoccupation}
-            />
+            <Headings title={allData.electricalEngineer?.notoccuoationtitle} />
+            <Paragraphs data={allData.electricalEngineer?.notoccupation} />
 
-<Headings
-              title={allData.electricalEngineer?.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.electricalEngineer?.visaprovision}
-            />
+            <Headings title={allData.electricalEngineer?.visaprovisiontitle} />
+            <Paragraphs data={allData.electricalEngineer?.visaprovision} />
 
-            <Headings
-              title={allData.electricalEngineer?.unitTitle}
-            />
-            <Paragraphs
-              data={allData.electricalEngineer?.unitDescription}
-            />
+            <Headings title={allData.electricalEngineer?.unitTitle} />
+            <Paragraphs data={allData.electricalEngineer?.unitDescription} />
 
-<Headings
-              title={allData.electricalEngineer?.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.electricalEngineer?.skilllevel}
-            />
+            <Headings title={allData.electricalEngineer?.skillleveltitle} />
+            <Paragraphs data={allData.electricalEngineer?.skilllevel} />
 
-            <Headings
-              title={allData.electricalEngineer?.occupationsTitle}
-            />
+            <Headings title={allData.electricalEngineer?.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.electricalEngineer?.occupationDescription
-              }
+              data={allData.electricalEngineer?.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.electricalEngineer?.exceptionstitle}
-            
             list={allData.electricalEngineer?.exceptions}
           />
 
-
-<Expectations
+          <Expectations
             title={allData.electricalEngineer?.tasktitle}
-            
             list={allData.electricalEngineer?.tasks}
           />
           <Hero2
@@ -4371,8 +4372,8 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             buttonName={allData.electricalEngineer?.hero2ButtonName}
           />
         </>
-      )} 
-     
+      )}
+
       {anzsco === "anzsco-233411-electronics-engineer" && (
         <>
           <Section1
@@ -4381,92 +4382,53 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.electronicsEngineer?.image}
           />
           <Container>
-            <Headings
-              title={allData.electronicsEngineer?.skillTitle}
-            />
-            <Paragraphs
-              data={allData.electronicsEngineer?.skillDescription}
-            />
+            <Headings title={allData.electronicsEngineer?.skillTitle} />
+            <Paragraphs data={allData.electronicsEngineer?.skillDescription} />
 
-            <Headings
-              title={allData.electronicsEngineer?.secondTitle}
-            />
-            <Paragraphs
-              data={allData.electronicsEngineer?.secondDescription}
-            />
+            <Headings title={allData.electronicsEngineer?.secondTitle} />
+            <Paragraphs data={allData.electronicsEngineer?.secondDescription} />
 
-           
-            
-            <Headings
-              title={allData.electronicsEngineer?.occupationTitle}
-            />
+            <Headings title={allData.electronicsEngineer?.occupationTitle} />
 
-            {allData.electronicsEngineer?.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.electronicsEngineer?.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-             <Headings
-              title={allData.electronicsEngineer?.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.electronicsEngineer?.notoccupation}
-            />
+            <Headings title={allData.electronicsEngineer?.notoccuoationtitle} />
+            <Paragraphs data={allData.electronicsEngineer?.notoccupation} />
 
-<Headings
-              title={allData.electronicsEngineer?.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.electronicsEngineer?.visaprovision}
-            />
+            <Headings title={allData.electronicsEngineer?.visaprovisiontitle} />
+            <Paragraphs data={allData.electronicsEngineer?.visaprovision} />
 
-            <Headings
-              title={allData.electronicsEngineer?.unitTitle}
-            />
-            <Paragraphs
-              data={allData.electronicsEngineer?.unitDescription}
-            />
+            <Headings title={allData.electronicsEngineer?.unitTitle} />
+            <Paragraphs data={allData.electronicsEngineer?.unitDescription} />
 
-<Headings
-              title={allData.electronicsEngineer?.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.electronicsEngineer?.skilllevel}
-            />
+            <Headings title={allData.electronicsEngineer?.skillleveltitle} />
+            <Paragraphs data={allData.electronicsEngineer?.skilllevel} />
 
-            <Headings
-              title={allData.electronicsEngineer?.occupationsTitle}
-            />
+            <Headings title={allData.electronicsEngineer?.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.electronicsEngineer?.occupationDescription
-              }
+              data={allData.electronicsEngineer?.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.electronicsEngineer?.exceptionstitle}
-            
             list={allData.electronicsEngineer?.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.electronicsEngineer?.languagetitle}
-            
             list={allData.electronicsEngineer?.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.electronicsEngineer?.tasktitle}
-            
             list={allData.electronicsEngineer?.tasks}
           />
           <Hero2
@@ -4475,9 +4437,9 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             buttonName={allData.electronicsEngineer?.hero2ButtonName}
           />
         </>
-      )} 
+      )}
 
-{anzsco === "anzsco-233511-industrial-engineer" && (
+      {anzsco === "anzsco-233511-industrial-engineer" && (
         <>
           <Section1
             title={allData.industrialEngineer.title}
@@ -4485,100 +4447,58 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.industrialEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.industrialEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.industrialEngineer.skillDescription}
-            />
+            <Headings title={allData.industrialEngineer.skillTitle} />
+            <Paragraphs data={allData.industrialEngineer.skillDescription} />
 
-            <Headings
-              title={allData.industrialEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.industrialEngineer.secondDescription}
-            />
+            <Headings title={allData.industrialEngineer.secondTitle} />
+            <Paragraphs data={allData.industrialEngineer.secondDescription} />
 
-<Headings
-              title={allData.industrialEngineer.thirdTitle}
-            />
-            {allData.industrialEngineer.thirdDescription.map((t,i)=>
-             <Paragraphs key={i}
-             data={t}
-           />)
-            }
-           
-            
-            <Headings
-              title={allData.industrialEngineer.occupationTitle}
-            />
-
-            {allData.industrialEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.industrialEngineer.thirdTitle} />
+            {allData.industrialEngineer.thirdDescription.map((t, i) => (
+              <Paragraphs key={i} data={t} />
             ))}
-             <Headings
-              title={allData.industrialEngineer.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.industrialEngineer.notoccupation}
-            />
 
-<Headings
-              title={allData.industrialEngineer.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.industrialEngineer.visaprovision}
-            />
+            <Headings title={allData.industrialEngineer.occupationTitle} />
 
-            <Headings
-              title={allData.industrialEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.industrialEngineer.unitDescription}
-            />
+            {allData.industrialEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
+            ))}
+            <Headings title={allData.industrialEngineer.notoccuoationtitle} />
+            <Paragraphs data={allData.industrialEngineer.notoccupation} />
 
-<Headings
-              title={allData.industrialEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.industrialEngineer.skilllevel}
-            />
+            <Headings title={allData.industrialEngineer.visaprovisiontitle} />
+            <Paragraphs data={allData.industrialEngineer.visaprovision} />
 
-            <Headings
-              title={allData.industrialEngineer.occupationsTitle}
-            />
+            <Headings title={allData.industrialEngineer.unitTitle} />
+            <Paragraphs data={allData.industrialEngineer.unitDescription} />
+
+            <Headings title={allData.industrialEngineer.skillleveltitle} />
+            <Paragraphs data={allData.industrialEngineer.skilllevel} />
+
+            <Headings title={allData.industrialEngineer.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.industrialEngineer.occupationDescription
-              }
+              data={allData.industrialEngineer.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.industrialEngineer.exceptionstitle}
-            
             list={allData.industrialEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.industrialEngineer.languagetitle}
-            
             list={allData.industrialEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.industrialEngineer.tasktitle}
-            
             list={allData.industrialEngineer.tasks}
           />
           <Hero2
@@ -4587,9 +4507,9 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             buttonName={allData.industrialEngineer.hero2ButtonName}
           />
         </>
-      )} 
-      
-       {anzsco === "anzsco-233512-mechanical-engineer" && (
+      )}
+
+      {anzsco === "anzsco-233512-mechanical-engineer" && (
         <>
           <Section1
             title={allData.mechanicalEngineer.title}
@@ -4597,100 +4517,58 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.mechanicalEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.mechanicalEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.mechanicalEngineer.skillDescription}
-            />
+            <Headings title={allData.mechanicalEngineer.skillTitle} />
+            <Paragraphs data={allData.mechanicalEngineer.skillDescription} />
 
-            <Headings
-              title={allData.mechanicalEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.mechanicalEngineer.secondDescription}
-            />
+            <Headings title={allData.mechanicalEngineer.secondTitle} />
+            <Paragraphs data={allData.mechanicalEngineer.secondDescription} />
 
-<Headings
-              title={allData.mechanicalEngineer.thirdTitle}
-            />
-            {allData.mechanicalEngineer.thirdDescription.map((t,i)=>
-             <Paragraphs key={i}
-             data={t}
-           />)
-            }
-           
-            
-            <Headings
-              title={allData.mechanicalEngineer.occupationTitle}
-            />
-
-            {allData.mechanicalEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.mechanicalEngineer.thirdTitle} />
+            {allData.mechanicalEngineer.thirdDescription.map((t, i) => (
+              <Paragraphs key={i} data={t} />
             ))}
-             <Headings
-              title={allData.mechanicalEngineer.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.mechanicalEngineer.notoccupation}
-            />
 
-<Headings
-              title={allData.mechanicalEngineer.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.mechanicalEngineer.visaprovision}
-            />
+            <Headings title={allData.mechanicalEngineer.occupationTitle} />
 
-            <Headings
-              title={allData.mechanicalEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.mechanicalEngineer.unitDescription}
-            />
+            {allData.mechanicalEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
+            ))}
+            <Headings title={allData.mechanicalEngineer.notoccuoationtitle} />
+            <Paragraphs data={allData.mechanicalEngineer.notoccupation} />
 
-<Headings
-              title={allData.mechanicalEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.mechanicalEngineer.skilllevel}
-            />
+            <Headings title={allData.mechanicalEngineer.visaprovisiontitle} />
+            <Paragraphs data={allData.mechanicalEngineer.visaprovision} />
 
-            <Headings
-              title={allData.mechanicalEngineer.occupationsTitle}
-            />
+            <Headings title={allData.mechanicalEngineer.unitTitle} />
+            <Paragraphs data={allData.mechanicalEngineer.unitDescription} />
+
+            <Headings title={allData.mechanicalEngineer.skillleveltitle} />
+            <Paragraphs data={allData.mechanicalEngineer.skilllevel} />
+
+            <Headings title={allData.mechanicalEngineer.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.mechanicalEngineer.occupationDescription
-              }
+              data={allData.mechanicalEngineer.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.mechanicalEngineer.exceptionstitle}
-            
             list={allData.mechanicalEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.mechanicalEngineer.languagetitle}
-            
             list={allData.mechanicalEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.mechanicalEngineer.tasktitle}
-            
             list={allData.mechanicalEngineer.tasks}
           />
           <Hero2
@@ -4699,10 +4577,9 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             buttonName={allData.mechanicalEngineer.hero2ButtonName}
           />
         </>
-      )} 
-      
+      )}
 
-     {anzsco === "anzsco-233513-production-or-plant-engineer" && (
+      {anzsco === "anzsco-233513-production-or-plant-engineer" && (
         <>
           <Section1
             title={allData.plantEngineer.title}
@@ -4710,100 +4587,56 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.plantEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.plantEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.plantEngineer.skillDescription}
-            />
+            <Headings title={allData.plantEngineer.skillTitle} />
+            <Paragraphs data={allData.plantEngineer.skillDescription} />
 
-            <Headings
-              title={allData.plantEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.plantEngineer.secondDescription}
-            />
+            <Headings title={allData.plantEngineer.secondTitle} />
+            <Paragraphs data={allData.plantEngineer.secondDescription} />
 
-<Headings
-              title={allData.plantEngineer.thirdTitle}
-            />
-            {allData.plantEngineer.thirdDescription.map((t,i)=>
-             <Paragraphs key={i}
-             data={t}
-           />)
-            }
-           
-            
-            <Headings
-              title={allData.plantEngineer.occupationTitle}
-            />
-
-            {allData.plantEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.plantEngineer.thirdTitle} />
+            {allData.plantEngineer.thirdDescription.map((t, i) => (
+              <Paragraphs key={i} data={t} />
             ))}
-             <Headings
-              title={allData.plantEngineer.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.plantEngineer.notoccupation}
-            />
 
-<Headings
-              title={allData.plantEngineer.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.plantEngineer.visaprovision}
-            />
+            <Headings title={allData.plantEngineer.occupationTitle} />
 
-            <Headings
-              title={allData.plantEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.plantEngineer.unitDescription}
-            />
+            {allData.plantEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
+            ))}
+            <Headings title={allData.plantEngineer.notoccuoationtitle} />
+            <Paragraphs data={allData.plantEngineer.notoccupation} />
 
-<Headings
-              title={allData.plantEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.plantEngineer.skilllevel}
-            />
+            <Headings title={allData.plantEngineer.visaprovisiontitle} />
+            <Paragraphs data={allData.plantEngineer.visaprovision} />
 
-            <Headings
-              title={allData.plantEngineer.occupationsTitle}
-            />
-            <Paragraphs
-              data={
-                allData.plantEngineer.occupationDescription
-              }
-            />
+            <Headings title={allData.plantEngineer.unitTitle} />
+            <Paragraphs data={allData.plantEngineer.unitDescription} />
+
+            <Headings title={allData.plantEngineer.skillleveltitle} />
+            <Paragraphs data={allData.plantEngineer.skilllevel} />
+
+            <Headings title={allData.plantEngineer.occupationsTitle} />
+            <Paragraphs data={allData.plantEngineer.occupationDescription} />
           </Container>
           <Expectations
             title={allData.plantEngineer.exceptionstitle}
-            
             list={allData.plantEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.plantEngineer.languagetitle}
-            
             list={allData.plantEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.plantEngineer.tasktitle}
-            
             list={allData.plantEngineer.tasks}
           />
           <Hero2
@@ -4812,9 +4645,9 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             buttonName={allData.plantEngineer.hero2ButtonName}
           />
         </>
-      )} 
-     
-     {anzsco === "anzsco-233611-mining-engineer" && (
+      )}
+
+      {anzsco === "anzsco-233611-mining-engineer" && (
         <>
           <Section1
             title={allData.miningEngineer.title}
@@ -4822,100 +4655,56 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.miningEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.miningEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.miningEngineer.skillDescription}
-            />
+            <Headings title={allData.miningEngineer.skillTitle} />
+            <Paragraphs data={allData.miningEngineer.skillDescription} />
 
-            <Headings
-              title={allData.miningEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.miningEngineer.secondDescription}
-            />
+            <Headings title={allData.miningEngineer.secondTitle} />
+            <Paragraphs data={allData.miningEngineer.secondDescription} />
 
-<Headings
-              title={allData.miningEngineer.thirdTitle}
-            />
-            {allData.miningEngineer.thirdDescription.map((t,i)=>
-             <Paragraphs key={i}
-             data={t}
-           />)
-            }
-           
-            
-            <Headings
-              title={allData.miningEngineer.occupationTitle}
-            />
-
-            {allData.miningEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.miningEngineer.thirdTitle} />
+            {allData.miningEngineer.thirdDescription.map((t, i) => (
+              <Paragraphs key={i} data={t} />
             ))}
-             <Headings
-              title={allData.miningEngineer.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.miningEngineer.notoccupation}
-            />
 
-<Headings
-              title={allData.miningEngineer.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.miningEngineer.visaprovision}
-            />
+            <Headings title={allData.miningEngineer.occupationTitle} />
 
-            <Headings
-              title={allData.miningEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.miningEngineer.unitDescription}
-            />
+            {allData.miningEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
+            ))}
+            <Headings title={allData.miningEngineer.notoccuoationtitle} />
+            <Paragraphs data={allData.miningEngineer.notoccupation} />
 
-<Headings
-              title={allData.miningEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.miningEngineer.skilllevel}
-            />
+            <Headings title={allData.miningEngineer.visaprovisiontitle} />
+            <Paragraphs data={allData.miningEngineer.visaprovision} />
 
-            <Headings
-              title={allData.miningEngineer.occupationsTitle}
-            />
-            <Paragraphs
-              data={
-                allData.miningEngineer.occupationDescription
-              }
-            />
+            <Headings title={allData.miningEngineer.unitTitle} />
+            <Paragraphs data={allData.miningEngineer.unitDescription} />
+
+            <Headings title={allData.miningEngineer.skillleveltitle} />
+            <Paragraphs data={allData.miningEngineer.skilllevel} />
+
+            <Headings title={allData.miningEngineer.occupationsTitle} />
+            <Paragraphs data={allData.miningEngineer.occupationDescription} />
           </Container>
           <Expectations
             title={allData.miningEngineer.exceptionstitle}
-            
             list={allData.miningEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.miningEngineer.languagetitle}
-            
             list={allData.miningEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.miningEngineer.tasktitle}
-            
             list={allData.miningEngineer.tasks}
           />
           <Hero2
@@ -4926,7 +4715,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
         </>
       )}
 
-{anzsco === "anzsco-233612-petroleum-engineer" && (
+      {anzsco === "anzsco-233612-petroleum-engineer" && (
         <>
           <Section1
             title={allData.petroleumEngineer.title}
@@ -4934,100 +4723,58 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.petroleumEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.petroleumEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.petroleumEngineer.skillDescription}
-            />
+            <Headings title={allData.petroleumEngineer.skillTitle} />
+            <Paragraphs data={allData.petroleumEngineer.skillDescription} />
 
-            <Headings
-              title={allData.petroleumEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.petroleumEngineer.secondDescription}
-            />
+            <Headings title={allData.petroleumEngineer.secondTitle} />
+            <Paragraphs data={allData.petroleumEngineer.secondDescription} />
 
-<Headings
-              title={allData.petroleumEngineer.thirdTitle}
-            />
-            {allData.petroleumEngineer.thirdDescription.map((t,i)=>
-             <Paragraphs key={i}
-             data={t}
-           />)
-            }
-           
-            
-            <Headings
-              title={allData.petroleumEngineer.occupationTitle}
-            />
-
-            {allData.petroleumEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.petroleumEngineer.thirdTitle} />
+            {allData.petroleumEngineer.thirdDescription.map((t, i) => (
+              <Paragraphs key={i} data={t} />
             ))}
-             <Headings
-              title={allData.petroleumEngineer.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.petroleumEngineer.notoccupation}
-            />
 
-<Headings
-              title={allData.petroleumEngineer.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.petroleumEngineer.visaprovision}
-            />
+            <Headings title={allData.petroleumEngineer.occupationTitle} />
 
-            <Headings
-              title={allData.petroleumEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.petroleumEngineer.unitDescription}
-            />
+            {allData.petroleumEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
+            ))}
+            <Headings title={allData.petroleumEngineer.notoccuoationtitle} />
+            <Paragraphs data={allData.petroleumEngineer.notoccupation} />
 
-<Headings
-              title={allData.petroleumEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.petroleumEngineer.skilllevel}
-            />
+            <Headings title={allData.petroleumEngineer.visaprovisiontitle} />
+            <Paragraphs data={allData.petroleumEngineer.visaprovision} />
 
-            <Headings
-              title={allData.petroleumEngineer.occupationsTitle}
-            />
+            <Headings title={allData.petroleumEngineer.unitTitle} />
+            <Paragraphs data={allData.petroleumEngineer.unitDescription} />
+
+            <Headings title={allData.petroleumEngineer.skillleveltitle} />
+            <Paragraphs data={allData.petroleumEngineer.skilllevel} />
+
+            <Headings title={allData.petroleumEngineer.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.petroleumEngineer.occupationDescription
-              }
+              data={allData.petroleumEngineer.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.petroleumEngineer.exceptionstitle}
-            
             list={allData.petroleumEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.petroleumEngineer.languagetitle}
-            
             list={allData.petroleumEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.petroleumEngineer.tasktitle}
-            
             list={allData.petroleumEngineer.tasks}
           />
           <Hero2
@@ -5037,10 +4784,8 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           />
         </>
       )}
-     
-      
 
-{anzsco === "anzsco-233911-aeronautical-engineer" && (
+      {anzsco === "anzsco-233911-aeronautical-engineer" && (
         <>
           <Section1
             title={allData.aeronauticalEngineer.title}
@@ -5048,100 +4793,58 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.aeronauticalEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.aeronauticalEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.aeronauticalEngineer.skillDescription}
-            />
+            <Headings title={allData.aeronauticalEngineer.skillTitle} />
+            <Paragraphs data={allData.aeronauticalEngineer.skillDescription} />
 
-            <Headings
-              title={allData.aeronauticalEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.aeronauticalEngineer.secondDescription}
-            />
+            <Headings title={allData.aeronauticalEngineer.secondTitle} />
+            <Paragraphs data={allData.aeronauticalEngineer.secondDescription} />
 
-<Headings
-              title={allData.aeronauticalEngineer.thirdTitle}
-            />
-            {allData.aeronauticalEngineer.thirdDescription.map((t,i)=>
-             <Paragraphs key={i}
-             data={t}
-           />)
-            }
-           
-            
-            <Headings
-              title={allData.aeronauticalEngineer.occupationTitle}
-            />
-
-            {allData.aeronauticalEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.aeronauticalEngineer.thirdTitle} />
+            {allData.aeronauticalEngineer.thirdDescription.map((t, i) => (
+              <Paragraphs key={i} data={t} />
             ))}
-             <Headings
-              title={allData.aeronauticalEngineer.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.aeronauticalEngineer.notoccupation}
-            />
 
-<Headings
-              title={allData.aeronauticalEngineer.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.aeronauticalEngineer.visaprovision}
-            />
+            <Headings title={allData.aeronauticalEngineer.occupationTitle} />
 
-            <Headings
-              title={allData.aeronauticalEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.aeronauticalEngineer.unitDescription}
-            />
+            {allData.aeronauticalEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
+            ))}
+            <Headings title={allData.aeronauticalEngineer.notoccuoationtitle} />
+            <Paragraphs data={allData.aeronauticalEngineer.notoccupation} />
 
-<Headings
-              title={allData.aeronauticalEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.aeronauticalEngineer.skilllevel}
-            />
+            <Headings title={allData.aeronauticalEngineer.visaprovisiontitle} />
+            <Paragraphs data={allData.aeronauticalEngineer.visaprovision} />
 
-            <Headings
-              title={allData.aeronauticalEngineer.occupationsTitle}
-            />
+            <Headings title={allData.aeronauticalEngineer.unitTitle} />
+            <Paragraphs data={allData.aeronauticalEngineer.unitDescription} />
+
+            <Headings title={allData.aeronauticalEngineer.skillleveltitle} />
+            <Paragraphs data={allData.aeronauticalEngineer.skilllevel} />
+
+            <Headings title={allData.aeronauticalEngineer.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.aeronauticalEngineer.occupationDescription
-              }
+              data={allData.aeronauticalEngineer.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.aeronauticalEngineer.exceptionstitle}
-            
             list={allData.aeronauticalEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.aeronauticalEngineer.languagetitle}
-            
             list={allData.aeronauticalEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.aeronauticalEngineer.tasktitle}
-            
             list={allData.aeronauticalEngineer.tasks}
           />
           <Hero2
@@ -5151,9 +4854,8 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           />
         </>
       )}
-     
-    
-    {anzsco === "anzsco-233912-agricultural-engineer" && (
+
+      {anzsco === "anzsco-233912-agricultural-engineer" && (
         <>
           <Section1
             title={allData.agriculturalEngineer.title}
@@ -5161,100 +4863,58 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.agriculturalEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.agriculturalEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.agriculturalEngineer.skillDescription}
-            />
+            <Headings title={allData.agriculturalEngineer.skillTitle} />
+            <Paragraphs data={allData.agriculturalEngineer.skillDescription} />
 
-            <Headings
-              title={allData.agriculturalEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.agriculturalEngineer.secondDescription}
-            />
+            <Headings title={allData.agriculturalEngineer.secondTitle} />
+            <Paragraphs data={allData.agriculturalEngineer.secondDescription} />
 
-<Headings
-              title={allData.agriculturalEngineer.thirdTitle}
-            />
-            {allData.agriculturalEngineer.thirdDescription.map((t,i)=>
-             <Paragraphs key={i}
-             data={t}
-           />)
-            }
-           
-            
-            <Headings
-              title={allData.agriculturalEngineer.occupationTitle}
-            />
-
-            {allData.agriculturalEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.agriculturalEngineer.thirdTitle} />
+            {allData.agriculturalEngineer.thirdDescription.map((t, i) => (
+              <Paragraphs key={i} data={t} />
             ))}
-             <Headings
-              title={allData.agriculturalEngineer.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.agriculturalEngineer.notoccupation}
-            />
 
-<Headings
-              title={allData.agriculturalEngineer.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.agriculturalEngineer.visaprovision}
-            />
+            <Headings title={allData.agriculturalEngineer.occupationTitle} />
 
-            <Headings
-              title={allData.agriculturalEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.agriculturalEngineer.unitDescription}
-            />
+            {allData.agriculturalEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
+            ))}
+            <Headings title={allData.agriculturalEngineer.notoccuoationtitle} />
+            <Paragraphs data={allData.agriculturalEngineer.notoccupation} />
 
-<Headings
-              title={allData.agriculturalEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.agriculturalEngineer.skilllevel}
-            />
+            <Headings title={allData.agriculturalEngineer.visaprovisiontitle} />
+            <Paragraphs data={allData.agriculturalEngineer.visaprovision} />
 
-            <Headings
-              title={allData.agriculturalEngineer.occupationsTitle}
-            />
+            <Headings title={allData.agriculturalEngineer.unitTitle} />
+            <Paragraphs data={allData.agriculturalEngineer.unitDescription} />
+
+            <Headings title={allData.agriculturalEngineer.skillleveltitle} />
+            <Paragraphs data={allData.agriculturalEngineer.skilllevel} />
+
+            <Headings title={allData.agriculturalEngineer.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.agriculturalEngineer.occupationDescription
-              }
+              data={allData.agriculturalEngineer.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.agriculturalEngineer.exceptionstitle}
-            
             list={allData.agriculturalEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.agriculturalEngineer.languagetitle}
-            
             list={allData.agriculturalEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.agriculturalEngineer.tasktitle}
-            
             list={allData.agriculturalEngineer.tasks}
           />
           <Hero2
@@ -5265,7 +4925,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
         </>
       )}
 
-{anzsco === "anzsco-233913-biomedical-engineer" && (
+      {anzsco === "anzsco-233913-biomedical-engineer" && (
         <>
           <Section1
             title={allData.biomedicalEngineer.title}
@@ -5273,100 +4933,58 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.biomedicalEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.biomedicalEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.biomedicalEngineer.skillDescription}
-            />
+            <Headings title={allData.biomedicalEngineer.skillTitle} />
+            <Paragraphs data={allData.biomedicalEngineer.skillDescription} />
 
-            <Headings
-              title={allData.biomedicalEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.biomedicalEngineer.secondDescription}
-            />
+            <Headings title={allData.biomedicalEngineer.secondTitle} />
+            <Paragraphs data={allData.biomedicalEngineer.secondDescription} />
 
-<Headings
-              title={allData.biomedicalEngineer.thirdTitle}
-            />
-            {allData.biomedicalEngineer.thirdDescription.map((t,i)=>
-             <Paragraphs key={i}
-             data={t}
-           />)
-            }
-           
-            
-            <Headings
-              title={allData.biomedicalEngineer.occupationTitle}
-            />
-
-            {allData.biomedicalEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.biomedicalEngineer.thirdTitle} />
+            {allData.biomedicalEngineer.thirdDescription.map((t, i) => (
+              <Paragraphs key={i} data={t} />
             ))}
-             <Headings
-              title={allData.biomedicalEngineer.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.biomedicalEngineer.notoccupation}
-            />
 
-<Headings
-              title={allData.biomedicalEngineer.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.biomedicalEngineer.visaprovision}
-            />
+            <Headings title={allData.biomedicalEngineer.occupationTitle} />
 
-            <Headings
-              title={allData.biomedicalEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.biomedicalEngineer.unitDescription}
-            />
+            {allData.biomedicalEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
+            ))}
+            <Headings title={allData.biomedicalEngineer.notoccuoationtitle} />
+            <Paragraphs data={allData.biomedicalEngineer.notoccupation} />
 
-<Headings
-              title={allData.biomedicalEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.biomedicalEngineer.skilllevel}
-            />
+            <Headings title={allData.biomedicalEngineer.visaprovisiontitle} />
+            <Paragraphs data={allData.biomedicalEngineer.visaprovision} />
 
-            <Headings
-              title={allData.biomedicalEngineer.occupationsTitle}
-            />
+            <Headings title={allData.biomedicalEngineer.unitTitle} />
+            <Paragraphs data={allData.biomedicalEngineer.unitDescription} />
+
+            <Headings title={allData.biomedicalEngineer.skillleveltitle} />
+            <Paragraphs data={allData.biomedicalEngineer.skilllevel} />
+
+            <Headings title={allData.biomedicalEngineer.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.biomedicalEngineer.occupationDescription
-              }
+              data={allData.biomedicalEngineer.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.biomedicalEngineer.exceptionstitle}
-            
             list={allData.biomedicalEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.biomedicalEngineer.languagetitle}
-            
             list={allData.biomedicalEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.biomedicalEngineer.tasktitle}
-            
             list={allData.biomedicalEngineer.tasks}
           />
           <Hero2
@@ -5376,8 +4994,8 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           />
         </>
       )}
-   
-{anzsco === "anzsco-233914-engineering-technologist" && (
+
+      {anzsco === "anzsco-233914-engineering-technologist" && (
         <>
           <Section1
             title={allData.engineeringTechnologist.title}
@@ -5385,91 +5003,60 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.engineeringTechnologist.image}
           />
           <Container>
-            <Headings
-              title={allData.engineeringTechnologist.skillTitle}
-            />
-            <Paragraphs
-              data={allData.engineeringTechnologist.skillDescription}
-            />
+            <Headings title={allData.environmentalEngineer.skillTitle} />
+            <Paragraphs data={allData.environmentalEngineer.skillDescription} />
 
-            <Headings
-              title={allData.engineeringTechnologist.secondTitle}
-            />
+            <Headings title={allData.environmentalEngineer.secondTitle} />
             <Paragraphs
               data={allData.engineeringTechnologist.secondDescription}
             />
-            
-            <Headings
-              title={allData.engineeringTechnologist.occupationTitle}
-            />
 
-            {allData.engineeringTechnologist.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.environmentalEngineer.occupationTitle} />
+
+            {allData.environmentalEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-             <Headings
-              title={allData.engineeringTechnologist.notoccuoationtitle}
+            <Headings
+              title={allData.environmentalEngineer.notoccuoationtitle}
             />
-            <Paragraphs
-              data={allData.engineeringTechnologist.notoccupation}
-            />
-
-<Headings
-              title={allData.engineeringTechnologist.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.engineeringTechnologist.visaprovision}
-            />
+            <Paragraphs data={allData.environmentalEngineer.notoccupation} />
 
             <Headings
-              title={allData.engineeringTechnologist.unitTitle}
+              title={allData.environmentalEngineer.visaprovisiontitle}
             />
-            <Paragraphs
-              data={allData.engineeringTechnologist.unitDescription}
-            />
+            <Paragraphs data={allData.environmentalEngineer.visaprovision} />
 
-<Headings
-              title={allData.engineeringTechnologist.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.engineeringTechnologist.skilllevel}
-            />
+            <Headings title={allData.environmentalEngineer.unitTitle} />
+            <Paragraphs data={allData.environmentalEngineer.unitDescription} />
 
-            <Headings
-              title={allData.engineeringTechnologist.occupationsTitle}
-            />
+            <Headings title={allData.environmentalEngineer.skillleveltitle} />
+            <Paragraphs data={allData.environmentalEngineer.skilllevel} />
+
+            <Headings title={allData.environmentalEngineer.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.engineeringTechnologist.occupationDescription
-              }
+              data={allData.environmentalEngineer.occupationDescription}
             />
           </Container>
           <Expectations
-            title={allData.engineeringTechnologist.exceptionstitle}
-            
-            list={allData.engineeringTechnologist.exceptions}
+            title={allData.environmentalEngineer.exceptionstitle}
+            list={allData.environmentalEngineer.exceptions}
           />
 
-<Expectations
-            title={allData.engineeringTechnologist.languagetitle}
-            
-            list={allData.engineeringTechnologist.language}
+          <Expectations
+            title={allData.environmentalEngineer.languagetitle}
+            list={allData.environmentalEngineer.language}
           />
 
-<Expectations
-            title={allData.engineeringTechnologist.tasktitle}
-            
-            list={allData.engineeringTechnologist.tasks}
+          <Expectations
+            title={allData.environmentalEngineer.tasktitle}
+            list={allData.environmentalEngineer.tasks}
           />
           <Hero2
             title={allData.engineeringTechnologist.hero2Title}
@@ -5478,7 +5065,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           />
         </>
       )}
-      
+
       {anzsco === "anzsco-233915-environmental-engineer" && (
         <>
           <Section1
@@ -5487,90 +5074,59 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.environmentalEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.environmentalEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.environmentalEngineer.skillDescription}
-            />
+            <Headings title={allData.environmentalEngineer.skillTitle} />
+            <Paragraphs data={allData.environmentalEngineer.skillDescription} />
 
-            <Headings
-              title={allData.environmentalEngineer.secondTitle}
-            />
+            <Headings title={allData.environmentalEngineer.secondTitle} />
             <Paragraphs
               data={allData.environmentalEngineer.secondDescription}
             />
-            
-            <Headings
-              title={allData.environmentalEngineer.occupationTitle}
-            />
 
-            {allData.environmentalEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.environmentalEngineer.occupationTitle} />
+
+            {allData.environmentalEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-             <Headings
+            <Headings
               title={allData.environmentalEngineer.notoccuoationtitle}
             />
-            <Paragraphs
-              data={allData.environmentalEngineer.notoccupation}
-            />
+            <Paragraphs data={allData.environmentalEngineer.notoccupation} />
 
-<Headings
+            <Headings
               title={allData.environmentalEngineer.visaprovisiontitle}
             />
-            <Paragraphs
-              data={allData.environmentalEngineer.visaprovision}
-            />
+            <Paragraphs data={allData.environmentalEngineer.visaprovision} />
 
-            <Headings
-              title={allData.environmentalEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.environmentalEngineer.unitDescription}
-            />
+            <Headings title={allData.environmentalEngineer.unitTitle} />
+            <Paragraphs data={allData.environmentalEngineer.unitDescription} />
 
-<Headings
-              title={allData.environmentalEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.environmentalEngineer.skilllevel}
-            />
+            <Headings title={allData.environmentalEngineer.skillleveltitle} />
+            <Paragraphs data={allData.environmentalEngineer.skilllevel} />
 
-            <Headings
-              title={allData.environmentalEngineer.occupationsTitle}
-            />
+            <Headings title={allData.environmentalEngineer.occupationsTitle} />
             <Paragraphs
-              data={
-                allData.environmentalEngineer.occupationDescription
-              }
+              data={allData.environmentalEngineer.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.environmentalEngineer.exceptionstitle}
-            
             list={allData.environmentalEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.environmentalEngineer.languagetitle}
-            
             list={allData.environmentalEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.environmentalEngineer.tasktitle}
-            
             list={allData.environmentalEngineer.tasks}
           />
           <Hero2
@@ -5580,7 +5136,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           />
         </>
       )}
-     
+
       {anzsco === "anzsco-233999-engineering-professionals-nec" && (
         <>
           <Section1
@@ -5589,22 +5145,16 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.engineeringProfessionals.image}
           />
           <Container>
-            <Headings
-              title={allData.engineeringProfessionals.skillTitle}
-            />
+            <Headings title={allData.engineeringProfessionals.skillTitle} />
             <Paragraphs
               data={allData.engineeringProfessionals.skillDescription}
             />
 
-            <Headings
-              title={allData.engineeringProfessionals.secondTitle}
-            />
+            <Headings title={allData.engineeringProfessionals.secondTitle} />
             <Paragraphs
               data={allData.engineeringProfessionals.secondDescription}
             />
-            <Headings
-              title={allData.engineeringProfessionals.thirdTitle}
-            />
+            <Headings title={allData.engineeringProfessionals.thirdTitle} />
             <Paragraphs
               data={allData.engineeringProfessionals.thirdDescription}
             />
@@ -5612,72 +5162,55 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               title={allData.engineeringProfessionals.occupationTitle}
             />
 
-            {allData.engineeringProfessionals.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.engineeringProfessionals.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-             <Headings
+            <Headings
               title={allData.engineeringProfessionals.notoccuoationtitle}
             />
-            <Paragraphs
-              data={allData.engineeringProfessionals.notoccupation}
-            />
-
-<Headings
-              title={allData.engineeringProfessionals.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.engineeringProfessionals.visaprovision}
-            />
+            <Paragraphs data={allData.engineeringProfessionals.notoccupation} />
 
             <Headings
-              title={allData.engineeringProfessionals.unitTitle}
+              title={allData.engineeringProfessionals.visaprovisiontitle}
             />
+            <Paragraphs data={allData.engineeringProfessionals.visaprovision} />
+
+            <Headings title={allData.engineeringProfessionals.unitTitle} />
             <Paragraphs
               data={allData.engineeringProfessionals.unitDescription}
             />
 
-<Headings
+            <Headings
               title={allData.engineeringProfessionals.skillleveltitle}
             />
-            <Paragraphs
-              data={allData.engineeringProfessionals.skilllevel}
-            />
+            <Paragraphs data={allData.engineeringProfessionals.skilllevel} />
 
             <Headings
               title={allData.engineeringProfessionals.occupationsTitle}
             />
             <Paragraphs
-              data={
-                allData.engineeringProfessionals.occupationDescription
-              }
+              data={allData.engineeringProfessionals.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.engineeringProfessionals.exceptionstitle}
-            
             list={allData.engineeringProfessionals.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.engineeringProfessionals.languagetitle}
-            
             list={allData.engineeringProfessionals.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.engineeringProfessionals.tasktitle}
-            
             list={allData.engineeringProfessionals.tasks}
           />
           <Hero2
@@ -5687,7 +5220,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           />
         </>
       )}
-      
+
       {anzsco === "anzsco-263111-computer-networks-and-system-engineers" && (
         <>
           <Section1
@@ -5696,95 +5229,52 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.computerEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.computerEngineer.skillTitle}
-            />
-            <Paragraphs
-              data={allData.computerEngineer.skillDescription}
-            />
+            <Headings title={allData.computerEngineer.skillTitle} />
+            <Paragraphs data={allData.computerEngineer.skillDescription} />
 
-            <Headings
-              title={allData.computerEngineer.secondTitle}
-            />
-            <Paragraphs
-              data={allData.computerEngineer.secondDescription}
-            />
-            <Headings
-              title={allData.computerEngineer.thirdTitle}
-            />
-            <Paragraphs
-              data={allData.computerEngineer.thirdDescription}
-            />
-            <Headings
-              title={allData.computerEngineer.occupationTitle}
-            />
+            <Headings title={allData.computerEngineer.secondTitle} />
+            <Paragraphs data={allData.computerEngineer.secondDescription} />
+            <Headings title={allData.computerEngineer.thirdTitle} />
+            <Paragraphs data={allData.computerEngineer.thirdDescription} />
+            <Headings title={allData.computerEngineer.occupationTitle} />
 
-            {allData.computerEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.computerEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-             <Headings
-              title={allData.computerEngineer.notoccuoationtitle}
-            />
-            <Paragraphs
-              data={allData.computerEngineer.notoccupation}
-            />
+            <Headings title={allData.computerEngineer.notoccuoationtitle} />
+            <Paragraphs data={allData.computerEngineer.notoccupation} />
 
-<Headings
-              title={allData.computerEngineer.visaprovisiontitle}
-            />
-            <Paragraphs
-              data={allData.computerEngineer.visaprovision}
-            />
+            <Headings title={allData.computerEngineer.visaprovisiontitle} />
+            <Paragraphs data={allData.computerEngineer.visaprovision} />
 
-            <Headings
-              title={allData.computerEngineer.unitTitle}
-            />
-            <Paragraphs
-              data={allData.computerEngineer.unitDescription}
-            />
+            <Headings title={allData.computerEngineer.unitTitle} />
+            <Paragraphs data={allData.computerEngineer.unitDescription} />
 
-<Headings
-              title={allData.computerEngineer.skillleveltitle}
-            />
-            <Paragraphs
-              data={allData.computerEngineer.skilllevel}
-            />
+            <Headings title={allData.computerEngineer.skillleveltitle} />
+            <Paragraphs data={allData.computerEngineer.skilllevel} />
 
-            <Headings
-              title={allData.computerEngineer.occupationsTitle}
-            />
-            <Paragraphs
-              data={
-                allData.computerEngineer.occupationDescription
-              }
-            />
+            <Headings title={allData.computerEngineer.occupationsTitle} />
+            <Paragraphs data={allData.computerEngineer.occupationDescription} />
           </Container>
           <Expectations
             title={allData.computerEngineer.exceptionstitle}
-            
             list={allData.computerEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.computerEngineer.languagetitle}
-            
             list={allData.computerEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.computerEngineer.tasktitle}
-            
             list={allData.computerEngineer.tasks}
           />
           <Hero2
@@ -5794,8 +5284,8 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           />
         </>
       )}
-      
-{anzsco === "anzsco-263311-telecommunication-engineers" && (
+
+      {anzsco === "anzsco-263311-telecommunication-engineers" && (
         <>
           <Section1
             title={allData.telecommunicationsEngineer.title}
@@ -5803,22 +5293,16 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.telecommunicationsEngineer.image}
           />
           <Container>
-            <Headings
-              title={allData.telecommunicationsEngineer.skillTitle}
-            />
+            <Headings title={allData.telecommunicationsEngineer.skillTitle} />
             <Paragraphs
               data={allData.telecommunicationsEngineer.skillDescription}
             />
 
-            <Headings
-              title={allData.telecommunicationsEngineer.secondTitle}
-            />
+            <Headings title={allData.telecommunicationsEngineer.secondTitle} />
             <Paragraphs
               data={allData.telecommunicationsEngineer.secondDescription}
             />
-            <Headings
-              title={allData.telecommunicationsEngineer.thirdTitle}
-            />
+            <Headings title={allData.telecommunicationsEngineer.thirdTitle} />
             <Paragraphs
               data={allData.telecommunicationsEngineer.thirdDescription}
             />
@@ -5826,72 +5310,59 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               title={allData.telecommunicationsEngineer.occupationTitle}
             />
 
-            {allData.telecommunicationsEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.telecommunicationsEngineer.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-             <Headings
+            <Headings
               title={allData.telecommunicationsEngineer.notoccuoationtitle}
             />
             <Paragraphs
               data={allData.telecommunicationsEngineer.notoccupation}
             />
 
-<Headings
+            <Headings
               title={allData.telecommunicationsEngineer.visaprovisiontitle}
             />
             <Paragraphs
               data={allData.telecommunicationsEngineer.visaprovision}
             />
 
-            <Headings
-              title={allData.telecommunicationsEngineer.unitTitle}
-            />
+            <Headings title={allData.telecommunicationsEngineer.unitTitle} />
             <Paragraphs
               data={allData.telecommunicationsEngineer.unitDescription}
             />
 
-<Headings
+            <Headings
               title={allData.telecommunicationsEngineer.skillleveltitle}
             />
-            <Paragraphs
-              data={allData.telecommunicationsEngineer.skilllevel}
-            />
+            <Paragraphs data={allData.telecommunicationsEngineer.skilllevel} />
 
             <Headings
               title={allData.telecommunicationsEngineer.occupationsTitle}
             />
             <Paragraphs
-              data={
-                allData.telecommunicationsEngineer.occupationDescription
-              }
+              data={allData.telecommunicationsEngineer.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.telecommunicationsEngineer.exceptionstitle}
-            
             list={allData.telecommunicationsEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.telecommunicationsEngineer.languagetitle}
-            
             list={allData.telecommunicationsEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.telecommunicationsEngineer.tasktitle}
-            
             list={allData.telecommunicationsEngineer.tasks}
           />
           <Hero2
@@ -5933,29 +5404,35 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               title={allData.telecommunicationsnetworkEngineer.occupationTitle}
             />
 
-            {allData.telecommunicationsnetworkEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
-            ))}
-             <Headings
-              title={allData.telecommunicationsnetworkEngineer.notoccuoationtitle}
+            {allData.telecommunicationsnetworkEngineer.occupationList?.map(
+              (l, i) => (
+                <Row key={i}>
+                  <Col xs={1} className="pt-1">
+                    <img
+                      style={{ height: "20px", width: "20px", float: "right" }}
+                      src="/images/Vector.png"
+                      alt="hat"
+                    />
+                  </Col>
+                  <Col xs={11}>
+                    <Paragraphs data={l} />
+                  </Col>
+                </Row>
+              )
+            )}
+            <Headings
+              title={
+                allData.telecommunicationsnetworkEngineer.notoccuoationtitle
+              }
             />
             <Paragraphs
               data={allData.telecommunicationsnetworkEngineer.notoccupation}
             />
 
-<Headings
-              title={allData.telecommunicationsnetworkEngineer.visaprovisiontitle}
+            <Headings
+              title={
+                allData.telecommunicationsnetworkEngineer.visaprovisiontitle
+              }
             />
             <Paragraphs
               data={allData.telecommunicationsnetworkEngineer.visaprovision}
@@ -5968,7 +5445,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               data={allData.telecommunicationsnetworkEngineer.unitDescription}
             />
 
-<Headings
+            <Headings
               title={allData.telecommunicationsnetworkEngineer.skillleveltitle}
             />
             <Paragraphs
@@ -5986,30 +5463,29 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           </Container>
           <Expectations
             title={allData.telecommunicationsnetworkEngineer.exceptionstitle}
-            
             list={allData.telecommunicationsnetworkEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.telecommunicationsnetworkEngineer.languagetitle}
-            
             list={allData.telecommunicationsnetworkEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.telecommunicationsnetworkEngineer.tasktitle}
-            
             list={allData.telecommunicationsnetworkEngineer.tasks}
           />
           <Hero2
             title={allData.telecommunicationsnetworkEngineer.hero2Title}
             data={allData.telecommunicationsnetworkEngineer.hero2Description}
-            buttonName={allData.telecommunicationsnetworkEngineer.hero2ButtonName}
+            buttonName={
+              allData.telecommunicationsnetworkEngineer.hero2ButtonName
+            }
           />
         </>
       )}
 
-{anzsco === "anzsco-312211-civil-engineering-draftsperson" && (
+      {anzsco === "anzsco-312211-civil-engineering-draftsperson" && (
         <>
           <Section1
             title={allData.civilengineeringDraftsperson.title}
@@ -6017,9 +5493,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.civilengineeringDraftsperson.image}
           />
           <Container>
-            <Headings
-              title={allData.civilengineeringDraftsperson.skillTitle}
-            />
+            <Headings title={allData.civilengineeringDraftsperson.skillTitle} />
             <Paragraphs
               data={allData.civilengineeringDraftsperson.skillDescription}
             />
@@ -6030,9 +5504,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             <Paragraphs
               data={allData.civilengineeringDraftsperson.secondDescription}
             />
-            <Headings
-              title={allData.civilengineeringDraftsperson.thirdTitle}
-            />
+            <Headings title={allData.civilengineeringDraftsperson.thirdTitle} />
             <Paragraphs
               data={allData.civilengineeringDraftsperson.thirdDescription}
             />
@@ -6040,42 +5512,42 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               title={allData.civilengineeringDraftsperson.occupationTitle}
             />
 
-            {allData.civilengineeringDraftsperson.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
-            ))}
-             <Headings
+            {allData.civilengineeringDraftsperson.occupationList?.map(
+              (l, i) => (
+                <Row key={i}>
+                  <Col xs={1} className="pt-1">
+                    <img
+                      style={{ height: "20px", width: "20px", float: "right" }}
+                      src="/images/Vector.png"
+                      alt="hat"
+                    />
+                  </Col>
+                  <Col xs={11}>
+                    <Paragraphs data={l} />
+                  </Col>
+                </Row>
+              )
+            )}
+            <Headings
               title={allData.civilengineeringDraftsperson.notoccuoationtitle}
             />
             <Paragraphs
               data={allData.civilengineeringDraftsperson.notoccupation}
             />
 
-<Headings
+            <Headings
               title={allData.civilengineeringDraftsperson.visaprovisiontitle}
             />
             <Paragraphs
               data={allData.civilengineeringDraftsperson.visaprovision}
             />
 
-            <Headings
-              title={allData.civilengineeringDraftsperson.unitTitle}
-            />
+            <Headings title={allData.civilengineeringDraftsperson.unitTitle} />
             <Paragraphs
               data={allData.civilengineeringDraftsperson.unitDescription}
             />
 
-<Headings
+            <Headings
               title={allData.civilengineeringDraftsperson.skillleveltitle}
             />
             <Paragraphs
@@ -6086,26 +5558,21 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               title={allData.civilengineeringDraftsperson.occupationsTitle}
             />
             <Paragraphs
-              data={
-                allData.civilengineeringDraftsperson.occupationDescription
-              }
+              data={allData.civilengineeringDraftsperson.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.civilengineeringDraftsperson.exceptionstitle}
-            
             list={allData.civilengineeringDraftsperson.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.civilengineeringDraftsperson.languagetitle}
-            
             list={allData.civilengineeringDraftsperson.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.civilengineeringDraftsperson.tasktitle}
-            
             list={allData.civilengineeringDraftsperson.tasks}
           />
           <Hero2
@@ -6115,7 +5582,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           />
         </>
       )}
-      
+
       {anzsco === "anzsco-312212-civil-engineering-technician" && (
         <>
           <Section1
@@ -6124,22 +5591,16 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.civilengineeringTechnician.image}
           />
           <Container>
-            <Headings
-              title={allData.civilengineeringTechnician.skillTitle}
-            />
+            <Headings title={allData.civilengineeringTechnician.skillTitle} />
             <Paragraphs
               data={allData.civilengineeringTechnician.skillDescription}
             />
 
-            <Headings
-              title={allData.civilengineeringTechnician.secondTitle}
-            />
+            <Headings title={allData.civilengineeringTechnician.secondTitle} />
             <Paragraphs
               data={allData.civilengineeringTechnician.secondDescription}
             />
-            <Headings
-              title={allData.civilengineeringTechnician.thirdTitle}
-            />
+            <Headings title={allData.civilengineeringTechnician.thirdTitle} />
             <Paragraphs
               data={allData.civilengineeringTechnician.thirdDescription}
             />
@@ -6147,72 +5608,59 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               title={allData.civilengineeringTechnician.occupationTitle}
             />
 
-            {allData.civilengineeringTechnician.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.civilengineeringTechnician.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-             <Headings
+            <Headings
               title={allData.civilengineeringTechnician.notoccuoationtitle}
             />
             <Paragraphs
               data={allData.civilengineeringTechnician.notoccupation}
             />
 
-<Headings
+            <Headings
               title={allData.civilengineeringTechnician.visaprovisiontitle}
             />
             <Paragraphs
               data={allData.civilengineeringTechnician.visaprovision}
             />
 
-            <Headings
-              title={allData.civilengineeringTechnician.unitTitle}
-            />
+            <Headings title={allData.civilengineeringTechnician.unitTitle} />
             <Paragraphs
               data={allData.civilengineeringTechnician.unitDescription}
             />
 
-<Headings
+            <Headings
               title={allData.civilengineeringTechnician.skillleveltitle}
             />
-            <Paragraphs
-              data={allData.civilengineeringTechnician.skilllevel}
-            />
+            <Paragraphs data={allData.civilengineeringTechnician.skilllevel} />
 
             <Headings
               title={allData.civilengineeringTechnician.occupationsTitle}
             />
             <Paragraphs
-              data={
-                allData.civilengineeringTechnician.occupationDescription
-              }
+              data={allData.civilengineeringTechnician.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.civilengineeringTechnician.exceptionstitle}
-            
             list={allData.civilengineeringTechnician.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.civilengineeringTechnician.languagetitle}
-            
             list={allData.civilengineeringTechnician.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.civilengineeringTechnician.tasktitle}
-            
             list={allData.civilengineeringTechnician.tasks}
           />
           <Hero2
@@ -6222,7 +5670,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           />
         </>
       )}
-     
+
       {anzsco === "anzsco-312311-electrical-engineering-draftsperson" && (
         <>
           <Section1
@@ -6254,29 +5702,35 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               title={allData.electricalengineeringDraftsperson.occupationTitle}
             />
 
-            {allData.electricalengineeringDraftsperson.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
-            ))}
-             <Headings
-              title={allData.electricalengineeringDraftsperson.notoccuoationtitle}
+            {allData.electricalengineeringDraftsperson.occupationList?.map(
+              (l, i) => (
+                <Row key={i}>
+                  <Col xs={1} className="pt-1">
+                    <img
+                      style={{ height: "20px", width: "20px", float: "right" }}
+                      src="/images/Vector.png"
+                      alt="hat"
+                    />
+                  </Col>
+                  <Col xs={11}>
+                    <Paragraphs data={l} />
+                  </Col>
+                </Row>
+              )
+            )}
+            <Headings
+              title={
+                allData.electricalengineeringDraftsperson.notoccuoationtitle
+              }
             />
             <Paragraphs
               data={allData.electricalengineeringDraftsperson.notoccupation}
             />
 
-<Headings
-              title={allData.electricalengineeringDraftsperson.visaprovisiontitle}
+            <Headings
+              title={
+                allData.electricalengineeringDraftsperson.visaprovisiontitle
+              }
             />
             <Paragraphs
               data={allData.electricalengineeringDraftsperson.visaprovision}
@@ -6289,7 +5743,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               data={allData.electricalengineeringDraftsperson.unitDescription}
             />
 
-<Headings
+            <Headings
               title={allData.electricalengineeringDraftsperson.skillleveltitle}
             />
             <Paragraphs
@@ -6307,25 +5761,24 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           </Container>
           <Expectations
             title={allData.electricalengineeringDraftsperson.exceptionstitle}
-            
             list={allData.electricalengineeringDraftsperson.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.electricalengineeringDraftsperson.languagetitle}
-            
             list={allData.electricalengineeringDraftsperson.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.electricalengineeringDraftsperson.tasktitle}
-            
             list={allData.electricalengineeringDraftsperson.tasks}
           />
           <Hero2
             title={allData.electricalengineeringDraftsperson.hero2Title}
             data={allData.electricalengineeringDraftsperson.hero2Description}
-            buttonName={allData.electricalengineeringDraftsperson.hero2ButtonName}
+            buttonName={
+              allData.electricalengineeringDraftsperson.hero2ButtonName
+            }
           />
         </>
       )}
@@ -6360,28 +5813,30 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               title={allData.electricalengineeringTechnician.occupationTitle}
             />
 
-            {allData.electricalengineeringTechnician.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
-            ))}
-             <Headings
+            {allData.electricalengineeringTechnician.occupationList?.map(
+              (l, i) => (
+                <Row key={i}>
+                  <Col xs={1} className="pt-1">
+                    <img
+                      style={{ height: "20px", width: "20px", float: "right" }}
+                      src="/images/Vector.png"
+                      alt="hat"
+                    />
+                  </Col>
+                  <Col xs={11}>
+                    <Paragraphs data={l} />
+                  </Col>
+                </Row>
+              )
+            )}
+            <Headings
               title={allData.electricalengineeringTechnician.notoccuoationtitle}
             />
             <Paragraphs
               data={allData.electricalengineeringTechnician.notoccupation}
             />
 
-<Headings
+            <Headings
               title={allData.electricalengineeringTechnician.visaprovisiontitle}
             />
             <Paragraphs
@@ -6395,7 +5850,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               data={allData.electricalengineeringTechnician.unitDescription}
             />
 
-<Headings
+            <Headings
               title={allData.electricalengineeringTechnician.skillleveltitle}
             />
             <Paragraphs
@@ -6413,19 +5868,16 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           </Container>
           <Expectations
             title={allData.electricalengineeringTechnician.exceptionstitle}
-            
             list={allData.electricalengineeringTechnician.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.electricalengineeringTechnician.languagetitle}
-            
             list={allData.electricalengineeringTechnician.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.electricalengineeringTechnician.tasktitle}
-            
             list={allData.electricalengineeringTechnician.tasks}
           />
           <Hero2
@@ -6457,34 +5909,34 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               data={allData.telecommunicationfieldEngineer.secondDescription}
             />
 
-            
-
             <Headings
               title={allData.telecommunicationfieldEngineer.occupationTitle}
             />
 
-            {allData.telecommunicationfieldEngineer.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
-            ))}
-             <Headings
+            {allData.telecommunicationfieldEngineer.occupationList?.map(
+              (l, i) => (
+                <Row key={i}>
+                  <Col xs={1} className="pt-1">
+                    <img
+                      style={{ height: "20px", width: "20px", float: "right" }}
+                      src="/images/Vector.png"
+                      alt="hat"
+                    />
+                  </Col>
+                  <Col xs={11}>
+                    <Paragraphs data={l} />
+                  </Col>
+                </Row>
+              )
+            )}
+            <Headings
               title={allData.telecommunicationfieldEngineer.notoccuoationtitle}
             />
             <Paragraphs
               data={allData.telecommunicationfieldEngineer.notoccupation}
             />
 
-<Headings
+            <Headings
               title={allData.telecommunicationfieldEngineer.visaprovisiontitle}
             />
             <Paragraphs
@@ -6498,7 +5950,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               data={allData.telecommunicationfieldEngineer.unitDescription}
             />
 
-<Headings
+            <Headings
               title={allData.telecommunicationfieldEngineer.skillleveltitle}
             />
             <Paragraphs
@@ -6516,19 +5968,16 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           </Container>
           <Expectations
             title={allData.telecommunicationfieldEngineer.exceptionstitle}
-            
             list={allData.telecommunicationfieldEngineer.exceptions}
           />
 
-<Expectations
+          <Expectations
             title={allData.telecommunicationfieldEngineer.languagetitle}
-            
             list={allData.telecommunicationfieldEngineer.language}
           />
 
-<Expectations
+          <Expectations
             title={allData.telecommunicationfieldEngineer.tasktitle}
-            
             list={allData.telecommunicationfieldEngineer.tasks}
           />
           <Hero2
@@ -6539,7 +5988,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
         </>
       )}
 
-{anzsco === "anzsco-312411-electronics-draftsperson" && (
+      {anzsco === "anzsco-312411-electronics-draftsperson" && (
         <>
           <Section1
             title={allData.electronicsDraftsperson.title}
@@ -6547,70 +5996,59 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.electronicsDraftsperson.image}
           />
           <Container>
-            <Headings
-              title={allData.electronicsDraftsperson.skillTitle}
-            />
+            <Headings title={allData.electronicsDraftsperson.skillTitle} />
             <Paragraphs
               data={allData.electronicsDraftsperson.skillDescription}
             />
 
-            <Headings
-              title={allData.electronicsDraftsperson.secondTitle}
-            />
+            <Headings title={allData.electronicsDraftsperson.secondTitle} />
             <Paragraphs
               data={allData.electronicsDraftsperson.secondDescription}
-            />    
-
-            <Headings
-              title={allData.electronicsDraftsperson.occupationTitle}
             />
 
-            {allData.electronicsDraftsperson.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            <Headings title={allData.electronicsDraftsperson.occupationTitle} />
+
+            {allData.electronicsDraftsperson.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-            <Headings title={allData.electronicsDraftsperson.notoccuoationtitle}/>
-            <Paragraphs data={allData.electronicsDraftsperson.notoccupation}/>
-
-            <Headings title={allData.electronicsDraftsperson.visaprovisiontitle}/>
-            <Paragraphs data={allData.electronicsDraftsperson.visaprovision}/>
+            <Headings
+              title={allData.electronicsDraftsperson.notoccuoationtitle}
+            />
+            <Paragraphs data={allData.electronicsDraftsperson.notoccupation} />
 
             <Headings
-              title={allData.electronicsDraftsperson.unitTitle}
+              title={allData.electronicsDraftsperson.visaprovisiontitle}
             />
+            <Paragraphs data={allData.electronicsDraftsperson.visaprovision} />
+
+            <Headings title={allData.electronicsDraftsperson.unitTitle} />
             <Paragraphs
               data={allData.electronicsDraftsperson.unitDescription}
             />
 
-
-<Headings title={allData.electronicsDraftsperson.skillleveltitle}/>
-            <Paragraphs data={allData.electronicsDraftsperson.skilllevel}/>
+            <Headings title={allData.electronicsDraftsperson.skillleveltitle} />
+            <Paragraphs data={allData.electronicsDraftsperson.skilllevel} />
 
             <Headings
               title={allData.electronicsDraftsperson.occupationsTitle}
             />
             <Paragraphs
-              data={
-                allData.electronicsDraftsperson.occupationDescription
-              }
+              data={allData.electronicsDraftsperson.occupationDescription}
             />
           </Container>
           <Expectations
             title={allData.electronicsDraftsperson.exceptionstitle}
             list={allData.electronicsDraftsperson.exceptions}
           />
-          
-           <Expectations
+
+          <Expectations
             title={allData.electronicsDraftsperson.languagetitle}
             list={allData.electronicsDraftsperson.language}
           />
@@ -6635,70 +6073,45 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.navalArchitect.image}
           />
           <Container>
-            <Headings
-              title={allData.navalArchitect.skillTitle}
-            />
-            <Paragraphs
-              data={allData.navalArchitect.skillDescription}
-            />
+            <Headings title={allData.navalArchitect.skillTitle} />
+            <Paragraphs data={allData.navalArchitect.skillDescription} />
 
-            <Headings
-              title={allData.navalArchitect.secondTitle}
-            />
-            <Paragraphs
-              data={allData.navalArchitect.secondDescription}
-            />    
+            <Headings title={allData.navalArchitect.secondTitle} />
+            <Paragraphs data={allData.navalArchitect.secondDescription} />
 
-            <Headings
-              title={allData.navalArchitect.occupationTitle}
-            />
+            <Headings title={allData.navalArchitect.occupationTitle} />
 
-            {allData.navalArchitect.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.navalArchitect.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-            <Headings title={allData.navalArchitect.notoccuoationtitle}/>
-            <Paragraphs data={allData.navalArchitect.notoccupation}/>
+            <Headings title={allData.navalArchitect.notoccuoationtitle} />
+            <Paragraphs data={allData.navalArchitect.notoccupation} />
 
-            <Headings title={allData.navalArchitect.visaprovisiontitle}/>
-            <Paragraphs data={allData.navalArchitect.visaprovision}/>
+            <Headings title={allData.navalArchitect.visaprovisiontitle} />
+            <Paragraphs data={allData.navalArchitect.visaprovision} />
 
-            <Headings
-              title={allData.navalArchitect.unitTitle}
-            />
-            <Paragraphs
-              data={allData.navalArchitect.unitDescription}
-            />
+            <Headings title={allData.navalArchitect.unitTitle} />
+            <Paragraphs data={allData.navalArchitect.unitDescription} />
 
+            <Headings title={allData.navalArchitect.skillleveltitle} />
+            <Paragraphs data={allData.navalArchitect.skilllevel} />
 
-<Headings title={allData.navalArchitect.skillleveltitle}/>
-            <Paragraphs data={allData.navalArchitect.skilllevel}/>
-
-            <Headings
-              title={allData.navalArchitect.occupationsTitle}
-            />
-            <Paragraphs
-              data={
-                allData.navalArchitect.occupationDescription
-              }
-            />
+            <Headings title={allData.navalArchitect.occupationsTitle} />
+            <Paragraphs data={allData.navalArchitect.occupationDescription} />
           </Container>
           <Expectations
             title={allData.navalArchitect.exceptionstitle}
             list={allData.navalArchitect.exceptions}
           />
-          
-           <Expectations
+
+          <Expectations
             title={allData.navalArchitect.languagetitle}
             list={allData.navalArchitect.language}
           />
@@ -6740,36 +6153,49 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             <Headings
               title={allData.telecommunicationsNetworkPlanner.thirdTitle}
             />
-            {allData.telecommunicationsNetworkPlanner.thirdDescription?.map((t,i)=>(
-  <Paragraphs key={i}
-  data={t}
-/>
-            ))}
-          
+            {allData.telecommunicationsNetworkPlanner.thirdDescription?.map(
+              (t, i) => (
+                <Paragraphs key={i} data={t} />
+              )
+            )}
 
             <Headings
               title={allData.telecommunicationsNetworkPlanner.occupationTitle}
             />
 
-            {allData.telecommunicationsNetworkPlanner.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
-            ))}
-            <Headings title={allData.telecommunicationsNetworkPlanner.notoccuoationtitle}/>
-            <Paragraphs data={allData.telecommunicationsNetworkPlanner.notoccupation}/>
+            {allData.telecommunicationsNetworkPlanner.occupationList?.map(
+              (l, i) => (
+                <Row key={i}>
+                  <Col xs={1} className="pt-1">
+                    <img
+                      style={{ height: "20px", width: "20px", float: "right" }}
+                      src="/images/Vector.png"
+                      alt="hat"
+                    />
+                  </Col>
+                  <Col xs={11}>
+                    <Paragraphs data={l} />
+                  </Col>
+                </Row>
+              )
+            )}
+            <Headings
+              title={
+                allData.telecommunicationsNetworkPlanner.notoccuoationtitle
+              }
+            />
+            <Paragraphs
+              data={allData.telecommunicationsNetworkPlanner.notoccupation}
+            />
 
-            <Headings title={allData.telecommunicationsNetworkPlanner.visaprovisiontitle}/>
-            <Paragraphs data={allData.telecommunicationsNetworkPlanner.visaprovision}/>
+            <Headings
+              title={
+                allData.telecommunicationsNetworkPlanner.visaprovisiontitle
+              }
+            />
+            <Paragraphs
+              data={allData.telecommunicationsNetworkPlanner.visaprovision}
+            />
 
             <Headings
               title={allData.telecommunicationsNetworkPlanner.unitTitle}
@@ -6778,9 +6204,12 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               data={allData.telecommunicationsNetworkPlanner.unitDescription}
             />
 
-
-<Headings title={allData.telecommunicationsNetworkPlanner.skillleveltitle}/>
-            <Paragraphs data={allData.telecommunicationsNetworkPlanner.skilllevel}/>
+            <Headings
+              title={allData.telecommunicationsNetworkPlanner.skillleveltitle}
+            />
+            <Paragraphs
+              data={allData.telecommunicationsNetworkPlanner.skilllevel}
+            />
 
             <Headings
               title={allData.telecommunicationsNetworkPlanner.occupationsTitle}
@@ -6796,7 +6225,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             list={allData.telecommunicationsNetworkPlanner.exceptions}
           />
 
-           <Expectations
+          <Expectations
             title={allData.telecommunicationsNetworkPlanner.languagetitle}
             list={allData.telecommunicationsNetworkPlanner.language}
           />
@@ -6808,12 +6237,14 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
           <Hero2
             title={allData.telecommunicationsNetworkPlanner.hero2Title}
             data={allData.telecommunicationsNetworkPlanner.hero2Description}
-            buttonName={allData.telecommunicationsNetworkPlanner.hero2ButtonName}
+            buttonName={
+              allData.telecommunicationsNetworkPlanner.hero2ButtonName
+            }
           />
         </>
       )}
 
-{anzsco === "anzsco-313212-telecommunication-technologist" && (
+      {anzsco === "anzsco-313212-telecommunication-technologist" && (
         <>
           <Section1
             title={allData.telecommunicationsTechnologist.title}
@@ -6838,36 +6269,45 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             <Headings
               title={allData.telecommunicationsTechnologist.thirdTitle}
             />
-            {allData.telecommunicationsTechnologist.thirdDescription?.map((t,i)=>(
-  <Paragraphs key={i}
-  data={t} 
-/>
-            ))}
-          
+            {allData.telecommunicationsTechnologist.thirdDescription?.map(
+              (t, i) => (
+                <Paragraphs key={i} data={t} />
+              )
+            )}
 
             <Headings
               title={allData.telecommunicationsTechnologist.occupationTitle}
             />
 
-            {allData.telecommunicationsTechnologist.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
-            ))}
-            <Headings title={allData.telecommunicationsTechnologist.notoccuoationtitle}/>
-            <Paragraphs data={allData.telecommunicationsTechnologist.notoccupation}/>
+            {allData.telecommunicationsTechnologist.occupationList?.map(
+              (l, i) => (
+                <Row key={i}>
+                  <Col xs={1} className="pt-1">
+                    <img
+                      style={{ height: "20px", width: "20px", float: "right" }}
+                      src="/images/Vector.png"
+                      alt="hat"
+                    />
+                  </Col>
+                  <Col xs={11}>
+                    <Paragraphs data={l} />
+                  </Col>
+                </Row>
+              )
+            )}
+            <Headings
+              title={allData.telecommunicationsTechnologist.notoccuoationtitle}
+            />
+            <Paragraphs
+              data={allData.telecommunicationsTechnologist.notoccupation}
+            />
 
-            <Headings title={allData.telecommunicationsTechnologist.visaprovisiontitle}/>
-            <Paragraphs data={allData.telecommunicationsTechnologist.visaprovision}/>
+            <Headings
+              title={allData.telecommunicationsTechnologist.visaprovisiontitle}
+            />
+            <Paragraphs
+              data={allData.telecommunicationsTechnologist.visaprovision}
+            />
 
             <Headings
               title={allData.telecommunicationsTechnologist.unitTitle}
@@ -6876,9 +6316,12 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
               data={allData.telecommunicationsTechnologist.unitDescription}
             />
 
-
-<Headings title={allData.telecommunicationsTechnologist.skillleveltitle}/>
-            <Paragraphs data={allData.telecommunicationsTechnologist.skilllevel}/>
+            <Headings
+              title={allData.telecommunicationsTechnologist.skillleveltitle}
+            />
+            <Paragraphs
+              data={allData.telecommunicationsTechnologist.skilllevel}
+            />
 
             <Headings
               title={allData.telecommunicationsTechnologist.occupationsTitle}
@@ -6894,7 +6337,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             list={allData.telecommunicationsTechnologist.exceptions}
           />
 
-           <Expectations
+          <Expectations
             title={allData.telecommunicationsTechnologist.languagetitle}
             list={allData.telecommunicationsTechnologist.language}
           />
@@ -6918,72 +6361,52 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             image={allData.engineeringTechnicians.image}
           />
           <Container>
-            <Headings
-              title={allData.engineeringTechnicians.skillTitle}
-            />
+            <Headings title={allData.engineeringTechnicians.skillTitle} />
             <Paragraphs
               data={allData.engineeringTechnicians.skillDescription}
             />
 
-            <Headings
-              title={allData.engineeringTechnicians.secondTitle}
-            />
+            <Headings title={allData.engineeringTechnicians.secondTitle} />
             <Paragraphs
               data={allData.engineeringTechnicians.secondDescription}
             />
 
-            <Headings
-              title={allData.engineeringTechnicians.thirdTitle}
-            />
-            {allData.engineeringTechnicians.thirdDescription?.map((t,i)=>(
-  <Paragraphs key={i}
-  data={t}
-/>
+            <Headings title={allData.engineeringTechnicians.thirdTitle} />
+            {allData.engineeringTechnicians.thirdDescription?.map((t, i) => (
+              <Paragraphs key={i} data={t} />
             ))}
-          
 
-            <Headings
-              title={allData.engineeringTechnicians.occupationTitle}
-            />
+            <Headings title={allData.engineeringTechnicians.occupationTitle} />
 
-            {allData.engineeringTechnicians.occupationList?.map((l,i) => (
-              <Row key={i}>
-                <Col xs={1} className="pt-1">
-                  <img
-                    style={{ height: "20px", width: "20px", float: "right" }}
-                    src="/images/Vector.png"
-                    alt="hat"
-                  />
-                </Col>
-                <Col xs={11}>
-                  <Paragraphs data={l} />
-                </Col>
-              </Row>
+            {allData.engineeringTechnicians.occupationList?.map((l, i) => (
+              <Stack direction="row" key={i} spacing={1}>
+                <img
+                  style={{ height: "20px", width: "20px", float: "right" }}
+                  src="/images/Vector.png"
+                  alt="hat"
+                />
+                <Paragraphs data={l} />
+              </Stack>
             ))}
-            <Headings title={allData.engineeringTechnicians.notoccuoationtitle}/>
-            <Paragraphs data={allData.engineeringTechnicians.notoccupation}/>
-
-            <Headings title={allData.engineeringTechnicians.visaprovisiontitle}/>
-            <Paragraphs data={allData.engineeringTechnicians.visaprovision}/>
+            <Headings
+              title={allData.engineeringTechnicians.notoccuoationtitle}
+            />
+            <Paragraphs data={allData.engineeringTechnicians.notoccupation} />
 
             <Headings
-              title={allData.engineeringTechnicians.unitTitle}
+              title={allData.engineeringTechnicians.visaprovisiontitle}
             />
+            <Paragraphs data={allData.engineeringTechnicians.visaprovision} />
+
+            <Headings title={allData.engineeringTechnicians.unitTitle} />
+            <Paragraphs data={allData.engineeringTechnicians.unitDescription} />
+
+            <Headings title={allData.engineeringTechnicians.skillleveltitle} />
+            <Paragraphs data={allData.engineeringTechnicians.skilllevel} />
+
+            <Headings title={allData.engineeringTechnicians.occupationsTitle} />
             <Paragraphs
-              data={allData.engineeringTechnicians.unitDescription}
-            />
-
-
-<Headings title={allData.engineeringTechnicians.skillleveltitle}/>
-            <Paragraphs data={allData.engineeringTechnicians.skilllevel}/>
-
-            <Headings
-              title={allData.engineeringTechnicians.occupationsTitle}
-            />
-            <Paragraphs
-              data={
-                allData.engineeringTechnicians.occupationDescription
-              }
+              data={allData.engineeringTechnicians.occupationDescription}
             />
           </Container>
           <Expectations
@@ -6991,7 +6414,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer." />
             list={allData.engineeringTechnicians.exceptions}
           />
 
-           <Expectations
+          <Expectations
             title={allData.engineeringTechnicians.languagetitle}
             list={allData.engineeringTechnicians.language}
           />
