@@ -67,6 +67,7 @@ export const getStaticProps = async () => {
     props: {
       landingRes: landingRes.data.attributes,
     },
+    revalidate: 1,
   };
 };
 
