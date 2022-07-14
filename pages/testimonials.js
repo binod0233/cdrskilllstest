@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/inline-script-id */
 import React from "react";
 import Hero3 from "../components/FAQ/Hero3";
 import Head from 'next/head'

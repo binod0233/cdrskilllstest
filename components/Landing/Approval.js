@@ -3,23 +3,18 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-
-const Approval = () => {
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import parse from "html-react-parser";
+const Approval = ({ approvalData }) => {
+  const { approval, assure } = approvalData;
+  // console.log("approval", approvalData);
   return (
     <div style={{ background: "#E5E5E5" }}>
       <Container>
         <Row>
           <Col className="mt-5" md={8}>
-            <Headings title="Get your CDR report Approved and Accepted." />
-            <Paragraphs
-              data="A satisfied customer is the best business strategy of all. We successfully made a 
-decent track record of getting approvals for CDR reports that we have prepared 
-for Engineers Australia.
-Professional writers with years of experience are ready 
-to assist you.
-"
-            />
+            <Headings title={approval.title} />
+            <Paragraphs data={parse(approval.paragraph)} />
             <button
               style={{
                 background: "#017CC9",
@@ -53,10 +48,11 @@ to assist you.
                 }}
               >
                 <BusinessCenterIcon />
-                We assure you
+                {assure.title}
               </h3>
-              <ul
-              className='listText'
+              {parse(assure.paragraph)}
+              {/* <ul
+                className="listText"
                 style={{
                   color: "#203546",
                   fontFamily: "Montserrat",
@@ -129,7 +125,7 @@ to assist you.
                   ></i>
                   Ensure Best Price
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </Col>
         </Row>

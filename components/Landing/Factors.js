@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 
-const Factors = () => {
+const Factors = ({ factor }) => {
   const dataList = [
     {
       image: "/images/Landing/licensed-professional-final-1.png",
@@ -59,14 +59,16 @@ const Factors = () => {
   delivering them to a customer.`,
     },
   ];
+  // console.log("Factors", factor.factor_data.data);
+
   return (
     <div style={{ backgroundColor: "#E5E5E5" }}>
       <Container>
         <Row className="pt-5">
-          <Headings title="Here are some of the factors that you have to 
-look after"/>
-          {dataList.map((d,i) => (
-            <Col key={i}
+          <Headings title={factor.factor} />
+          {factor.factor_data.data.map((d, i) => (
+            <Col
+              key={d.id}
               md="4"
               xs="12"
               className="d-flex flex-column justify-content-center align-items-center px-5"
@@ -86,7 +88,7 @@ look after"/>
                     width: "60%",
                     margin: "18px 0 0 18px",
                   }}
-                  src={d.image}
+                  src={d.attributes.image.data.attributes.url}
                   alt="licensed-professional-final-1"
                   className="img-fluid"
                 ></img>
@@ -102,7 +104,7 @@ look after"/>
                   textAlign: "center",
                 }}
               >
-                {d.title}
+                {d.attributes.title}
               </h4>
               <p
                 className="landingFactorText"
@@ -114,7 +116,7 @@ look after"/>
                   fontSize: "18px",
                 }}
               >
-                {d.desription}
+                {d.attributes.paragraph}
               </p>
             </Col>
           ))}
