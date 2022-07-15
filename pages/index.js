@@ -11,7 +11,7 @@ import Hero from "../components/Hero";
 import parse from "html-react-parser";
 import Seo from "../components/Seo";
 
-const Landing = ({ landingRes }) => {
+const Landing = ({ landingRes, test }) => {
   const router = useRouter();
   const canonicalUrl = (
     `https://cdrskillassessment.com` +
@@ -19,15 +19,17 @@ const Landing = ({ landingRes }) => {
   ).split("?")[0];
   const { hero, seo, about, shared } = landingRes;
   const factor = {
-    factor: landingRes.factor,
-    factor_data: landingRes.factor_data,
+    factor: landingRes?.factor,
+    factor_data: landingRes?.factor_data,
   };
-  const approval = { approval: landingRes.Approval, assure: landingRes.assure };
-  const step = { step: landingRes.steps, steps: landingRes.step };
-  const faq = { faq: landingRes.faq, faq_data: landingRes.faq_data };
+  const approval = {
+    approval: landingRes?.Approval,
+    assure: landingRes?.assure,
+  };
+  const step = { step: landingRes?.steps, steps: landingRes?.step };
+  const faq = { faq: landingRes?.faq, faq_data: landingRes?.faq_data };
 
-  console.log("testedddd", faq);
-
+  // console.log("test", test);
   return (
     <div>
       {/* <Head>
@@ -39,7 +41,7 @@ const Landing = ({ landingRes }) => {
         <link rel="canonical" href={canonicalUrl} />
       </Head> */}
       <Seo seo={seo} />
-      <Hero title={hero.title} details={parse(hero.paragraph)} />
+      <Hero title={hero?.title} details={parse(hero?.paragraph)} />
 
       <About about={about} />
       <Factors factor={factor} />
@@ -47,11 +49,12 @@ const Landing = ({ landingRes }) => {
       <Steps stepData={step} />
       <Faq faqData={faq} />
       <Hero2
-        title={shared.data.attributes.title}
-        data={shared.data.attributes.paragraph}
+        title={shared?.data?.attributes?.title}
+        data={shared?.data?.attributes?.paragraph}
         buttonName={"Check Pricing"}
         link="/pricing"
       />
+      {parse(test?.data[1]?.attributes?.addcontent[0]?.paragraph)}
     </div>
   );
 };
@@ -63,10 +66,17 @@ export const getStaticProps = async () => {
 
   const landingRes = await landing.json();
 
+  const test = await fetch(
+    "https://cdrskill.herokuapp.com/api/cdrsamples?populate=deep"
+  );
+  const testRes = await test.json();
+
   return {
     props: {
-      landingRes: landingRes.data.attributes,
+      landingRes: landingRes?.data?.attributes,
+      test: testRes,
     },
+    revalidate: 1,
   };
 };
 
