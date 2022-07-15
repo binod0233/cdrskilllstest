@@ -42,11 +42,11 @@ const Samples = ({ sampleRes }) => {
         data={parse(sample.paragraph)}
         image={sample?.image?.data?.attributes?.url}
       />
-      <FourCol data={positiveassessment} />
+      {/* <FourCol data={positiveassessment} />
       <WantTo data={knowmore} />
       <SampleList />
       <WhyRely data={pursuing} />
-      <FrequentlyAsked />
+      <FrequentlyAsked /> */}
       <Hero2
         title={shared.data.attributes.title}
         data={parse(shared.data.attributes.paragraph)}
