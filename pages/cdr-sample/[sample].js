@@ -27,7 +27,7 @@ const SpecificSample = ({ sampleData }) => {
   // console.log("samplesData", sampleData);
 
   const resSampleData = sampleData?.data;
-  // console.log("allData", resSampleData?.attributes?.addcontent[0]?.paragraph);
+  // console.log("allData", resSampleData?.attributes?.addcontent[0]);
 
   return (
     <div>
@@ -1274,17 +1274,8 @@ Reviewing Service for engineers in Australia."
             <SampleFor list={allData?.chemicalEngineer?.list} />
 
             <Container>
-              {/* <Headings title={allData.chemicalEngineer.secondTitle} />
-              <Paragraphs data={allData.chemicalEngineer.secondDescription} />
-            </Container>
-            <CDRSample list={allData.chemicalEngineer.sampleList} />
-            <Container>
-              <Headings title={allData.chemicalEngineer.bottomTitle1} />
-              <Paragraphs data={allData.chemicalEngineer.bottomDescription1} />
-
-              <Headings title={allData.chemicalEngineer.bottomTitle2} />
-              <Paragraphs data={allData.chemicalEngineer.bottomDescription2} /> */}
-              {resSampleData?.attributes?.addcontent[0]?.parse(paragraph)}
+              {resSampleData?.attributes?.addcontent[0] &&
+                parse(resSampleData?.attributes?.addcontent[0].paragraph)}
             </Container>
             <OurStrength />
             <Hero2
