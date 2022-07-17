@@ -3,22 +3,15 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-
-const WantTo = () => {
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import parse from "html-react-parser";
+const WantTo = ({ data }) => {
   return (
     <Container>
       <Row className="pb-4">
         <Col md={7} className="pt-5">
-          <Headings
-            title="Want to know more? Our experts will clear 
-            your Doubt"
-          />
-          <Paragraphs
-            data="We are here to answer any of your questions and to offer you the most 
-            satisfactory service possible. In case of any inconvenience, feel free to 
-            contact our experts."
-          />
+          <Headings title={data?.title} />
+          <Paragraphs data={parse(data?.paragraph)} />
           <button
             style={{
               background: "#017CC9",
@@ -51,8 +44,8 @@ const WantTo = () => {
                 fontWeight: "700",
               }}
             >
-              <BusinessCenterIcon className="me-3"/>
-             Our other Services
+              <BusinessCenterIcon className="me-3" />
+              Our other Services
             </h3>
             <ul
               style={{

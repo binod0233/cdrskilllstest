@@ -54,7 +54,6 @@ const Landing = ({ landingRes, test }) => {
         buttonName={"Check Pricing"}
         link="/pricing"
       />
-      {parse(test?.data[1]?.attributes?.addcontent[0]?.paragraph)}
     </div>
   );
 };

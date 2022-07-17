@@ -2,8 +2,9 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
+import parse from "html-react-parser";
 
-const WhyRely = () => {
+const WhyRely = ({ data }) => {
   const content = [
     {
       image: "/images/Samples/why1.png",
@@ -68,11 +69,8 @@ const WhyRely = () => {
   ];
   return (
     <Container>
-      <Headings
-        title="CDR report samples to assist Engineers in pursuing Engineering careers 
-in Australia"
-      />
-      <Paragraphs data="CDR report samples developed by professional engineering writers have many benefits." />
+      <Headings title={data?.title} />
+      <Paragraphs data={parse(data?.paragraph)} />
       <Row className="mt-5">
         {content.map((c, index) => (
           <Col xs={12} md={4} key={index} className="px-md-5">

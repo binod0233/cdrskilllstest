@@ -20,16 +20,16 @@ const Seo = ({ seo }) => {
             <meta name="twitter:description" content={Seo.metaDescription} />
           </>
         )}
-        {Seo.shareImage && (
+        {Seo.metaImage && (
           <>
-            <meta property="og:image" content={Seo.shareImage} />
-            <meta name="twitter:image" content={Seo.shareImage} />
-            <meta name="image" content={Seo.shareImage} />
+            <meta property="og:image" content={Seo.metaImage} />
+            <meta name="twitter:image" content={Seo.metaImage} />
+            <meta name="image" content={Seo.metaImage} />
           </>
         )}
         {Seo.article && <meta property="og:type" content="article" />}
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={Seo.canonicalURL} />
+        {Seo.canonicalURL && <link rel="canonical" href={Seo.canonicalURL} />}
       </Head>
     </>
   );

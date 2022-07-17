@@ -27,8 +27,11 @@ const SpecificSample = ({ sampleData }) => {
   // console.log("samplesData", sampleData);
 
   const resSampleData = sampleData?.data;
-  // console.log("allData", resSampleData?.attributes?.addcontent[0]);
 
+  // console.log("allData", resSampleData?.attributes?.addcontent[0]);
+  // if (!router.isFallback && !post?.slug) {
+  //   return <ErrorPage statusCode={404} />
+  // }
   return (
     <div>
       {router.isFallback || resSampleData === null ? (

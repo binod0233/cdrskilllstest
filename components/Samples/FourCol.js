@@ -2,15 +2,12 @@ import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-
-const FourCol = () => {
+import parse from "html-react-parser";
+const FourCol = ({ data }) => {
   return (
     <Container className="my-3">
-      <Headings title="CDR report samples with positive assessment by Engineers Australia" />
-      <Paragraphs
-        data="Engineers Australia uses a variety of customised papers to assess an engineer's proficiency in engineering skills and knowledge, 
-        management, communication, and leadership. CDR report for Engineers Australia consists of three different documents, namely:"
-      />
+      <Headings title={data.title} />
+      <Paragraphs data={parse(data.paragraph)} />
       <div className="py-3">
         <Row>
           <Col

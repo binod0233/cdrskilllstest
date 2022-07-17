@@ -22,6 +22,7 @@ const Samples = ({ sampleRes }) => {
   console.log("sampleRes", sampleRes);
   const { hero, seo, sample, shared, pursuing, positiveassessment, knowmore } =
     sampleRes;
+
   return (
     <div>
       {/* <Head>
@@ -42,11 +43,11 @@ const Samples = ({ sampleRes }) => {
         data={parse(sample.paragraph)}
         image={sample?.image?.data?.attributes?.url}
       />
-      {/* <FourCol data={positiveassessment} />
-      <WantTo data={knowmore} />
+      {positiveassessment && <FourCol data={positiveassessment} />}
+      {knowmore && <WantTo data={knowmore} />}
       <SampleList />
-      <WhyRely data={pursuing} />
-      <FrequentlyAsked /> */}
+      {pursuing && <WhyRely data={pursuing} />}
+      <FrequentlyAsked />
       <Hero2
         title={shared.data.attributes.title}
         data={parse(shared.data.attributes.paragraph)}
@@ -68,7 +69,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      sampleRes: sampleRes?.data?.attributes,
+      sampleRes: sampleRes.data.attributes,
     },
     revalidate: 1,
   };
