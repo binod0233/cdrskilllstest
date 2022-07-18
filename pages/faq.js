@@ -197,4 +197,21 @@ const FAQ = () => {
   );
 };
 
+export const getStaticProps = async () => {
+  // const { NEXT_STRAPI_API_URL } = process.env;
+
+  const faq = await fetch(
+    "    https://cdrskill.herokuapp.com/api/faq?populate=deep  "
+  );
+
+  const disclaimerRes = await faq.json();
+
+  return {
+    props: {
+      disclaimerRes: disclaimerRes?.data?.attributes || "",
+    },
+    revalidate: 1,
+  };
+};
+
 export default FAQ;
