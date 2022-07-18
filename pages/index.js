@@ -41,7 +41,10 @@ const Landing = ({ landingRes, test }) => {
         <link rel="canonical" href={canonicalUrl} />
       </Head> */}
       <Seo seo={seo} />
-      <Hero title={hero?.title} details={parse(hero?.paragraph)} />
+      <Hero
+        title={hero?.title}
+        details={hero ? parse(hero?.paragraph) : null}
+      />
 
       <About about={about} />
       <Factors factor={factor} />
@@ -50,7 +53,7 @@ const Landing = ({ landingRes, test }) => {
       <Faq faqData={faq} />
       <Hero2
         title={shared?.data?.attributes?.title}
-        data={shared?.data?.attributes?.paragraph}
+        data={parse(shared?.data?.attributes?.paragraph)}
         buttonName={"Check Pricing"}
         link="/pricing"
       />

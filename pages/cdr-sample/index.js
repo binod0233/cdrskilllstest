@@ -19,7 +19,7 @@ const Samples = ({ sampleRes }) => {
     `https://cdrskillassessment.com` +
     (router.asPath === "/" ? "" : router.asPath)
   ).split("?")[0];
-  console.log("sampleRes", sampleRes);
+  // console.log("sampleRes", sampleRes);
   const { hero, seo, sample, shared, pursuing, positiveassessment, knowmore } =
     sampleRes;
 
@@ -37,10 +37,10 @@ const Samples = ({ sampleRes }) => {
         <link rel="canonical" href={canonicalUrl} />
       </Head> */}
       <Seo seo={seo} />
-      <Hero title={hero.title} details={parse(hero.paragraph)} />
+      <Hero title={hero?.title} details={hero ? parse(hero.paragraph) : ""} />
       <Section1
-        title={sample.title}
-        data={parse(sample.paragraph)}
+        title={sample?.title}
+        data={sample ? parse(sample.paragraph) : ""}
         image={sample?.image?.data?.attributes?.url}
       />
       {positiveassessment && <FourCol data={positiveassessment} />}
@@ -49,8 +49,8 @@ const Samples = ({ sampleRes }) => {
       {pursuing && <WhyRely data={pursuing} />}
       <FrequentlyAsked />
       <Hero2
-        title={shared.data.attributes.title}
-        data={parse(shared.data.attributes.paragraph)}
+        title={shared?.data?.attributes?.title}
+        data={shared ? parse(shared.data.attributes.paragraph) : ""}
         buttonName="Check Our Pricing"
         link="/pricing"
       />
@@ -69,7 +69,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      sampleRes: sampleRes.data.attributes,
+      sampleRes: sampleRes?.data?.attributes || "",
     },
     revalidate: 1,
   };

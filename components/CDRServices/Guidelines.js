@@ -2,17 +2,14 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
+import parse from "html-react-parser";
 
-const Guidelines = () => {
+const Guidelines = ({ guidelines }) => {
   return (
     <div>
       <Container className="p-md-5 px-5">
-        <Headings title="What are CDR Report Guidelines?" />
-        <Paragraphs
-          data="Engineers who are preparing for migration to Australia need to be assessed by Engineers Australia through Competency Demonstration 
-Report. It is very important to make your CDR report perfect to get approved by Engineers Australia. The main purpose of CDR Assessment 
-is to know:"
-        />
+        <Headings title={guidelines.title} />
+        <Paragraphs data={parse(guidelines.paragraph)} />
 
         <ul
           className="mt-md-4 mt-2"

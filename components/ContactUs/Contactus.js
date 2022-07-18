@@ -2,15 +2,16 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Col, Container, Form, Row, Button } from "react-bootstrap";
 import PhoneInput from "react-phone-number-input";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { parse } from "html-react-parser";
 
-const Contactus = () => {
+const Contactus = ({ data }) => {
   const form = useRef();
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,12 +22,12 @@ const Contactus = () => {
     e.preventDefault();
 
     emailjs
-    .sendForm(
-      "service_swmc1ha",
-      "template_u77tatf",
-      form.current,
-      "hWJYhr4QPZh-TxVMc"
-    )
+      .sendForm(
+        "service_swmc1ha",
+        "template_u77tatf",
+        form.current,
+        "hWJYhr4QPZh-TxVMc"
+      )
       .then(
         (result) => {
           alert("Email sent.");
@@ -53,7 +54,7 @@ const Contactus = () => {
             textAlign: "center",
           }}
         >
-          Contact Us
+          {data?.title}
         </h1>
         <p
           className="ps-md-5 pe-md-5 pb-md-5 pb-2"
@@ -63,14 +64,15 @@ const Contactus = () => {
             textAlign: "center",
           }}
         >
-          Our Expert team member prompt to help you withing 24 hours when we
-          receive the request from customer.
+          {data === ""
+            ? parse(data?.paragraph)
+            : " Our Expert team member prompt to help you withing 24 hours when we receive the request from customer."}
         </p>
         <div>
           <Row>
             <Col md={6} xs={12}>
               <div
-              className='contactUsBanner'
+                className="contactUsBanner"
                 style={{
                   padding: "10px",
                   margin: "0 60px",
@@ -175,18 +177,22 @@ const Contactus = () => {
               <Form
                 ref={form}
                 onSubmit={submitFormhandler}
-                style={{boxShadow: "3px 3px 20px rgba(0, 0, 0, 0.25)"}}
+                style={{ boxShadow: "3px 3px 20px rgba(0, 0, 0, 0.25)" }}
                 className="bg-white p-5 my-3 mt-md-0"
               >
-                 <Form.Group className="mb-3" controlId="fullName" style={{display:"none"}}>
-              <Form.Control
-                placeholder="Site Name"
-                value="Contact Us"
-                readOnly
-                className="inputField"
-                name="subject"
-              />
-            </Form.Group>
+                <Form.Group
+                  className="mb-3"
+                  controlId="fullName"
+                  style={{ display: "none" }}
+                >
+                  <Form.Control
+                    placeholder="Site Name"
+                    value="Contact Us"
+                    readOnly
+                    className="inputField"
+                    name="subject"
+                  />
+                </Form.Group>
                 <Form.Group className="mb-4" controlId="fullName">
                   <Form.Label style={{ fontWeight: "500", color: "#203546" }}>
                     Your Name

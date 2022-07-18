@@ -3,9 +3,10 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-
-const Offer = () => {
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import parse from "html-react-parser";
+import OurServices from "./OurServices";
+const Offer = ({ offers }) => {
   const dataList = [
     {
       image: "images/CDRServices/image-2.png",
@@ -49,6 +50,7 @@ const Offer = () => {
       alt: `Economical Rates`,
     },
   ];
+  // console.log(offers.offer);
   return (
     <div>
       <Container>
@@ -62,19 +64,19 @@ const Offer = () => {
           }}
         >
           {" "}
-          What do we have to offer?
+          {offers.title}
         </h2>
         <Row>
-          {dataList.map((d) => (
-            <Col md={4} className="px-4 py-2">
+          {offers.offer.map((d) => (
+            <Col md={4} className="px-4 py-2" key={d.id}>
               <div
                 className="d-flex flex-column justify-content-center align-items-center pt-5"
                 style={{ backgroundColor: "#D5EFFF" }}
               >
                 <img
-                className='whatToOfferImage'
+                  className="whatToOfferImage"
                   style={{ height: "200px", width: "200px" }}
-                  src={d.image}
+                  src={d.image?.data?.attributes?.url}
                   alt={d.alt}
                 />
                 <h4
@@ -96,7 +98,7 @@ const Offer = () => {
                     textAlign: "Center",
                   }}
                 >
-                  {d.details}
+                  {parse(d.paragraph)}
                 </p>
               </div>
             </Col>
@@ -105,13 +107,8 @@ const Offer = () => {
 
         <Row>
           <Col md={7} className="mt-5 px-5 pt-2">
-            <Headings title="Make Sure your Report gets Approved and Accepted" />
-            <Paragraphs
-              data="Instead of wasting your time and money with incompetent agencies, 
-contact us for your ensured success. Our writers will make sure 
-the results are refined, proofread, and plagiarism free. We are giving 
-Free Consultation for our clients."
-            />
+            <Headings title={offers.approval?.title} />
+            <Paragraphs data={parse(offers.approval.paragraph)} />
             <button
               style={{
                 background: "#017CC9",
@@ -145,9 +142,10 @@ Free Consultation for our clients."
                 }}
               >
                 <BusinessCenterIcon />
-                Our other Services
+                {offers.services?.title}
               </h3>
-              <ul
+              {parse(offers.services.paragraph)}
+              {/* <ul
                 style={{
                   color: "#203546",
                   fontFamily: "Montserrat",
@@ -253,7 +251,7 @@ Free Consultation for our clients."
                   ></i>
                   CV Resume Writing
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </Col>
         </Row>

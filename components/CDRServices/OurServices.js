@@ -1,8 +1,8 @@
 import Chatra from "@chatra/chatra";
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-
-const OurServices = () => {
+import parse from "html-react-parser";
+const OurServices = ({ ourServices }) => {
   const dataList = [
     {
       image: "images/CDRServices/Vector.png",
@@ -128,6 +128,8 @@ const OurServices = () => {
       alt: `Stage 2 Competency Assessment`,
     },
   ];
+  console.log("ourServices", ourServices.cdr_service_data?.data);
+
   return (
     <div>
       <Container className="p-5">
@@ -140,8 +142,7 @@ const OurServices = () => {
             textAlign: "Center",
           }}
         >
-          {" "}
-          Our CDR Services
+          {ourServices.cdrservice?.title}
         </h2>
         <p
           style={{
@@ -152,11 +153,10 @@ const OurServices = () => {
           }}
           className="ourCDRServicesParagraph ps-5 pe-5 pb-md-5"
         >
-          We provide you the Best CDR Writing Services and many other services
-          including reviewing and tutoring services for the most valued prices.{" "}
+          {parse(ourServices.cdrservice.paragraph)}{" "}
         </p>
         <Row>
-          {dataList.map((d,i) => (
+          {dataList.map((d, i) => (
             <Col key={i} md={4} className="px-4 py-3">
               <div className="img-fluid d-flex flex-column justify-content-center align-items-center">
                 <img
@@ -187,10 +187,11 @@ const OurServices = () => {
               >
                 {d.data}{" "}
               </p>
-                <div className='d-flex justify-content-center'>
-                <Button onClick={()=>Chatra("openChat",true)}>Get Service</Button>
-
-                </div>
+              <div className="d-flex justify-content-center">
+                <Button onClick={() => Chatra("openChat", true)}>
+                  Get Service
+                </Button>
+              </div>
             </Col>
           ))}
         </Row>
