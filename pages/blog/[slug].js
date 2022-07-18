@@ -10,6 +10,7 @@ import axios from "axios";
 import parse from "html-react-parser";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Image from "next/image";
 
 const SpecificBlog = ({ resBlogData }) => {
   const router = useRouter();
@@ -355,20 +356,20 @@ const SpecificBlog = ({ resBlogData }) => {
               <Headings title={resBlogData?.attributes?.title} />
 
               <Row>
-                <img
+                <Image
                   src={resBlogData?.attributes?.image?.data?.attributes?.url}
                   alt={
                     resBlogData?.attributes?.image?.data?.attributes
                       ?.alternativeText
                   }
                   className="img-fluid"
-                  // width={
-                  //   resBlogData?.attributes?.image?.data?.attributes?.width
-                  // }
-                  // height={
-                  //   resBlogData?.attributes?.image?.data?.attributes?.height
-                  // }
-                  style={{ width: "20%", height: "20%" }}
+                  width={
+                    resBlogData?.attributes?.image?.data?.attributes?.width
+                  }
+                  height={
+                    resBlogData?.attributes?.image?.data?.attributes?.height
+                  }
+                  // style={{ width: "auto", height: "50%" }}
                 />
               </Row>
               <div>
