@@ -9,6 +9,8 @@ const Seo = ({ seo }) => {
         {Seo?.metaTitle && (
           <>
             <title>{Seo.metaTitle}</title>
+            <meta property="title" content={Seo.metaTitle} />
+
             <meta property="og:title" content={Seo.metaTitle} />
             <meta name="twitter:title" content={Seo.metaTitle} />
           </>

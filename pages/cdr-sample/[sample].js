@@ -1277,6 +1277,7 @@ Reviewing Service for engineers in Australia."
             <SampleFor list={allData?.chemicalEngineer?.list} />
 
             <Container>
+              <h2> {resSampleData?.attributes?.addcontent[0]?.title}</h2>
               {resSampleData?.attributes?.addcontent[0] &&
                 parse(resSampleData?.attributes?.addcontent[0].paragraph)}
             </Container>
