@@ -25,6 +25,7 @@ import Paper from "@mui/material/Paper";
 import CheckIcon from "@mui/icons-material/Check";
 import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import parse from "html-react-parser";
 
 const theme = createTheme({
   palette: {
@@ -86,8 +87,10 @@ const rows = [
   createData("3 Reports Inclusive", "base", "premium"),
 ];
 
-const PricingPlan = () => {
+const PricingPlan = ({ plan }) => {
   const [expanded, setExpanded] = useState(false);
+  // const { hero } = pricingRes;
+  // console.log("pricingRes", pricingRes);
 
   const basicList = [
     `3 Career Episode
@@ -225,7 +228,7 @@ const PricingPlan = () => {
             fontStyle: "normal",
           }}
         >
-          Select Our Pricing Plan
+          {plan?.title}
         </Typography>
 
         <Typography
@@ -240,11 +243,7 @@ const PricingPlan = () => {
           }}
           gutterBottom
         >
-          At cdrskillassessment, we strive to provide our clients the best
-          possible services at a very affordable price. We guarantee you the
-          best price available and for the same service, if you find any other
-          service provider (with the same quality) offering prices lower than
-          us, we are happy to match the pricing.
+          {plan && parse(plan.paragraph)}
         </Typography>
 
         <Grid

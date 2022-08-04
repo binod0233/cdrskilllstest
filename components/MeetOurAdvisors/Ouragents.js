@@ -4,8 +4,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import parse from "html-react-parser";
 
-const Ouragents = () => {
+const Ouragents = ({ agentRes }) => {
   const dataList = [
     {
       image: "/images/MeetOurAdvisors/Sarala.png",
@@ -32,6 +33,8 @@ const Ouragents = () => {
       phone: "61481612162",
     },
   ];
+  const { hero, cdr_agents } = agentRes;
+  console.log("agentRes", cdr_agents.data);
   return (
     <div>
       <Container className="p-5">
@@ -43,7 +46,7 @@ const Ouragents = () => {
             textAlign: "center",
           }}
         >
-          Our Agents
+          {hero?.title}
         </h1>
         <p
           style={{
@@ -55,17 +58,11 @@ const Ouragents = () => {
           }}
           className="pb-5"
         >
-          Having a hard time creating a perfect CDR Report?Meet Our Agents Our
-          CDR writing experts are ready to help you achieve your CDR assessment
-          goals by offering you a top-notch CDR report within a short period of
-          time. Get an original, high-quality, plagiarism-free CDR Report to
-          Engineers Australia from our professional writers. Explore our CDR
-          services and get a chance to pursue your dream career in Australia
-          with a 100% approval rate!
+          {hero && parse(hero.paragraph)}
         </p>
 
         <Row>
-          {dataList.map((d, index) => (
+          {cdr_agents?.data.map((d, index) => (
             <Col md={3} className="py-5" key={index}>
               <div
                 style={{
@@ -74,7 +71,10 @@ const Ouragents = () => {
                 }}
                 className="d-flex flex-column justify-content-center align-items-center p-4"
               >
-                <img src={d.image} alt="agents" />
+                <img
+                  src={d?.attributes?.image?.data?.attributes?.url}
+                  alt="agents"
+                />
 
                 <h3
                   style={{
@@ -84,10 +84,10 @@ const Ouragents = () => {
                   }}
                   className="pt-4"
                 >
-                  {d.title}{" "}
+                  {d?.attributes?.name}{" "}
                 </h3>
                 <div style={{ color: "#666666", fontFamily: "Asap" }}>
-                  CDR Agent
+                  {d?.attributes?.title}
                 </div>
                 <div className="d-flex flex-row pe-2 my-2">
                   <FacebookIcon className="" style={{ color: "#3B5998" }} />

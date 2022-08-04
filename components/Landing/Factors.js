@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
+import parse from "html-react-parser";
 
 const Factors = ({ factor }) => {
   const dataList = [
@@ -116,7 +117,7 @@ const Factors = ({ factor }) => {
                   fontSize: "18px",
                 }}
               >
-                {d.attributes.paragraph}
+                {parse(d.attributes.paragraph)}
               </p>
             </Col>
           ))}

@@ -3,6 +3,7 @@ import Contactus from "../components/ContactUs/Contactus";
 import Hero3 from "../components/FAQ/Hero3";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Seo from "../components/Seo";
 
 const ContactUs = ({ contactRes }) => {
   const router = useRouter();
@@ -14,11 +15,12 @@ const ContactUs = ({ contactRes }) => {
   // console.log("contact", contactRes);
   return (
     <div>
-      <Head>
+      {/* <Head>
         <title>Contact Us</title>
         <meta name="description" content="Contact Us" />
         <link rel="canonical" href={canonicalUrl} />
-      </Head>
+      </Head> */}
+      <Seo seo={seo} />
       {hero && <Contactus data={hero} />}
       {shared && (
         <Hero3

@@ -3,6 +3,7 @@ import DIsclaimer from "../components/Disclaimer/DIsclaimer";
 import Hero3 from "../components/FAQ/Hero3";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Seo from "../components/Seo";
 
 const Disclaimer = ({ disclaimerRes }) => {
   const router = useRouter();
@@ -14,12 +15,12 @@ const Disclaimer = ({ disclaimerRes }) => {
   // console.log("disclaimer", disclaimerRes);
   return (
     <div>
-      <Head>
+      {/* <Head>
         <title>Disclaimer | CDR Skill Assessment</title>
         <meta name="description" content="Disclaimer | CDR Skill Assessment" />
         <link rel="canonical" href={canonicalUrl} />
-      </Head>
-
+      </Head> */}
+      <Seo seo={seo} />
       {content ? <DIsclaimer content={content} /> : <DIsclaimer />}
       {shared && (
         <Hero3

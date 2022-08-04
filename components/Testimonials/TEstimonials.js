@@ -3,6 +3,7 @@ import { Avatar, Box, Stack, Rating } from "@mui/material";
 import { Col, Container, Row } from "react-bootstrap";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
+import parse from "html-react-parser";
 
 const Item = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -13,7 +14,7 @@ const Item = styled("div")(({ theme }) => ({
   textAlign: "center",
 }));
 
-const TEstimonials = () => {
+const TEstimonials = ({ testimonialRes }) => {
   const datatList = [
     {
       title: "Brijesh Mehta",
@@ -486,6 +487,7 @@ const TEstimonials = () => {
       alt: "testimonials",
     },
   ];
+  const { hero, testimonial_data } = testimonialRes;
 
   return (
     <div>
@@ -500,7 +502,7 @@ const TEstimonials = () => {
             textAlign: "center",
           }}
         >
-          Testimonials
+          {hero?.title}
         </Typography>
         <p
           style={{
@@ -515,15 +517,14 @@ const TEstimonials = () => {
           }}
           className="pb-5"
         >
-          {" "}
-          Hundreds of our clients got positive skill assessments with the
-          professional help of our experts. Now, its your turn to get a skilled
-          migration visa.
+          {hero && parse(hero.paragraph)}
         </p>
 
         <Row className="pt-5 mt-2">
-          {datatList.map((d, i) => {
-            var data = d.data.split(" ").length;
+          {testimonial_data?.data.map((d, i) => {
+            {
+              /* var data = d.data.split(" ").length; */
+            }
 
             return (
               <Col key={d.id} md={4} className="my-5">
@@ -548,15 +549,14 @@ const TEstimonials = () => {
                       }}
                     >
                       <Box className="my-2" sx={{ marginLeft: "-22px" }}>
-                        {d.title} <br />
-                        {d.country}
+                        {d?.attributes?.name} <br />
+                        {d?.attributes?.country}
                       </Box>
                     </Item>
                     <Item>
-                      {" "}
                       <Avatar
-                        alt={d.alt}
-                        src={d.image}
+                        alt="testimonials img"
+                        src={d?.attributes?.image?.data?.attributes.url}
                         sx={{
                           width: "120px",
                           height: "120px",
@@ -575,7 +575,7 @@ const TEstimonials = () => {
                       style={{ borderLeft: "5px solid #370C64" }}
                     >
                       <Rating
-                        value={4.5}
+                        value={d?.attributes?.rating}
                         precision={0.5}
                         size="medium"
                         readOnly
@@ -584,7 +584,7 @@ const TEstimonials = () => {
                         style={{ fontFamily: "Asap", fontWeight: "500" }}
                         className="py-4 pe-5"
                       >
-                        {d.data}
+                        {parse(d?.attributes?.details)}
                       </p>
                     </div>
                   </Row>
