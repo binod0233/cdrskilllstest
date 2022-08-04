@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, Container, Row, Button } from "react-bootstrap";
+import { Col, Container, Row, Button, Card } from "react-bootstrap";
 import Headings from "../Headings";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -7,7 +7,8 @@ import Link from "next/link";
 
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
+import ArrowForward from "@mui/icons-material/ArrowForward";
+import GridView from "@mui/icons-material";
 import parse from "html-react-parser";
 
 const RecentBlogs = ({ resBlogData }) => {
@@ -43,37 +44,7 @@ const RecentBlogs = ({ resBlogData }) => {
         >
           RECENT BLOGS
         </h1>
-        <Row className="pt-0">
-          {data.length !== 0 && (
-            <>
-              <Col className="pt-md-5">
-                <Headings title={data[0].title} />
-                <button
-                  style={{
-                    background: "#017CC9",
-                    color: "#FFF",
-                    borderRadius: "5px",
-                    padding: "3px 11px ",
-                    fontWeight: "600",
-                    border: "none",
-                    outline: "none",
-                    marginBottom: "50px",
-                  }}
-                  onClick={() => router.push(`/blog/${data[0].slug}`)}
-                >
-                  Read More
-                </button>
-              </Col>
-              <Col>
-                <img
-                  src={data[0].image}
-                  alt="image-Recovered-Recovered 1"
-                  className="img-fluid mt-md-5"
-                />
-              </Col>
-            </>
-          )}
-        </Row>
+
         <Row className="pt-0">
           {resBlogData.map((item, index) => {
             return (
@@ -86,6 +57,7 @@ const RecentBlogs = ({ resBlogData }) => {
                       boxShadow: "0.5px 0.5px 30px rgba(0, 0, 0, 0.3)",
                       borderRadius: "10px",
                       zIndex: "-1",
+                      height: "100%",
                     }}
                   >
                     <Row className="p-0">

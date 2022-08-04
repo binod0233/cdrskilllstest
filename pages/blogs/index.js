@@ -26,9 +26,9 @@ const Blogs = ({ resBlogData }) => {
         <link rel="canonical" href={canonicalUrl} />
       </Head>
       <BlogsCategories />
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* <Suspense fallback={<div>Loading...</div>}>
         <ALLBLOGS />
-      </Suspense>
+      </Suspense> */}
 
       {resBlogData && <RecentBlogs resBlogData={resBlogData} />}
       <Hero3

@@ -11,6 +11,7 @@ import parse from "html-react-parser";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image from "next/image";
+import Seo from "../../components/Seo";
 
 const SpecificBlog = ({ resBlogData }) => {
   const router = useRouter();
@@ -351,6 +352,7 @@ const SpecificBlog = ({ resBlogData }) => {
         </>
       ) : (
         <>
+          <Seo seo={resBlogData?.attributes?.seo} />
           <Container>
             <div className="p-5">
               <Headings title={resBlogData?.attributes?.title} />
