@@ -4,6 +4,7 @@ import Hero3 from "../components/FAQ/Hero3";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
+import Seo from "../components/Seo";
 
 import TEstimonials from "../components/Testimonials/TEstimonials";
 
@@ -27,21 +28,22 @@ const Testimonials = ({ testimonialRes }) => {
     },
   };
   console.log("testimonialRes", testimonialRes);
-  // const { hero } = testimonialRes;
+  const { shared, seo } = testimonialRes;
   return (
     <div>
       <Script type="application/ld+json">{JSON.stringify(schemaData)}</Script>
-      <Head>
+      {/* <Head>
         <title>Testimonials | CDR Skill Assessment</title>
         <meta
           name="description"
           content="Testimonials | CDR Skill Assessment"
         />
         <link rel="canonical" href={canonicalUrl} />
-      </Head>
+      </Head> */}
+      <Seo seo={seo} />
       <TEstimonials testimonialRes={testimonialRes} />
       <Hero3
-        title="Stay connected with CDRskillassessment! Contact us via our Social Channels"
+        title={shared?.data?.attributes?.title}
         buttonName1="Whatsapp"
         buttonName2="facebook"
       />
