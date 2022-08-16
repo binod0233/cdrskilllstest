@@ -2,8 +2,8 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-
-const Beforeutakehelp = () => {
+import parse from "html-react-parser";
+const Beforeutakehelp = ({ data }) => {
   const considerations = [
     {
       title: "1.	CDR Writing Service provider based in Australia.",
@@ -55,15 +55,13 @@ const Beforeutakehelp = () => {
       alt: "",
     },
   ];
+  const { takehelop, takehelpcontent } = data;
   return (
     <div style={{ background: "#E5E5E5", paddingBottom: "20px" }}>
       <Container className="pt-4">
-        <Headings
-          title="Before you take help from any CDR report writing service provider,you need 
-to consider a few things. "
-        />
-        {considerations.map((c,i) => (
-          <Row key={i} className="my-4">
+        <Headings title={takehelop} />
+        {takehelpcontent.map((c, i) => (
+          <Row key={c.id} className="my-4">
             <Col md={8} xs={12}>
               <div
                 className="px-4 py-4"
@@ -81,13 +79,17 @@ to consider a few things. "
                     fontWeight: "700",
                   }}
                 >
-                  {c.title}
+                  {c?.title}
                 </h4>
-                <Paragraphs data={c.details} />
+                <Paragraphs data={parse(c.paragraph)} />
               </div>
             </Col>
             <Col md={4} xs={12} className="px-5 pb-5">
-              <img src={c.image} alt={c.alt} className="img-fluid" />
+              <img
+                src={c?.image?.data?.attributes?.url}
+                // alt={c.alt}
+                className="img-fluid"
+              />
             </Col>
           </Row>
         ))}

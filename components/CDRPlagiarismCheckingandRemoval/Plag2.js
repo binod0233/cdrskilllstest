@@ -2,17 +2,19 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import parse from "html-react-parser";
+const Plag2 = ({ data }) => {
+  const { content4 } = data;
 
-const Plag2 = () => {
   return (
     <div>
       <Container className="p-md-5 pt-3">
-        <Headings
-          title="Professionals at CDRSkillassessment ensure approval by Engineers Australia 
-with plagiarism-free CDR"
+        <Headings title={content4[0]?.title} />
+        <Paragraphs
+          data={content4[0]?.paragraph && parse(content4[0].paragraph)}
         />
-        <ul
+        {/* <ul
           className="mt-4"
           style={{
             listStyleType: "none",
@@ -75,37 +77,29 @@ with plagiarism-free CDR"
             help in preparing a Plagiarism-free CDR report for Engineers
             Australia.
           </li>
-        </ul>
+        </ul> */}
 
         <Row>
           <Col md={8} className="mt-5 pt-4">
-            <Headings
-              title="Choose the best plagiarism checking and 
-removing service provider to review your CDR 
-for Engineers Australia."
-            />
+            <Headings title={content4[1]?.title} />
             <Paragraphs
-              data="Engineers who wish to pursue an engineering career in Australia should write a CDR 
-report to demonstrate skills, knowledge and experience to Engineers Australia. We 
-have dedicated engineering teams with years of experience in CDR Reviewing Service 
-for engineers in Australia."
+              data={content4[1]?.paragraph && parse(content4[1].paragraph)}
             />
-            <div className='mobileScreenGuidelinesButton'>
-
-            <button
-              style={{
-                background: "#017CC9",
-                color: "#FFF",
-                borderRadius: "5px",
-                padding: "3px 11px ",
-                fontWeight: "600",
-                border: "none",
-                outline: "none",
-              }}
+            <div className="mobileScreenGuidelinesButton">
+              <button
+                style={{
+                  background: "#017CC9",
+                  color: "#FFF",
+                  borderRadius: "5px",
+                  padding: "3px 11px ",
+                  fontWeight: "600",
+                  border: "none",
+                  outline: "none",
+                }}
               >
-              Contact an Expert
-            </button>
-              </div>
+                Contact an Expert
+              </button>
+            </div>
           </Col>
           <Col md={4} className="mt-md-5 mt-3 px-4">
             <div
@@ -125,9 +119,10 @@ for engineers in Australia."
                 }}
               >
                 <BusinessCenterIcon />
-               Our Other Services
+                {content4[2]?.title}
               </h3>
-              <ul
+              {content4[2]?.paragraph && parse(content4[2].paragraph)}
+              {/* <ul
                 style={{
                   color: "#203546",
                   fontFamily: "Montserrat",
@@ -222,7 +217,7 @@ for engineers in Australia."
                   ></i>
                   CV Resume Writing
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </Col>
         </Row>

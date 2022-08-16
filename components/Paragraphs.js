@@ -2,7 +2,7 @@ import React from "react";
 
 const Paragraphs = ({ data }) => {
   return (
-    <p
+    <div
       className="textParagraph"
       style={{
         color: "#5B5B5B",
@@ -13,7 +13,7 @@ const Paragraphs = ({ data }) => {
       }}
     >
       {data}
-    </p>
+    </div>
   );
 };
 

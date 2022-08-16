@@ -1,11 +1,13 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
+import parse from "html-react-parser";
 
-const Advantages = () => {
+const Advantages = ({ data }) => {
+  const { advantage_data } = data;
   const list = [
     {
-      image: "/images/CVResumeWriting/multilevel-checking.png", 
+      image: "/images/CVResumeWriting/multilevel-checking.png",
       title: "Multilevel checking",
       details: `To avoid a blatant rejection from Engineers Australia, we utilise multiple
     error detection methods and software
@@ -38,11 +40,11 @@ const Advantages = () => {
 before presenting to Engineers Australia:"
         />
         <Row className="pt-md-5 mt-md-5 mt-3">
-          {list.map((l,i) => (
+          {advantage_data.map((item, i) => (
             <Col key={i} md={4}>
               <div className="d-flex justify-content-center align-items-center">
                 <img
-                  src={l.image}
+                  src={item?.image?.data?.attributes?.url}
                   className="img-fluid cvResumeImage"
                   style={{ height: "300px" }}
                 />
@@ -51,7 +53,7 @@ before presenting to Engineers Australia:"
                 style={{ color: "#078CF8", fontWeight: "700" }}
                 className="mt-4 ml-4 mb-2 mr-4 text-center ourCDRServicesTitle"
               >
-                {l.title}
+                {item?.title}
               </h4>
               <p
                 className="ourCDRServicesParagraph"
@@ -64,7 +66,7 @@ before presenting to Engineers Australia:"
                   fontSize: "18px",
                 }}
               >
-                {l.details}
+                {item?.paragraph && parse(item.paragraph)}
               </p>
             </Col>
           ))}

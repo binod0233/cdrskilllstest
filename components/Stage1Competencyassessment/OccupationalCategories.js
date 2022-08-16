@@ -2,8 +2,8 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-
-const OccupationalCategories = () => {
+import parse from "html-react-parser";
+const OccupationalCategories = ({ data }) => {
   const content = [
     {
       image: "/images/Stage1CompetencyAssessment/manager.png",
@@ -33,19 +33,16 @@ const OccupationalCategories = () => {
       alt: ``,
     },
   ];
+  const { categorised, categorised_data } = data;
   return (
     <div style={{ background: "#E5E5E5" }}>
       <Container className="py-5">
-        <Headings
-          title="Engineers Australia has categorised Stage 1 Competency Assessment 
-into 3 occupational Categories."
-        />
+        <Headings title={categorised?.title} />
         <Paragraphs
-          data="Engineers can be eligible to be a member of Engineers Australia through Stage 1 Competency Assessment in three different 
-occupational categories."
+          data={categorised?.paragraph && parse(categorised?.paragraph)}
         />
         <Row>
-          {content.map((c, index) => (
+          {categorised_data.map((c, index) => (
             <Col xs={12} md={4} key={index} className="p-5 p-md-3">
               <div
                 className="thousandsCard"
@@ -59,8 +56,8 @@ occupational categories."
                 <div className="d-flex justify-content-center ">
                   <div style={{ height: "300px", width: "300px" }}>
                     <img
-                      src={c.image}
-                      alt={c.alt}
+                      src={c?.image?.data?.attributes?.url}
+                      // alt={c.alt}
                       style={{
                         height: "100%",
                         width: "100%",
@@ -79,7 +76,7 @@ occupational categories."
                     fontWeight: "700",
                   }}
                 >
-                  <strong>{c.title}</strong>
+                  <strong>{c?.title}</strong>
                 </h5>
                 <p
                   className="thousandsParagraph ourCDRServicesParagraph"
@@ -89,7 +86,7 @@ occupational categories."
                     fontFamily: "Century Gothic",
                   }}
                 >
-                  {c.paragraph}
+                  {c?.paragraph && parse(c?.paragraph)}
                 </p>
               </div>
             </Col>

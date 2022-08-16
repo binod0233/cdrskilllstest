@@ -3,41 +3,32 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-
-const Choose = () => {
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import parse from "html-react-parser";
+const Choose = ({ data }) => {
+  const { service, best_service } = data;
   return (
-    <Container className="mb-3 mb-md-0" >
+    <Container className="mb-3 mb-md-0">
       <Row>
         <Col md={7} className="pt-5">
-          <Headings
-            title="Choose the best service provider to write 
-your CDR report for Engineers Australia."
-          />
-          <Paragraphs
-            data="Engineers who wish to pursue an engineering career in Australia should 
-write a CDR report to demonstrate skills, knowledge and experience to 
-Engineers Australia. Competency Demonstration Report is one of the most 
-crucial documents for anyone looking to start a profession in Australia, as 
-it presents your skills in writing."
-          />
-          <div className='mobileScreenGuidelinesButton'>
-<button
-            style={{
-              background: "#017CC9",
-              color: "#FFF",
-              borderRadius: "5px",
-              padding: "3px 11px ",
-              fontWeight: "600",
-              border: "none",
-              outline: "none",
-            }}
-            onClick={() => Chatra("openChat", true)}
-          >
-            Check Our Pricing
-          </button>
+          <Headings title={best_service?.title} />
+          <Paragraphs data={best_service && parse(best_service.paragraph)} />
+          <div className="mobileScreenGuidelinesButton">
+            <button
+              style={{
+                background: "#017CC9",
+                color: "#FFF",
+                borderRadius: "5px",
+                padding: "3px 11px ",
+                fontWeight: "600",
+                border: "none",
+                outline: "none",
+              }}
+              onClick={() => Chatra("openChat", true)}
+            >
+              Check Our Pricing
+            </button>
           </div>
-          
         </Col>
         <Col md={5} className="mt-md-5 mt-3 ps-md-5 pe-3">
           <div
@@ -57,9 +48,10 @@ it presents your skills in writing."
               }}
             >
               <BusinessCenterIcon />
-              Our other Services
+              {service?.title}
             </h3>
-            <ul
+            {service && parse(service.paragraph)}
+            {/* <ul
               style={{
                 color: "#203546",
                 fontFamily: "Montserrat",
@@ -132,7 +124,7 @@ it presents your skills in writing."
                 ></i>
                 Removal CV Resume Writing
               </li>
-            </ul>
+            </ul> */}
           </div>
         </Col>
       </Row>

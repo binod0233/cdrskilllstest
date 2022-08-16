@@ -69,6 +69,7 @@ const SpecificBlog = ({ resBlogData }) => {
     getBlog();
     getRecentBlogList();
   }, [slug]);
+ 
   return (
     <div>
       {router.isFallback || resBlogData === null ? (

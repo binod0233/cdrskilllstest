@@ -2,61 +2,38 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-
-const Section2 = () => {
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import parse from "html-react-parser";
+const Section2 = ({ data }) => {
+  const { content6 } = data;
   return (
-    <div style={{ background: "#E5E5E5" }} className='mt-2 mt-md-0'>
+    <div style={{ background: "#E5E5E5" }} className="mt-2 mt-md-0">
       <Container>
-        <Headings title="What Exactly is an Engineers Australia Career Episode Report writing? " />
-        <Paragraphs
-          data="Career Episode Report writing describes your engineering education and job experience. It is an essential and constructive 
-engineering activity for Engineers Australia. Each of the three career episodes writing focuses on a different phase of your 
-engineering career. Each episode shows how you used your engineering knowledge and skills in the nominated occupation.
-The uniqueness of your Career Episode Report and your command of the English language are the foundations of good career 
-episode report writing."
-        />
-        <Headings
-          title="CDRskillassessment provides the best Career Episode report writing 
-Services in Australia "
-        />
-        <Paragraphs
-          data="Each episode explains how you utilised your engineering knowledge and skills in the nominated occupation. The originality 
-of your Career episode report and your command of the English language are the cornerstones of good Career episode report 
-writing. Engineers Australia's Career Episode Report (CER) records your engineering education and/or job  experience,as long 
-as it involves crucial and constructive engineering activity. Each of the three career episodes focuses on a specific time of your 
-engineering activities."
-        />
+        <Headings title={content6[0]?.title} />
+        <Paragraphs data={content6[0] && parse(content6[0].paragraph)} />
+        <Headings title={content6[1]?.title} />
+        <Paragraphs data={content6[1] && parse(content6[1].paragraph)} />
 
         <Row>
           <Col className="mt-md-5 mt-3" md={8}>
-            <Headings
-              title="Top-Notch Career Episode Writing Service 
-provider in Australia."
-            />
-            <Paragraphs
-              data="Engineers who wish to pursue an engineering career in Australia should write 
-a Summary Statement to represent the competency element of all three career 
-episodes in tabular format to Engineers Australia. A summary statement is one 
-of the most crucial documents of CDR for anyone looking to start an engineering 
-profession in Australia, as it presents your skills in writing."
-            />
-            <div className='mobileScreenGuidelinesButton'>
-            <button
-              style={{
-                background: "#017CC9",
-                color: "#FFF",
-                borderRadius: "5px",
-                padding: "3px 11px ",
-                fontWeight: "600",
-                border: "none",
-                outline: "none",
-              }}
-            >
-              Check Our Pricing
-            </button>
+            <Headings title={content6[2]?.title} />
+            <Paragraphs data={content6[2] && parse(content6[2].paragraph)} />
+
+            <div className="mobileScreenGuidelinesButton">
+              <button
+                style={{
+                  background: "#017CC9",
+                  color: "#FFF",
+                  borderRadius: "5px",
+                  padding: "3px 11px ",
+                  fontWeight: "600",
+                  border: "none",
+                  outline: "none",
+                }}
+              >
+                Check Our Pricing
+              </button>
             </div>
-         
           </Col>
           <Col md={4} className="mt-2 mt-md-5 px-4 pb-5 pb-0">
             <div
@@ -75,10 +52,11 @@ profession in Australia, as it presents your skills in writing."
                   fontWeight: "700",
                 }}
               >
-                <BusinessCenterIcon/>
-                Our Other Services
+                <BusinessCenterIcon />
+                {content6[5]?.title}
               </h3>
-              <ul
+              {content6[5]?.paragraph && parse(content6[5].paragraph)}
+              {/* <ul
                 style={{
                   color: "#203546",
                   fontFamily: "Montserrat",
@@ -173,22 +151,13 @@ profession in Australia, as it presents your skills in writing."
                   ></i>
                   CV Resume Writing
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </Col>
         </Row>
 
-        <Headings title="Considerations for Career Episode Report writing." />
-        <Paragraphs
-          data="Writing a Career Episode Report is both an art and a science. While EA assesses your engineering ability through career episodes, 
-it warns you not to incorporate too many technicalities. As a result, deciding how much technicality to provide is an art.
-The Career 
-Episode Report is all about YOU! Engineers Australia expects to read what YOU did rather than what the TEAM did. As a result, make 
-sure that your input is printed correctly.
-Each Career Episode report focuses on one Competency Unit and the factors that follow it. 
-The competency units fluctuate depending on the occupational category you are applying for.
-"
-        />
+        <Headings title={content6[3]?.title} />
+        <Paragraphs data={content6[3] && parse(content6[3].paragraph)} />
       </Container>
     </div>
   );

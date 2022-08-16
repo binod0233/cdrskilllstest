@@ -2,24 +2,60 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-
-const Fourunits = () => {
+import parse from "html-react-parser";
+const Fourunits = ({ data }) => {
+  const { show, showdata, content4 } = data;
   return (
     <Container>
-      <Headings
-        title="Show your competency through Stage 2 Assessment, Get Chartered 
-Membership of Engineers Australia"
-      />
-      <Paragraphs
-        data="The Stage 2 Competency standards are used as the basis of assessment for registration on the National Engineering Register 
-(NER) and Chartered membership of Engineers Australia (CPEng).  The Stage 2 Competency Assessment describes the profession's 
-knowledge and skill foundation, engineering application abilities, and professional skills, values, and attitudes required to practice 
-independently or unsupervised. The stage 2 competency requirements are similar in that they apply to professional engineers in 
-leadership and management roles, and they are organized into four units:"
-      />
+      <Headings title={show?.title} />
+      <Paragraphs data={show?.paragraph && parse(show?.paragraph)} />
 
       <Row className="py-4">
-        <Col
+        {showdata &&
+          showdata.map((item, index) => {
+            return (
+              <Col
+                md={3}
+                xs={12}
+                className="d-flex flex-row justify-content-center align-items-center my-2 my-md-0"
+                key={item.id}
+              >
+                <div
+                  style={{
+                    height: "100px",
+                    width: "100px",
+                    borderRadius: "55%",
+                    backgroundColor: "#017CC9",
+                  }}
+                >
+                  <img
+                    style={{
+                      objectFit: "contain",
+                      height: "60%",
+                      width: "60%",
+                      margin: "18px 0 0 22px",
+                    }}
+                    src={item?.image?.data?.attributes?.url}
+                    alt="licensed-professional-final-1"
+                    className="img-fluid"
+                  ></img>
+                </div>
+                <div
+                  style={{
+                    marginTop: "5px",
+                    fontFamily: "Asap",
+                    fontWeight: "700",
+                    fontSize: "18px",
+                    marginLeft: "10px",
+                  }}
+                  className="ourCDRServicesParagraph"
+                >
+                  {item?.title}
+                </div>
+              </Col>
+            );
+          })}
+        {/* <Col
           md={3}
           xs={12}
           className="d-flex flex-row justify-content-center align-items-center my-2 my-md-0"
@@ -176,7 +212,7 @@ leadership and management roles, and they are organized into four units:"
             Technical
             <br /> Proficiency
           </div>
-        </Col>
+        </Col> */}
       </Row>
       <Paragraphs
         data="Each unit includes competency and achievement indicators. The accomplishment indicators provided in this guideline serve as a 
@@ -184,15 +220,13 @@ reference to the management and leadership duties that are likely to be evaluate
       />
       <Row className="py-5">
         <img
-          src="/images/Stage2CompetencyAssessment/stage2.png"
+          src={show?.image?.data?.attributes?.url}
           alt="Stage 2 Competency Assessment ensures Chartered Membership of EA"
         />
       </Row>
-      <Headings title="Stage 2 Competency Assessment ensures Chartered Membership of EA" />
+      <Headings title={content4[0]?.title} />
       <Paragraphs
-        data="Chartered Membership of Engineers Australia entails a lifetime commitment to maintaining competence in a particular practice 
-area. The Chartered members of Engineers Australia are assessed using the Stage 2 Competency Assessment (CPEng). Engineers 
-Australia offers Chartered profession membership recognized internationally by the Australian government and business."
+        data={content4[0]?.paragraph && parse(content4[0].paragraph)}
       />
     </Container>
   );

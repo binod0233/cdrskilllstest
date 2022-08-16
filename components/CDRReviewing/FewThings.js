@@ -2,8 +2,9 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
+import parse from "html-react-parser";
 
-const FewThings = () => {
+const FewThings = ({ data }) => {
   const considerations = [
     {
       title: "1.		CDR reviewing Service provider based in Australia",
@@ -55,84 +56,83 @@ const FewThings = () => {
       alt: "",
     },
   ];
+  const { few_title, few_data } = data;
   return (
     <Container className="pt-3">
-      <Headings
-        title="Few things are to be considered before choosing of CDR reviewing service 
-for engineers in Australia"
-      />
-<div className="desktopScreenSteps">
-      {considerations.map((c,i) => (
-        <Row key={i} className="my-5">
-          <Col md={8} xs={12}>
-            <div
-              className="px-4 py-4"
-              style={{
-                background: " #FFFFFF",
-                boxShadow: "1px 1px 20px rgba(0, 0, 0, 0.25)",
-                borderRadius: " 10px",
-              }}
-            >
-              <h4
-                className="ms-3 ourCDRServicesTitle"
-                style={{
-                  fontFamily: "Asap",
-                  color: "#017CC9",
-                  fontWeight: "700",
-                }}
-              >
-                {c.title}
-              </h4>
-              <Paragraphs data={c.details} />
-            </div>
-          </Col>
-          <Col md={4} xs={12} className="px-5 pb-2">
-            <img
-              src={c.image}
-              alt={c.alt}
-              className="img-fluid"
-              style={{ marginTop: "-30px" }}
-            />
-          </Col>
-        </Row>
-      ))}
+      <Headings title={few_title} />
+      <div className="desktopScreenSteps">
+        {few_data &&
+          few_data.map((item, i) => (
+            <Row key={item.id} className="my-5">
+              <Col md={8} xs={12}>
+                <div
+                  className="px-4 py-4"
+                  style={{
+                    background: " #FFFFFF",
+                    boxShadow: "1px 1px 20px rgba(0, 0, 0, 0.25)",
+                    borderRadius: " 10px",
+                  }}
+                >
+                  <h4
+                    className="ms-3 ourCDRServicesTitle"
+                    style={{
+                      fontFamily: "Asap",
+                      color: "#017CC9",
+                      fontWeight: "700",
+                    }}
+                  >
+                    {item?.title}
+                  </h4>
+                  <Paragraphs data={item?.paragraph && parse(item.paragraph)} />
+                </div>
+              </Col>
+              <Col md={4} xs={12} className="px-5 pb-2">
+                <img
+                  src={item?.image?.data?.attributes?.url}
+                  // alt={c.alt}
+                  className="img-fluid"
+                  style={{ marginTop: "-30px" }}
+                />
+              </Col>
+            </Row>
+          ))}
       </div>
       <div className="mobileScreenSteps">
-      {considerations.map((c,i) => (
-        <Row key={i} className="my-3">
-           <Col xs={12} className="px-5 pb-3 d-flex justify-content-center">
-            <img
-              src={c.image}
-              alt={c.alt}
-              className="img-fluid"
-              style={{ height:'300px' }}
-            />
-          </Col>
-          <Col  xs={12}>
-            <div
-              className="px-4 py-4"
-              style={{
-                background: " #FFFFFF",
-                boxShadow: "1px 1px 20px rgba(0, 0, 0, 0.25)",
-                borderRadius: " 10px",
-              }}
-            >
-              <h4
-                className="ms-3 ourCDRServicesTitle"
-                style={{
-                  fontFamily: "Asap",
-                  color: "#017CC9",
-                  fontWeight: "700",
-                }}
-              >
-                {c.title}
-              </h4>
-              <Paragraphs data={c.details} />
-            </div>
-          </Col>
-         
-        </Row>
-      ))}
+        {few_data &&
+          few_data.map((item, i) => (
+            <Row key={item.id} className="my-3">
+              <Col xs={12} className="px-5 pb-3 d-flex justify-content-center">
+                <img
+                  src={item?.image?.data?.attributes?.url}
+                  // alt={c.alt}
+                  className="img-fluid"
+                  style={{ height: "300px" }}
+                />
+              </Col>
+              <Col xs={12}>
+                <div
+                  className="px-4 py-4"
+                  style={{
+                    background: " #FFFFFF",
+                    boxShadow: "1px 1px 20px rgba(0, 0, 0, 0.25)",
+                    borderRadius: " 10px",
+                  }}
+                >
+                  <h4
+                    className="ms-3 ourCDRServicesTitle"
+                    style={{
+                      fontFamily: "Asap",
+                      color: "#017CC9",
+                      fontWeight: "700",
+                    }}
+                  >
+                    {item?.title}
+                  </h4>
+                  <Paragraphs data={item?.paragraph && parse(item.paragraph)} />
+                </div>
+              </Col>
+            </Row>
+          ))}
       </div>
     </Container>
   );

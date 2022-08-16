@@ -2,8 +2,9 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
+import parse from "html-react-parser";
 
-const IncludesWhat = () => {
+const IncludesWhat = ({ data }) => {
   const content = [
     {
       image: "/images/CPDWriting/image.png",
@@ -38,20 +39,13 @@ const IncludesWhat = () => {
       alt: ``,
     },
   ];
+  const { what, what_data } = data;
   return (
     <Container>
-      <Headings title="What does an engineer’s CPD writing service include in Australia?" />
-      <Paragraphs
-        data="CPDskillassessment meticulously produces an innovative CPD report that displays your academic and career track record in the best 
-possible light to demonstrate your abilities, expertise, and career accomplishment. There are various aspects and methods to CPD 
-writing, which may be difficult for engineers. 
-CPD writing for Engineers Australia is a crucial part of the report. It is the process of keeping a tab on the level of your skills, knowledge, 
-and overall experience you have gained during your learning period. Types of CPD writing vary significantly and also includes different 
-learning method.  
-"
-      />
+      <Headings title={what[0]?.title} />
+      <Paragraphs data={what[0]?.paragraph && parse(what[0].paragraph)} />
       <Row>
-        {content.map((c, index) => (
+        {what_data.map((item, index) => (
           <Col xs={12} md={4} key={index} className=" p-md-3 px-5">
             <div
               className="thousandsCard"
@@ -64,8 +58,8 @@ learning method.
               <div className="d-flex justify-content-center ">
                 <div style={{ height: "100px", width: "100px" }}>
                   <img
-                    src={c.image}
-                    alt={c.alt}
+                    src={item?.image?.data?.attributes?.url}
+                    // alt={c.alt}
                     style={{
                       height: "100%",
                       width: "100%",
@@ -84,7 +78,7 @@ learning method.
                   fontWeight: "700",
                 }}
               >
-                <strong>{c.title}</strong>
+                <strong>{item?.title}</strong>
               </h5>
               <p
                 className="thousandsParagraph ourCDRServicesTitle"
@@ -94,7 +88,7 @@ learning method.
                   fontFamily: "Century Gothic",
                 }}
               >
-                {c.paragraph}
+                {item?.paragraph && parse(item.paragraph)}
               </p>
             </div>
           </Col>

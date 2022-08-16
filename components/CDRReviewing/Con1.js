@@ -3,23 +3,18 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useRouter } from "next/router";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-
-const Con1 = () => {
-  const router = useRouter()
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import parse from "html-react-parser";
+const Con1 = ({ data }) => {
+  const { content4 } = data;
+  const router = useRouter();
   return (
     <Container className="pt-md-5 pb-3">
       <Row>
         <Col md={7} className="pt-md-5 ">
-          <Headings
-            title="Choose the best service provider to write your 
-            CDR Resume for Engineers Australia"
-          />
+          <Headings title={content4[1]?.title} />
           <Paragraphs
-            data="Engineers who wish to pursue an engineering career in Australia should write 
-            a CDR resume to demonstrate skills, knowledge and experience to Engineers 
-            Australia. CDR resume is one of the most crucial documents for engineers 
-            looking to start a profession in Australia, as it presents your skills in writing.      "
+            data={content4[1]?.paragraph && parse(content4[1].paragraph)}
           />
           <button
             style={{
@@ -31,7 +26,7 @@ const Con1 = () => {
               border: "none",
               outline: "none",
             }}
-            onClick={()=>router.push('/our-agents')}
+            onClick={() => router.push("/our-agents")}
           >
             Contact an expert
           </button>
@@ -54,9 +49,12 @@ const Con1 = () => {
               }}
             >
               <BusinessCenterIcon />
-              Our other Services
+              {content4[2]?.title}
             </h3>
-            <ul
+
+            {content4[2]?.paragraph && parse(content4[2].paragraph)}
+
+            {/* <ul
               style={{
                 color: "#203546",
                 fontFamily: "Montserrat",
@@ -151,7 +149,7 @@ const Con1 = () => {
                 ></i>
                 CV Resume Writing
               </li>
-            </ul>
+            </ul> */}
           </div>
         </Col>
       </Row>

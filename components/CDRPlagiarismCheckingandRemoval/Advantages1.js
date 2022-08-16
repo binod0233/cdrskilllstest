@@ -2,17 +2,54 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Headings from "../Headings";
 import Paragraphs from "../Paragraphs";
+import parse from "html-react-parser";
 
-const Advantages1 = () => {
+const Advantages1 = ({ data }) => {
+  const { content4, advantage_data } = data;
+
   return (
     <div>
       <Container className="pt-5">
-        <Headings
-          title="Advantages of using a reputable service provider for CDR plagiarism 
-detection and removal before presenting to Engineers Australia"
-        />
+        <Headings title={content4[3]?.title} />
+        {advantage_data.map((item, index) => (
+          <>
+            {index % 2 === 0 ? (
+              <Row key={item.id}>
+                <Col className="pt-md-5 px-md-5 mx-md-5 my-5">
+                  <Headings title={item?.title} />
+                  <Paragraphs data={item?.paragraph && parse(item.paragraph)} />
+                </Col>
+                <Col className="px-md-5">
+                  <img
+                    src={item?.image?.data?.attributes?.url}
+                    alt="Information"
+                    className="img-fluid"
+                  />
+                </Col>
+              </Row>
+            ) : (
+              <Row key={item.id}>
+                <Col>
+                  <img
+                    src={item?.image?.data?.attributes?.url}
+                    alt="appropriate"
+                    className="img-fluid"
+                  />
+                </Col>
+                <Col className="mt-md-5 p-md-5">
+                  <div className="mt-4 px-md-5 mx-md-5">
+                    <Headings title={item?.title} />
+                    <Paragraphs
+                      data={item?.paragraph && parse(item.paragraph)}
+                    />
+                  </div>
+                </Col>
+              </Row>
+            )}
+          </>
+        ))}
 
-        <Row>
+        {/* <Row>
           <Col className="pt-md-5 px-md-5 mx-md-5 my-5">
             <Headings title="1. Multilevel Checking " />
             <Paragraphs
@@ -88,7 +125,7 @@ detection and removal before presenting to Engineers Australia"
               />
             </div>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </div>
   );
