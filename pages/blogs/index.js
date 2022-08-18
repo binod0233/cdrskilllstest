@@ -11,6 +11,7 @@ import {
   Figure,
 } from "react-bootstrap";
 import { Box } from "@mui/material";
+import Select from "react-select";
 
 import styles from "../../styles/Blog.module.css";
 import BlogsCategories from "../../components/Blogs/BlogsCategories";
@@ -39,6 +40,11 @@ const Blogs = () => {
     setPage(value);
   };
   console.log(page);
+  const options = [
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+  ];
 
   return (
     <div className="pt-5 pt-md-0">
@@ -69,15 +75,19 @@ const Blogs = () => {
           <Row>
             <Col className="ps-5 pb-2">
               <h4 className="">home/blogs</h4>
-              <h1 className="">dddddddd</h1>
+              <h1 className="">Skill Assessment</h1>
               <p className="">
                 Read latest blogs about CDR writing, Austrlia Migration & Skill
                 Assessment service from the world’s top most Blogger.
               </p>
             </Col>
-            <Col className="ps-5">
-              <h1>sdfdsffsdf</h1>
-              <h1>sdfdsffsdf</h1>
+            <Col className="ps-5 py-2">
+              <Select options={options} />
+              <h4 className="py-3" style={{ textAlign: "center" }}>
+                OR
+              </h4>
+
+              <Select options={options} />
             </Col>
           </Row>
         </Container>
@@ -214,23 +224,55 @@ const Blogs = () => {
             </Figure>
           </Col>
           <Col>
-            {" "}
             <Figure>
-              <Figure.Image
-                width={171}
-                height={180}
-                alt="171x180"
-                src="holder.js/171x180"
-              />
-              <Figure.Caption>
-                Nulla vitae elit libero, a pharetra augue mollis interdum.
-              </Figure.Caption>
+              <Stack direction="horizontal" gap={3}>
+                <Figure.Image
+                  width={101}
+                  height={100}
+                  alt="171x180"
+                  src="images/Blogs/per.png"
+                />
+                <Figure.Caption className="mb-5">
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                  <p>sss</p>
+                </Figure.Caption>{" "}
+              </Stack>
             </Figure>
           </Col>
         </Row>
         <Row>
-          <Col>ww</Col>
-          <Col>ww</Col>
+          <Col>
+            <Figure>
+              <Stack direction="horizontal" gap={3}>
+                <Figure.Image
+                  width={101}
+                  height={100}
+                  alt="171x180"
+                  src="images/Blogs/per.png"
+                />
+                <Figure.Caption className="mb-5">
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                  <p>sss</p>
+                </Figure.Caption>{" "}
+              </Stack>
+            </Figure>
+          </Col>{" "}
+          <Col>
+            <Figure>
+              <Stack direction="horizontal" gap={3}>
+                <Figure.Image
+                  width={101}
+                  height={100}
+                  alt="171x180"
+                  src="images/Blogs/per.png"
+                />
+                <Figure.Caption className="mb-5">
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                  <p>sss</p>
+                </Figure.Caption>{" "}
+              </Stack>
+            </Figure>
+          </Col>
         </Row>
       </Container>
       <Hero3
