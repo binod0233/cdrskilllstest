@@ -9,9 +9,11 @@ import {
   Stack,
   CardGroup,
   Figure,
+  Navbar,
 } from "react-bootstrap";
 import { Box } from "@mui/material";
 import Select from "react-select";
+import Link from "next/link";
 
 import styles from "../../styles/Blog.module.css";
 import BlogsCategories from "../../components/Blogs/BlogsCategories";
@@ -26,10 +28,10 @@ import {
   GridView,
 } from "@mui/icons-material";
 import Pagination from "@mui/material/Pagination";
-
+import parse from "html-react-parser";
 const ALLBLOGS = React.lazy(() => import("../../components/Blogs/ALLBLOGS"));
 
-const Blogs = () => {
+const Blogs = ({ resBlogData }) => {
   const router = useRouter();
   const canonicalUrl = (
     `https://cdrskillassessment.com` +
@@ -40,6 +42,10 @@ const Blogs = () => {
     setPage(value);
   };
   console.log(page);
+  const str =
+    "<p>loreum ipsumsdf sldjflsdf lsdjflk ldskfj lsdjfl lsdjflk lsjflsfdf lsfjl sfljsldf dddddddddddddddddddddddddddddd</p>";
+  const parseData = parse(str);
+  console.log(parse(str).props.children.substring(0, 50));
   const options = [
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
@@ -94,10 +100,10 @@ const Blogs = () => {
       </div>
 
       <Container style={{ marginTop: "-91px" }}>
-        <h2 className={styles.te}>Feature Block</h2>
+        <h2>Feature Block</h2>
         <Row>
           <Col sm={8}>
-            <Card>
+            <Card style={{ height: "56vh" }}>
               <Card.Header as="p" className="bg-white border-bottom-0">
                 <Stack direction="horizontal" gap={3}>
                   <GridView color="primaray" />
@@ -107,10 +113,7 @@ const Blogs = () => {
               </Card.Header>
 
               <Card.Body>
-                <Card.Title>
-                  Top 5 Tips to prepare perfect CDR reports for Engineers
-                  migrating to Australia
-                </Card.Title>
+                <Card.Title>{resBlogData[0].attributes.title}</Card.Title>
                 <Card.Text>
                   With supporting text below as a natural lead-in to additional
                   content. With supporting text below as a natural lead-in to
@@ -123,36 +126,134 @@ const Blogs = () => {
           </Col>
           <Col sm={4}>
             <Card>
-              <Card.Header as="h5" className="bg-white border-bottom-0">
+              <Card.Header
+                as="h5"
+                className="bg-white border-bottom-0"
+                style={{
+                  fontFamily: "Century Gothic",
+                  fontWeight: "700",
+                  fontSize: "20px",
+                  lineHeight: "20.52px",
+                  color: "#203546",
+                }}
+              >
                 Recent Blogs
               </Card.Header>
 
-              <Card.Body>
+              <Card.Body
+                style={{
+                  fontFamily: "Asap",
+                  fontWeight: "400",
+                  fontSize: "19px",
+                  lineHeight: "21.52px",
+                  color: "#7C7C7C",
+                }}
+              >
                 <Card.Title as="p">
-                  Top 5 Tips to prepare perfect CDR reports for Engineers
-                  migrating to Australia
+                  {resBlogData[0].attributes.title}
+
+                  <hr />
                 </Card.Title>
                 <Card.Title as="p">
-                  Top 5 Tips to prepare perfect CDR reports for Engineers
-                  migrating to Australia
+                  {resBlogData[1].attributes.title}
+
+                  <hr />
                 </Card.Title>
                 <Card.Title as="p">
-                  Top 5 Tips to prepare perfect CDR reports for Engineers
-                  migrating to Australia
+                  {resBlogData[2].attributes.title}
+
+                  <hr />
                 </Card.Title>
                 <Card.Title as="p">
-                  Top 5 Tips to prepare perfect CDR reports for Engineers
-                  migrating to Australia
+                  {resBlogData[3].attributes.title}
                 </Card.Title>
               </Card.Body>
             </Card>
           </Col>
         </Row>
+        <h2>All Blogs</h2>
+        <Row>
+          <Col sm={6}>
+            <Stack
+              style={{
+                boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.15)",
+                borderRadius: "5px",
+                height: "100%",
+              }}
+            >
+              {" "}
+              <Card.Img
+                variant="top"
+                src={resBlogData[0].attributes?.image?.data?.attributes?.url}
+              />
+              <Card.Body>
+                <GridView color="primaray" />
+                Australia Migration
+                <Card.Title className="pt-1">
+                  {resBlogData[0].attributes.title}
+                </Card.Title>
+                <Card.Text className="" style={{}}>
+                  A CDR report allows engineers to demonstrate that their
+                  expertise meets Australian standards. management...
+                </Card.Text>
+              </Card.Body>
+              <div className="mb-auto">
+                <Link href={`/blog/${resBlogData[0].attributes.slug}`}>
+                  <Button
+                    className="container"
+                    size="lg"
+                    // href="/blog/8-Common-CDR-Report-Mistakes-Made-by-Engineering-Applicants"
+                  >
+                    Read More <ArrowForward />
+                  </Button>
+                </Link>
+              </div>
+            </Stack>
+          </Col>
+          <Col sm={6}>
+            <Stack
+              style={{
+                boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.15)",
+                borderRadius: "5px",
+                height: "100%",
+              }}
+            >
+              {" "}
+              <Card.Img
+                variant="top"
+                src={resBlogData[1].attributes?.image?.data?.attributes?.url}
+              />
+              <Card.Body>
+                <GridView color="primaray" />
+                Australia Migration
+                <Card.Title className="pt-1">
+                  {resBlogData[1].attributes.title}
+                </Card.Title>
+                <Card.Text className="" style={{}}>
+                  A CDR report allows engineers to demonstrate that their
+                  expertise meets Australian standards. management...
+                </Card.Text>
+              </Card.Body>
+              <div className="mb-auto">
+                <Link href={`/blog/${resBlogData[1].attributes.slug}`}>
+                  <Button
+                    className="container"
+                    size="lg"
+                    // href="/blog/8-Common-CDR-Report-Mistakes-Made-by-Engineering-Applicants"
+                  >
+                    Read More <ArrowForward />
+                  </Button>
+                </Link>
+              </div>
+            </Stack>
+          </Col>
+        </Row>
+
         <Row sm={1} md={3} className="my-4 g-3">
-          {Array.from({ length: 6 }).map((_, idx) => (
-            <Col key={idx}>
+          {resBlogData.map((item, index) => (
+            <Col key={item.id}>
               <>
-                <div
+                <Stack
                   style={{
                     boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.15)",
                     borderRadius: "5px",
@@ -162,27 +263,33 @@ const Blogs = () => {
                   {" "}
                   <Card.Img
                     variant="top"
-                    src={
-                      "https://res.cloudinary.com/copenned/image/upload/v1658911391/8_Common_CDR_Report_Mistakes_Made_by_Engineering_Applicants_884_by_444_4e35834a9b.png"
-                    }
+                    src={item.attributes?.image?.data?.attributes?.url}
                   />
                   <Card.Body>
                     <GridView color="primaray" />
                     Australia Migration
                     <Card.Title className="pt-1">
-                      CDR got Rejected by Engineers Australia; reapply again to
-                      get a positive assessment
+                      {item.attributes.title}
                     </Card.Title>
-                    <Card.Text>
-                      This is a longer card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                    <Card.Text className="" style={{}}>
+                      A CDR report allows engineers to demonstrate that their
+                      expertise meets Australian standards. Engineers Australia
+                      uses a variety of customised papers to g skills and
+                      knowledge, management...
                     </Card.Text>
                   </Card.Body>
-                  <Button className="container" size="lg">
-                    Read More <ArrowForward />
-                  </Button>
-                </div>
+                  <div className="mb-auto">
+                    <Link href={`/blog/${item.attributes.slug}`}>
+                      <Button
+                        className="container"
+                        size="lg"
+                        // href="/blog/8-Common-CDR-Report-Mistakes-Made-by-Engineering-Applicants"
+                      >
+                        Read More <ArrowForward />
+                      </Button>
+                    </Link>
+                  </div>
+                </Stack>
               </>
             </Col>
           ))}
@@ -214,11 +321,11 @@ const Blogs = () => {
                   width={101}
                   height={100}
                   alt="171x180"
-                  src="images/Blogs/per.png"
+                  src="images/Blogs/Know.png"
                 />
-                <Figure.Caption className="mb-5">
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  <p>sss</p>
+                <Figure.Caption className="mb-4">
+                  A simple Guide on How to prepare a perfect CPD Report{" "}
+                  <p>CDR Service</p>
                 </Figure.Caption>{" "}
               </Stack>
             </Figure>
@@ -230,11 +337,11 @@ const Blogs = () => {
                   width={101}
                   height={100}
                   alt="171x180"
-                  src="images/Blogs/per.png"
+                  src="images/Blogs/Know.png"
                 />
-                <Figure.Caption className="mb-5">
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  <p>sss</p>
+                <Figure.Caption className="mb-4">
+                  A simple Guide on How to prepare a perfect CPD Report{" "}
+                  <p>CDR Service</p>
                 </Figure.Caption>{" "}
               </Stack>
             </Figure>
@@ -248,11 +355,11 @@ const Blogs = () => {
                   width={101}
                   height={100}
                   alt="171x180"
-                  src="images/Blogs/per.png"
+                  src="images/Blogs/Know.png"
                 />
-                <Figure.Caption className="mb-5">
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  <p>sss</p>
+                <Figure.Caption className="mb-4">
+                  A simple Guide on How to prepare a perfect CPD Report{" "}
+                  <p>CDR Service</p>
                 </Figure.Caption>{" "}
               </Stack>
             </Figure>
@@ -264,11 +371,11 @@ const Blogs = () => {
                   width={101}
                   height={100}
                   alt="171x180"
-                  src="images/Blogs/per.png"
+                  src="images/Blogs/Know.png"
                 />
-                <Figure.Caption className="mb-5">
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  <p>sss</p>
+                <Figure.Caption className="mb-4">
+                  A simple Guide on How to prepare a perfect CPD Report{" "}
+                  <p>CDR Service</p>
                 </Figure.Caption>{" "}
               </Stack>
             </Figure>
@@ -283,5 +390,17 @@ const Blogs = () => {
     </div>
   );
 };
+
+export async function getStaticProps({ params }) {
+  const blog = await fetch(
+    `https://cdrskill.herokuapp.com/api/blogs?populate=deep`
+  );
+  const blogData = await blog.json();
+
+  return {
+    props: { resBlogData: blogData?.data },
+    revalidate: 1,
+  };
+}
 
 export default Blogs;
