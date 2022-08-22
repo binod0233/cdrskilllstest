@@ -40,12 +40,8 @@ const Blogs = ({ resBlogData }) => {
   const handleChange = (event, value) => {
     setPage(value);
   };
-  console.log(page);
-  const str =
-    "<p>loreum ipsumsdf sldjflsdf lsdjflk ldskfj lsdjfl lsdjflk lsjflsfdf lsfjl sfljsldf dddddddddddddddddddddddddddddd</p>";
-  const parseData = parse(str);
-  console.log(parse(str).props.children.substring(0, 50));
-  console.log("strapi data", parse(resBlogData[0].attributes.content));
+  // console.log(page);
+  // console.log("strapi data", parse(resBlogData[0].attributes.content));
   const options = [
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },

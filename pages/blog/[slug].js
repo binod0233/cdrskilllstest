@@ -105,7 +105,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
             <Col className=" ">
               <p className="">
                 <FiberManualRecordIcon color="primary" />
-                Last Update :{"1hrs ago "}
+                Last Updated :{"1hrs ago "}
               </p>
             </Col>
             <Col className=" ">
@@ -120,7 +120,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
       </div>
       <Container style={{ backgroundColor: "" }}>
         <Row className="container">
-          <Col sm={8} className="  ">
+          <Col sm={8} className=" pe-5 ">
             <div
               style={{
                 fontFamily: "Arial",
@@ -129,8 +129,9 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                 lineHeight: "21.52px",
                 backgroundColor: "#2D495F",
                 color: "white",
-                marginTop: "10px",
-                marginBottom: "0px",
+                marginTop: "15px",
+                marginBottom: "-2px",
+                padding: "10px",
               }}
             >
               Home /Blogs /{""}
@@ -192,7 +193,16 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                 <>
                   {item.type === "h2" ? (
                     <div key={item.key}>
-                      <h2 id={item.key}>
+                      <h2
+                        id={item.key}
+                        style={{
+                          fontFamily: "Asap",
+                          fontWeight: "700",
+                          fontSize: "26px",
+                          lineHeight: "29.8px",
+                          color: "#203546",
+                        }}
+                      >
                         {parse(resBlogData.attributes.content)[item.key]}
                       </h2>
                     </div>
@@ -202,8 +212,8 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                 </>
               ))}
           </Col>
-          <Col className="  ">
-            <Row className="bg-white py-2  ">
+          <Col className=" bg-light ">
+            <Row className="bg-white mt-3 g-2">
               <div
                 className="container-fluid "
                 style={{
@@ -231,9 +241,9 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                 trends and techniques.
               </div>
             </Row>
-            <Row className="bg-light ">
+            <Row className=" g-2 mt-2">
               <div
-                className="py-2 "
+                className=""
                 style={{
                   fontFamily: "Century Gothic",
                   fontWeight: "700",
@@ -257,7 +267,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
               >
                 Latest Blog
               </div>
-              <div className="pt-3">
+              <div className="">
                 <div
                   className=" "
                   style={{
@@ -337,7 +347,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                   <hr />
                 </div>
               </div>
-              <Row className="py-2 bg-white ">
+              <Row className="bg-white mt-3 g-2">
                 <div
                   className=" pb-2 "
                   style={{
@@ -443,7 +453,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                   </Row>
                 </Stack>
               </Row>
-              <Row className="bg-white py-2 ">
+              <Row className="bg-white mt-3 g-2 ">
                 <div
                   className=" "
                   style={{
@@ -477,7 +487,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                 </div>
               </Row>
 
-              <Row className="bg-white py-2 ">
+              <Row className="bg-white mt-3 g-2 ">
                 <div
                   className=" "
                   style={{
@@ -540,7 +550,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                 </Form>
               </Row>
 
-              <Row className="bg-white py-2 ">
+              <Row className="bg-white mt-3 g-2 ">
                 <div
                   className=" pb-2"
                   style={{
@@ -554,19 +564,22 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                   Show your love!
                 </div>
                 <Col>
-                  {" "}
-                  <Button size="sm" style={{ background: "#29487D" }}>
-                    <FacebookIcon /> Share
-                  </Button>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.facebook.com/CDRSkill-Assessment-114392794578547"
+                  >
+                    <Button size="sm" style={{ background: "#29487D" }}>
+                      <FacebookIcon /> Share
+                    </Button>
+                  </a>
                 </Col>
                 <Col>
-                  {" "}
                   <Button size="sm" style={{ background: "#1DA1F2" }}>
                     <TwitterIcon /> Tweet
                   </Button>
                 </Col>
                 <Col>
-                  {" "}
                   <Button size="sm" style={{ background: "#0E76A8" }}>
                     <LinkedInIcon /> Share
                   </Button>
@@ -592,7 +605,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
         <Row sm={1} md={3} className=" pb-5 ">
           {resData.map((item, index) => (
             <>
-              {index < 3 && (
+              {index > 3 && index < 7 && (
                 <Col key={item.id}>
                   <>
                     <Stack
