@@ -69,23 +69,6 @@ const SpecificBlog = ({ resBlogData }) => {
       );
   };
 
-  const getBlog = () => {
-    axios
-      .get(`https://cdrdashboardbackend.herokuapp.com/api/blogs?slug=${slug}`)
-      .then((res) => setData(res.data));
-  };
-  const getRecentBlogList = () => {
-    axios
-      .get(
-        `https://cdrdashboardbackend.herokuapp.com/api/blogs/blog-list/cdrskillassessment/recent`
-      )
-      .then((res) => setRecentData(res.data.blog));
-  };
-
-  useEffect(() => {
-    getBlog();
-    getRecentBlogList();
-  }, [slug]);
   console.log("data", parse(resBlogData.attributes.content));
 
   return (
