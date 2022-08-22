@@ -170,7 +170,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                                 id={item.key}
                                 href={`#${item.key}`}
                               >
-                                <a style={{ color: "black" }}>
+                                <a style={{ color: "#203546" }}>
                                   {
                                     parse(resBlogData.attributes.content)[
                                       item.key
@@ -213,7 +213,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
               ))}
           </Col>
           <Col className=" bg-light ">
-            <Row className="bg-white mt-3 g-2">
+            <Row className="bg-white mt-3 p-1  g-2">
               <div
                 className="container-fluid "
                 style={{
@@ -347,7 +347,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                   <hr />
                 </div>
               </div>
-              <Row className="bg-white mt-3 g-2">
+              <Row className="bg-white mt-3 p-1 g-2">
                 <div
                   className=" pb-2 "
                   style={{
@@ -453,7 +453,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                   </Row>
                 </Stack>
               </Row>
-              <Row className="bg-white mt-3 g-2 ">
+              <Row className="bg-white mt-3 p-1  g-2 ">
                 <div
                   className=" "
                   style={{
@@ -487,7 +487,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                 </div>
               </Row>
 
-              <Row className="bg-white mt-3 g-2 ">
+              <Row className="bg-white mt-3 p-1  g-2 ">
                 <div
                   className=" "
                   style={{
@@ -550,7 +550,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                 </Form>
               </Row>
 
-              <Row className="bg-white mt-3 g-2 ">
+              <Row className="bg-white mt-3 p-1  g-2 ">
                 <div
                   className=" pb-2"
                   style={{
