@@ -11,6 +11,7 @@ import {
   Button,
   Card,
   Stack,
+  Accordion,
 } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 import Hero3 from "../../components/FAQ/Hero3";
@@ -20,9 +21,12 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Image from "next/image";
 import Select from "react-select";
-
-// import Seo from "../../components/Seo";
-
+import AddIcon from "@mui/icons-material/Add";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import GridViewIcon from "@mui/icons-material/GridView";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter"; // import Seo from "../../components/Seo";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const SpecificBlog = ({ resBlogData }) => {
   const router = useRouter();
   const slug = router.query.slug;
@@ -32,12 +36,16 @@ const SpecificBlog = ({ resBlogData }) => {
   const [message, setMessage] = useState("");
   const [data, setData] = useState({});
   const [recentData, setRecentData] = useState([]);
+
   const canonicalUrl = (
     `https://cdrskillassessment.com` +
     (router.asPath === "/" ? "" : router.asPath)
   ).split("?")[0];
 
   console.log("blogData", resBlogData);
+  //substring  {parse(resBlogData.attributes.content)[
+  //   item.key
+  // ].props.children.substring(0, 14)}
 
   const submitFormhandler = (e) => {
     e.preventDefault();
@@ -79,6 +87,7 @@ const SpecificBlog = ({ resBlogData }) => {
     getBlog();
     getRecentBlogList();
   }, [slug]);
+  console.log("data", parse(resBlogData.attributes.content));
 
   return (
     <div className="">
@@ -119,7 +128,7 @@ const SpecificBlog = ({ resBlogData }) => {
               </Row>
             </Container>
           </div>
-          <Container style={{ marginTop: "-25%", backgroundColor: "" }}>
+          <Container style={{ backgroundColor: "" }}>
             <Row className="">
               <Col sm={9} className="ms-4  ">
                 <Card.Img
@@ -476,16 +485,16 @@ const SpecificBlog = ({ resBlogData }) => {
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              height: "90vh",
-              width: "100%",
+              // height: "60%",
+              // width: "100%",
               position: "relative",
               overflow: "hidden",
 
-              clipPath: "ellipse(226% 27% at 50% 16%)",
+              clipPath: "ellipse(226% 100% at 50% 16%)",
               zIndex: "-1",
             }}
           >
-            <Container className="pt-5 text-light">
+            <Container className="pt-5 mb-3  text-light">
               <h1
                 className="headingTitle"
                 style={{
@@ -498,26 +507,106 @@ const SpecificBlog = ({ resBlogData }) => {
               </h1>
               <Row xs={2} md={4} lg={4}>
                 <Col className=" ">
-                  <p className="">Last Update</p>
+                  <p className="">
+                    <FiberManualRecordIcon color="primary" />
+                    Last Update :{"1hrs ago "}
+                  </p>
                 </Col>
                 <Col className=" ">
-                  <p className="">Australia Migration</p>
+                  <p className="">
+                    <GridViewIcon color="primary" />
+                    Australia Migration
+                  </p>
                 </Col>
               </Row>
+              <Row xs={2} md={4} lg={4}></Row>
             </Container>
           </div>
-          <Container style={{ marginTop: "-30%", backgroundColor: "" }}>
-            <Row className="">
-              <Col sm={8} className="ms-4  ">
+          <Container style={{ backgroundColor: "" }}>
+            <Row className="container">
+              <Col sm={8} className="  ">
+                <div
+                  style={{
+                    fontFamily: "Arial",
+                    fontWeight: "400",
+                    fontSize: "19px",
+                    lineHeight: "21.52px",
+                    backgroundColor: "#2D495F",
+                    color: "white",
+                    marginTop: "10px",
+                    marginBottom: "0px",
+                  }}
+                >
+                  Home /Blogs /{""}
+                  {resBlogData?.attributes?.title}
+                </div>
                 <Card.Img
                   variant="top"
                   src={resBlogData?.attributes?.image?.data?.attributes?.url}
                 />
+                <Accordion>
+                  <Accordion.Item eventKey="0">
+                    <Accordion.Header>
+                      <span
+                        style={{
+                          fontFamily: "Arial",
+                          fontWeight: "700",
+                          fontSize: "16px",
+                          lineHeight: "19.52px",
+                          color: "#203546",
+                        }}
+                      >
+                        {" "}
+                        <AddIcon />
+                        {resBlogData?.attributes?.title}
+                      </span>
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      {resBlogData?.attributes?.content &&
+                        parse(resBlogData?.attributes?.content).map(
+                          (item, index) => (
+                            <>
+                              {item.type === "h2" && (
+                                <>
+                                  <Link id={item.key} href={`#${item.key}`}>
+                                    <a
+                                      key={item.key}
+                                      style={{ color: "black" }}
+                                    >
+                                      {
+                                        parse(resBlogData.attributes.content)[
+                                          item.key
+                                        ].props.children
+                                      }
+                                    </a>
+                                  </Link>
+                                  <br />
+                                </>
+                              )}
+                            </>
+                          )
+                        )}
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+
                 {resBlogData?.attributes?.content &&
-                  parse(resBlogData?.attributes?.content)}
+                  parse(resBlogData?.attributes?.content).map((item, index) => (
+                    <>
+                      {item.type === "h2" ? (
+                        <div key={item.key}>
+                          <h2 id={item.key}>
+                            {parse(resBlogData.attributes.content)[item.key]}
+                          </h2>
+                        </div>
+                      ) : (
+                        <>{parse(resBlogData.attributes.content)[item.key]}</>
+                      )}
+                    </>
+                  ))}
               </Col>
               <Col className="  ">
-                <Row className="bg-white py-2 container ">
+                <Row className="bg-white py-2  ">
                   <div
                     className="container-fluid "
                     style={{
@@ -545,7 +634,7 @@ const SpecificBlog = ({ resBlogData }) => {
                     writing trends and techniques.
                   </div>
                 </Row>
-                <Row className="bg-light container">
+                <Row className="bg-light ">
                   <div
                     className="py-2 "
                     style={{
@@ -846,6 +935,7 @@ const SpecificBlog = ({ resBlogData }) => {
                           className="formSubmitButton"
                           variant="primary"
                           type="submit"
+                          style={{ background: "#017CC9" }}
                         >
                           Post Feedback
                         </Button>
@@ -866,22 +956,22 @@ const SpecificBlog = ({ resBlogData }) => {
                     >
                       Show your love!
                     </div>
-                    <Col sm={4}>
+                    <Col>
                       {" "}
-                      <Button size="sm" variant="primary">
-                        Share
+                      <Button size="sm" style={{ background: "#29487D" }}>
+                        <FacebookIcon /> Share
                       </Button>
                     </Col>
-                    <Col sm={4}>
+                    <Col>
                       {" "}
-                      <Button size="sm" variant="primary">
-                        Tweet
+                      <Button size="sm" style={{ background: "#1DA1F2" }}>
+                        <TwitterIcon /> Tweet
                       </Button>
                     </Col>
-                    <Col sm={4}>
+                    <Col>
                       {" "}
-                      <Button size="sm" variant="primary">
-                        Share
+                      <Button size="sm" style={{ background: "#0E76A8" }}>
+                        <LinkedInIcon /> Share
                       </Button>
                     </Col>
                   </Row>

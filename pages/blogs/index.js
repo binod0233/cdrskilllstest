@@ -27,6 +27,7 @@ import {
   FaceOutlined,
   GridView,
 } from "@mui/icons-material";
+import ShareIcon from "@mui/icons-material/Share";
 import Pagination from "@mui/material/Pagination";
 import parse from "html-react-parser";
 const ALLBLOGS = React.lazy(() => import("../../components/Blogs/ALLBLOGS"));
@@ -46,6 +47,7 @@ const Blogs = ({ resBlogData }) => {
     "<p>loreum ipsumsdf sldjflsdf lsdjflk ldskfj lsdjfl lsdjflk lsjflsfdf lsfjl sfljsldf dddddddddddddddddddddddddddddd</p>";
   const parseData = parse(str);
   console.log(parse(str).props.children.substring(0, 50));
+  console.log("strapi data", parse(resBlogData[0].attributes.content));
   const options = [
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
@@ -80,12 +82,44 @@ const Blogs = ({ resBlogData }) => {
         <Container className="pt-5 text-light">
           <Row>
             <Col className="ps-5 pb-2">
-              <h4 className="">home/blogs</h4>
-              <h1 className="">Skill Assessment</h1>
-              <p className="">
+              <span
+                style={{
+                  fontFamily: "Arial",
+                  fontStyle: "normal",
+                  fontWeight: "400",
+                  fontSize: "25px",
+                  lineHeight: "29px",
+                }}
+              >
+                Home / Blogs
+              </span>
+              <div
+                style={{
+                  fontFamily: "Century Gothic",
+                  fontStyle: "normal",
+                  fontWeight: "700",
+                  fontSize: "40px",
+                  lineHeight: "49px",
+                }}
+              >
+                Skill Assessment Blog
+              </div>
+              <div
+                className="py-2"
+                style={{
+                  fontFamily: "Arial",
+                  fontStyle: "normal",
+                  fontWeight: "400",
+                  fontSize: "25px",
+                  lineHeight: "29px",
+                }}
+              >
                 Read latest blogs about CDR writing, Austrlia Migration & Skill
                 Assessment service from the world’s top most Blogger.
-              </p>
+              </div>
+              <span>
+                <ShareIcon /> 1300 shares
+              </span>
             </Col>
             <Col className="ps-5 py-2">
               <Select options={options} />
@@ -100,13 +134,25 @@ const Blogs = ({ resBlogData }) => {
       </div>
 
       <Container style={{ marginTop: "-91px" }}>
-        <h2>Feature Block</h2>
+        <div
+          style={{
+            fontFamily: "Century Gothic",
+            fontStyle: "normal",
+            fontWeight: "700",
+            fontSize: "30px",
+            lineHeight: "37px",
+          }}
+        >
+          Feature Block
+        </div>
         <Row>
           <Col sm={8}>
             <Card style={{ height: "56vh" }}>
               <Card.Header as="p" className="bg-white border-bottom-0">
                 <Stack direction="horizontal" gap={3}>
-                  <GridView color="primaray" />
+                  <span style={{ color: "#017CC9" }}>
+                    <GridView />
+                  </span>
                   Australia Migration
                   <div className="text-muted ">2 days ago</div>
                 </Stack>
@@ -120,7 +166,14 @@ const Blogs = ({ resBlogData }) => {
                   additional content. With supporting text below as a natural
                   lead-in to additional content.
                 </Card.Text>
-                <Button variant="primary">Read More -&gt;</Button>
+                <Link href={`/blog/${resBlogData[0].attributes.slug}`}>
+                  <Button
+
+                  // href="/blog/8-Common-CDR-Report-Mistakes-Made-by-Engineering-Applicants"
+                  >
+                    Read More <ArrowForward />
+                  </Button>
+                </Link>{" "}
               </Card.Body>
             </Card>
           </Col>
@@ -171,7 +224,18 @@ const Blogs = ({ resBlogData }) => {
             </Card>
           </Col>
         </Row>
-        <h2>All Blogs</h2>
+        <div
+          className="py-4"
+          style={{
+            fontFamily: "Century Gothic",
+            fontStyle: "normal",
+            fontWeight: "700",
+            fontSize: "30px",
+            lineHeight: "37px",
+          }}
+        >
+          All Blogs
+        </div>
         <Row>
           <Col sm={6}>
             <Stack
@@ -187,8 +251,10 @@ const Blogs = ({ resBlogData }) => {
                 src={resBlogData[0].attributes?.image?.data?.attributes?.url}
               />
               <Card.Body>
-                <GridView color="primaray" />
-                Australia Migration
+                <span style={{ color: "#017CC9" }}>
+                  <GridView />
+                  Australia Migration
+                </span>
                 <Card.Title className="pt-1">
                   {resBlogData[0].attributes.title}
                 </Card.Title>
@@ -224,8 +290,10 @@ const Blogs = ({ resBlogData }) => {
                 src={resBlogData[1].attributes?.image?.data?.attributes?.url}
               />
               <Card.Body>
-                <GridView color="primaray" />
-                Australia Migration
+                <span style={{ color: "#017CC9" }}>
+                  <GridView />
+                  Australia Migration
+                </span>
                 <Card.Title className="pt-1">
                   {resBlogData[1].attributes.title}
                 </Card.Title>
@@ -251,47 +319,53 @@ const Blogs = ({ resBlogData }) => {
 
         <Row sm={1} md={3} className="my-4 g-3">
           {resBlogData.map((item, index) => (
-            <Col key={item.id}>
-              <>
-                <Stack
-                  style={{
-                    boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.15)",
-                    borderRadius: "5px",
-                    height: "100%",
-                  }}
-                >
-                  {" "}
-                  <Card.Img
-                    variant="top"
-                    src={item.attributes?.image?.data?.attributes?.url}
-                  />
-                  <Card.Body>
-                    <GridView color="primaray" />
-                    Australia Migration
-                    <Card.Title className="pt-1">
-                      {item.attributes.title}
-                    </Card.Title>
-                    <Card.Text className="" style={{}}>
-                      A CDR report allows engineers to demonstrate that their
-                      expertise meets Australian standards. Engineers Australia
-                      uses a variety of customised papers to g skills and
-                      knowledge, management...
-                    </Card.Text>
-                  </Card.Body>
-                  <div className="mb-auto">
-                    <Link href={`/blog/${item.attributes.slug}`}>
-                      <Button
-                        className="container"
-                        size="lg"
-                        // href="/blog/8-Common-CDR-Report-Mistakes-Made-by-Engineering-Applicants"
-                      >
-                        Read More <ArrowForward />
-                      </Button>
-                    </Link>
-                  </div>
-                </Stack>
-              </>
-            </Col>
+            <>
+              {index > 2 && (
+                <Col key={item.id}>
+                  <>
+                    <Stack
+                      style={{
+                        boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.15)",
+                        borderRadius: "5px",
+                        height: "100%",
+                      }}
+                    >
+                      {" "}
+                      <Card.Img
+                        variant="top"
+                        src={item.attributes?.image?.data?.attributes?.url}
+                      />
+                      <Card.Body>
+                        <span style={{ color: "#017CC9" }}>
+                          <GridView />
+                          Australia Migration
+                        </span>
+                        <Card.Title className="pt-1">
+                          {item.attributes.title}
+                        </Card.Title>
+                        <Card.Text className="overflow-hidden">
+                          A CDR report allows engineers to demonstrate that
+                          their expertise meets Australian standards. Engineers
+                          Australia uses a variety of customised papers to g
+                          skills and knowledge, management...
+                        </Card.Text>
+                      </Card.Body>
+                      <div className="mb-auto">
+                        <Link href={`/blog/${item.attributes.slug}`}>
+                          <Button
+                            className="container"
+                            size="lg"
+                            // href="/blog/8-Common-CDR-Report-Mistakes-Made-by-Engineering-Applicants"
+                          >
+                            Read More <ArrowForward />
+                          </Button>
+                        </Link>
+                      </div>
+                    </Stack>
+                  </>
+                </Col>
+              )}
+            </>
           ))}
         </Row>
         <div className="d-flex justify-content-center py-4">
