@@ -27,6 +27,7 @@
     "react-gtm-module": "^2.0.11",
     "react-phone-number-input": "^3.2.2",
     "react-schemaorg": "^2.0.0",
+    "react-select": "^5.4.0",
     "schema-dts": "^1.1.0"
   },
   "devDependencies": {
