@@ -1,5 +1,4 @@
 import React from "react";
-import { Suspense } from "react";
 import {
   Row,
   Col,
@@ -7,7 +6,6 @@ import {
   Container,
   Card,
   Stack,
-  CardGroup,
   Figure,
   Navbar,
 } from "react-bootstrap";

@@ -27,7 +27,8 @@ import GridViewIcon from "@mui/icons-material/GridView";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter"; // import Seo from "../../components/Seo";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-const SpecificBlog = ({ resBlogData }) => {
+import { ArrowForward, GridView } from "@mui/icons-material";
+const SpecificBlog = ({ resBlogData, resData }) => {
   const router = useRouter();
   const slug = router.query.slug;
   const form = useRef();
@@ -36,6 +37,7 @@ const SpecificBlog = ({ resBlogData }) => {
   const [message, setMessage] = useState("");
   const [data, setData] = useState({});
   const [recentData, setRecentData] = useState([]);
+
   const canonicalUrl = (
     `https://cdrskillassessment.com` +
     (router.asPath === "/" ? "" : router.asPath)
@@ -574,7 +576,73 @@ const SpecificBlog = ({ resBlogData }) => {
           </Col>
         </Row>
       </Container>
+      <Container>
+        <div
+          className="py-4 "
+          style={{
+            fontFamily: "Century Gothic",
+            fontStyle: "normal",
+            fontWeight: "700",
+            fontSize: "30px",
+            lineHeight: "37px",
+          }}
+        >
+          Related Articles
+        </div>
+        <Row sm={1} md={3} className=" pb-5 ">
+          {resData.map((item, index) => (
+            <>
+              {index < 3 && (
+                <Col key={item.id}>
+                  <>
+                    <Stack
+                      style={{
+                        boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.15)",
+                        borderRadius: "5px",
+                        height: "100%",
+                      }}
+                    >
+                      {" "}
+                      <Card.Img
+                        variant="top"
+                        src={item.attributes?.image?.data?.attributes?.url}
+                      />
+                      <Card.Body>
+                        <span style={{ color: "#017CC9" }}>
+                          <GridView />
+                          Australia Migration
+                        </span>
+                        <Card.Title className="pt-1">
+                          {item.attributes.title}
+                        </Card.Title>
+                        <Card.Text className="overflow-hidden">
+                          A CDR report allows engineers to demonstrate that
+                          their expertise meets Australian standards. Engineers
+                          Australia uses a variety of customised papers to g
+                          skills and knowledge, management...
+                        </Card.Text>
+                      </Card.Body>
+                      <div className="mb-auto">
+                        <Link href={`/blog/${item.attributes.slug}`}>
+                          <Button
+                            className="container"
+                            size="lg"
+                            // href="/blog/8-Common-CDR-Report-Mistakes-Made-by-Engineering-Applicants"
+                          >
+                            Read More <ArrowForward />
+                          </Button>
+                        </Link>
+                      </div>
+                    </Stack>
+                  </>
+                </Col>
+              )}
+            </>
+          ))}
+        </Row>
+      </Container>
       <Hero3
+        className=""
         title="Stay connected with CDRskillassessment! Contact us via our Social Channels"
         buttonName1="whatsapp"
         buttonName2="Facebook"
@@ -601,9 +669,14 @@ export async function getStaticProps({ params }) {
     `https://cdrskill.herokuapp.com/api/blogs/${params.slug}?populate=deep`
   );
   const blogData = await blog.json();
+  const blogs = await fetch(
+    `https://cdrskill.herokuapp.com/api/blogs?populate=deep`
+  );
+  const blogDatas = await blogs.json();
 
   return {
-    props: { resBlogData: blogData?.data },
+    props: { resBlogData: blogData?.data, resData: blogDatas?.data },
+
     revalidate: 1,
   };
 }
