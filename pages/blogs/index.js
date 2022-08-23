@@ -7,28 +7,17 @@ import {
   Card,
   Stack,
   Figure,
-  Navbar,
 } from "react-bootstrap";
-import { Box } from "@mui/material";
 import Select from "react-select";
 import Link from "next/link";
 
-import styles from "../../styles/Blog.module.css";
-import BlogsCategories from "../../components/Blogs/BlogsCategories";
-import RecentBlogs from "../../components/Blogs/RecentBlogs";
 import Hero3 from "../../components/FAQ/Hero3";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import {
-  ArrowBack,
-  ArrowForward,
-  FaceOutlined,
-  GridView,
-} from "@mui/icons-material";
+import { ArrowForward, GridView } from "@mui/icons-material";
 import ShareIcon from "@mui/icons-material/Share";
 import Pagination from "@mui/material/Pagination";
 import parse from "html-react-parser";
-const ALLBLOGS = React.lazy(() => import("../../components/Blogs/ALLBLOGS"));
 
 const Blogs = ({ resBlogData }) => {
   const router = useRouter();
@@ -74,7 +63,7 @@ const Blogs = ({ resBlogData }) => {
         }}
       >
         <Container className="pt-5 text-light">
-          <Row>
+          <Row className="g-3">
             <Col className="ps-5 pb-2">
               <span
                 style={{
@@ -139,7 +128,7 @@ const Blogs = ({ resBlogData }) => {
         >
           Feature Block
         </div>
-        <Row>
+        <Row className="g-3">
           <Col sm={8}>
             <Card style={{ height: "56vh" }}>
               <Card.Header as="p" className="bg-white border-bottom-0">
@@ -147,18 +136,16 @@ const Blogs = ({ resBlogData }) => {
                   <span style={{ color: "#017CC9" }}>
                     <GridView />
                   </span>
-                  Australia Migration
+                  {resBlogData[1]?.attributes?.category}
                   <div className="text-muted ">2 days ago</div>
                 </Stack>
               </Card.Header>
 
               <Card.Body>
-                <Card.Title>{resBlogData[0].attributes.title}</Card.Title>
+                <Card.Title>{resBlogData[1].attributes.title}</Card.Title>
                 <Card.Text>
-                  With supporting text below as a natural lead-in to additional
-                  content. With supporting text below as a natural lead-in to
-                  additional content. With supporting text below as a natural
-                  lead-in to additional content.
+                  {resBlogData[1]?.attributes?.descriptions}
+                  ...
                 </Card.Text>
                 <Link href={`/blog/${resBlogData[0].attributes.slug}`}>
                   <Button
@@ -230,7 +217,7 @@ const Blogs = ({ resBlogData }) => {
         >
           All Blogs
         </div>
-        <Row>
+        <Row className="g-3">
           <Col sm={6}>
             <Stack
               style={{
@@ -292,8 +279,7 @@ const Blogs = ({ resBlogData }) => {
                   {resBlogData[1].attributes.title}
                 </Card.Title>
                 <Card.Text className="" style={{}}>
-                  A CDR report allows engineers to demonstrate that their
-                  expertise meets Australian standards. management...
+                  {resBlogData[1]?.attributes?.descriptions}
                 </Card.Text>
               </Card.Body>
               <div className="mb-auto">
@@ -311,11 +297,11 @@ const Blogs = ({ resBlogData }) => {
           </Col>
         </Row>
 
-        <Row sm={1} md={3} className="my-4 g-3">
+        <Row className="my-4 g-3">
           {resBlogData.map((item, index) => (
             <>
               {index > 2 && (
-                <Col key={item.id}>
+                <Col key={item.id} sm={1} md={4}>
                   <>
                     <Stack
                       style={{
@@ -332,16 +318,14 @@ const Blogs = ({ resBlogData }) => {
                       <Card.Body>
                         <span style={{ color: "#017CC9" }}>
                           <GridView />
-                          Australia Migration
+                          {item?.attributes?.category}
                         </span>
                         <Card.Title className="pt-1">
                           {item.attributes.title}
                         </Card.Title>
                         <Card.Text className="overflow-hidden">
-                          A CDR report allows engineers to demonstrate that
-                          their expertise meets Australian standards. Engineers
-                          Australia uses a variety of customised papers to g
-                          skills and knowledge, management...
+                          {item?.attributes?.descriptions?.substring(0, 200)}
+                          {" ..."}
                         </Card.Text>
                       </Card.Body>
                       <div className="mb-auto">
