@@ -8,14 +8,15 @@ import Headings from "../../components/Headings";
 import Hero2 from "../../components/Hero2";
 import Paragraphs from "../../components/Paragraphs";
 import { Stack } from "@mui/material";
-
-const SpecificAnzsco = () => {
+import Seo from "../../components/Seo";
+const SpecificAnzsco = ({ fieldRes }) => {
   const router = useRouter();
   const anzsco = router.query.anzsco;
   const canonicalUrl = (
     `https://cdrskillassessment.com` +
     (router.asPath === "/" ? "" : router.asPath)
   ).split("?")[0];
+  console.log("fieldREs", fieldRes);
 
   const allData = {
     engineeringManager: {
@@ -121,8 +122,8 @@ const SpecificAnzsco = () => {
       occupationsTitle: `Occupations in this Group.`,
       occupationDescription: (
         <div>
-          • Chemical engineer ANZSCO code 233111 <br />
-          • Material Engineer ANZSCO code 233112
+          • Chemical engineer ANZSCO code 233111 <br />• Material Engineer
+          ANZSCO code 233112
         </div>
       ),
       exceptionstitle: "Exceptions",
@@ -526,9 +527,11 @@ const SpecificAnzsco = () => {
       secondTitle: `Skill Assessment Authority`,
       secondDescription: `EA (Engineers Australia) / AIM`,
       thirdTitle: `Specialisations of Civil Engineer:`,
-      thirdDescription: [`Airfield Engineer Officer (Air Force)
+      thirdDescription: [
+        `Airfield Engineer Officer (Air Force)
       Hydraulics Engineer
-      `],
+      `,
+      ],
       occupationTitle: `On the Occupation Lists`,
       occupationList: [
         `489 (S/T) Occupations List
@@ -3516,10 +3519,11 @@ const SpecificAnzsco = () => {
       occupationsTitle: `Occupations in this Group`,
       occupationDescription: (
         <div>
-          • 313211 Radiocommunications Technician. <br/>
-          • 313212 Telecommunications<br/>
-          Field Engineer. <br/>
-          • 313213 Telecommunications Network Planner. <br/>
+          • 313211 Radiocommunications Technician. <br />
+          • 313212 Telecommunications
+          <br />
+          Field Engineer. <br />
+          • 313213 Telecommunications Network Planner. <br />
           • 313214 Telecommunications Technical Officer or Technologist.
           <br />
         </div>
@@ -3668,288 +3672,9 @@ const SpecificAnzsco = () => {
       hero2ButtonName: `Contact an Expert`,
     },
   };
-
-  return (
-    <div className="mt-4 mt-md-0">
-      <div>
-        {anzsco === "anzsco-133211-engineering-manager" && (
-          <Head>
-            <title>Engineering Manager | Unit Group 1332 | ANZSCO 133211</title>
-            <meta
-              name="description"
-              content="Engineering Manager | Unit Group 1332 | ANZSCO 133211"
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233111-chemical-engineer" && (
-          <Head>
-            <title>Chemical Engineer | Unit Group 2331 | ANZSCO 233111</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2331 Chemical and Materials Engineer. ANZSCO 233111 PR Visa for Chemical Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233211-civil-engineer" && (
-          <Head>
-            <title>Civil Engineer ANZSCO 233211</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233211 PR Visa for Civil Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233212-geo-technical-engineer" && (
-          <Head>
-            <title>Geo technical Engineer ANZSCO 233212</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233212 PR Visa for Geo-Technical Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233214-structural-engineer" && (
-          <Head>
-            <title>Structural Engineer ANZSCO 233214</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233214 PR Visa for Structural Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233215-transport-engineer" && (
-          <Head>
-            <title>Transport Engineer ANZSCO 233215</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233215 PR Visa for Transport Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233311-electrical-engineer" && (
-          <Head>
-            <title>Electrical Engineer ANZSCO 233311</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2333 Electrical Engineers. 
-
-ANZSCO 233311 PR Visa for Electrical Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233411-electronics-engineer" && (
-          <Head>
-            <title>Electronics Engineer ANZSCO 233411</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2334 Electronics Engineer. 
-
-ANZSCO 233411 PR Visa for Electronics Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233511-industrial-engineer" && (
-          <Head>
-            <title>Industrial Engineer ANZSCO 233511</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233511 PR Visa for Industrial Engineer"
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233512-mechanical-engineer" && (
-          <Head>
-            <title>Mechanical Engineer ANZSCO 233512</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233512 PR Visa for Mechanical Engineers."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233513-production-or-plant-engineer" && (
-          <Head>
-            <title>Production or plant Engineer ANZSCO 233513</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233513 PR Visa for Production or Plant engineers"
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233611-mining-engineer" && (
-          <Head>
-            <title>Mining Engineer ANZSCO 233611</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2336 Mining Engineers ANZSCO 233611 PR Visa for Mining Engineers."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233612-petroleum-engineer" && (
-          <Head>
-            <title>Petroleum Engineer ANZSCO 233612</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2336 Mining Engineers ANZSCO 233612 PR Visa for Petroleum Engineers."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233911-aeronautical-engineer" && (
-          <Head>
-            <title>Aeronautical Engineer ANZSCO 233911</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233911 PR Visa for Aeronautical Engineer"
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233912-agricultural-engineer" && (
-          <Head>
-            <title>Agricultural Engineer ANZSCO 233912</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233912 PR Visa for Agriculture Engineer"
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233913-biomedical-engineer" && (
-          <Head>
-            <title>Biomedical Engineer ANZSCO 233913</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233913 PR Visa for Biomedical Engineer"
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233914-engineering-technologist" && (
-          <Head>
-            <title>Engineering technologist ANZSCO 233914</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233914 PR Visa for Engineering Technologists"
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233915-environmental-engineer" && (
-          <Head>
-            <title>Environmental Engineer ANZSCO 233915</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233915 PR Visa for Environmental Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "anzsco-233999-engineering-professionals-nec" && (
-          <Head>
-            <title>Engineering professionals nec ANZSCO 233999</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233999 PR Visa for Engineering Professionals."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "computer-networks-and-system-engineers-anzsco-263111" && (
-          <Head>
-            <title>Computer Network and Systems Engineers ANZSCO 263111</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2631 Other Computer Network Professionals ANZSCO 263111 PR Visa for Computer Network and Systems Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}{" "}
-        {anzsco === "telecommunication-engineers-anzsco-263311" && (
-          <Head>
-            <title>Telecommunications Engineer ANZSCO 263311</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 2633 Telecommunications Engineering Professionals ANZSCO 263311 PR Visa for Telecommunications Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}{" "}
-        {anzsco === "telecommunication-network-engineers-anzsco-263312" && (
-          <Head>
-            <title>Telecommunications Network Engineers ANZSCO 263312</title>
-            <meta
-              name="description"
-              content="Telecommunications Network Engineers ANZSCO 263312"
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}{" "}
-        {anzsco === "civil-engineering-draftsperson-anzsco-312211" && (
-          <Head>
-            <title>Civil Engineering Draftsperson ANZSCO 312211</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 3122 Civil Engineering Draftsperson and Technician ANZSCO 312211PR Visa for Civil Engineering Draftsperson."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}{" "}
-        {anzsco === "civil-engineering-technician-anzsco-312212" && (
-          <Head>
-            <title>Civil Engineering Technician ANZSCO 312212</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 3122 Civil Engineering Draftsperson and Technician ANZSCO 312212PR Visa for Civil Engineering Technician ."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}{" "}
-        {anzsco === "electrical-engineering-draftsperson-anzsco-312311" && (
-          <Head>
-            <title>Electrical Engineering Draftsperson ANZSCO 312311</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 3123 Electrical Engineering Draftsperson and Technician ANZSCO 312311PR Visa for Electrical Engineering Draftsperson."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}{" "}
-        {anzsco === "electrical-engineering-technician-anzsco-312312" && (
-          <Head>
-            <title>Electrical Engineering Technician ANZSCO 312312</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 3123 Electrical Engineering Draftsperson and Technician ANZSCO 312312PR Visa for Electrical Engineering Technician."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-        {anzsco === "telecommunication-field-engineer-anzsco-313212" && (
-          <Head>
-            <title>Telecommunications Field Engineer ANZSCO 313212</title>
-            <meta
-              name="description"
-              content="Occupational Unit Group 3132 Telecommunications Technical 
-
-Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
-            />
-            <link rel="canonical" href={canonicalUrl} />
-          </Head>
-        )}
-      </div>
-
+  const anzscoData = (
+    <>
+      {" "}
       {anzsco === "anzsco-133211-engineering-manager" && (
         <>
           <Section1
@@ -4000,7 +3725,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233111-chemical-engineer" && (
         <>
           <Section1
@@ -4247,7 +3971,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233215-transport-engineer" && (
         <>
           <Section1
@@ -4275,7 +3998,7 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
                   style={{ height: "20px", width: "20px", float: "right" }}
                   src="/images/Vector.png"
                   alt="hat"
-                /> 
+                />
                 <Paragraphs data={l} />
               </Stack>
             ))}
@@ -4301,7 +4024,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
             list={allData.transportEngineer.exceptions}
           />
 
-
           <Expectations
             title={allData.transportEngineer.tasktitle}
             list={allData.transportEngineer.tasks}
@@ -4313,7 +4035,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233311-electrical-engineer" && (
         <>
           <Section1
@@ -4373,7 +4094,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233411-electronics-engineer" && (
         <>
           <Section1
@@ -4438,7 +4158,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233511-industrial-engineer" && (
         <>
           <Section1
@@ -4508,7 +4227,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233512-mechanical-engineer" && (
         <>
           <Section1
@@ -4578,7 +4296,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233513-production-or-plant-engineer" && (
         <>
           <Section1
@@ -4646,7 +4363,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233611-mining-engineer" && (
         <>
           <Section1
@@ -4714,7 +4430,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233612-petroleum-engineer" && (
         <>
           <Section1
@@ -4784,7 +4499,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233911-aeronautical-engineer" && (
         <>
           <Section1
@@ -4854,7 +4568,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233912-agricultural-engineer" && (
         <>
           <Section1
@@ -4924,7 +4637,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233913-biomedical-engineer" && (
         <>
           <Section1
@@ -4994,7 +4706,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233914-engineering-technologist" && (
         <>
           <Section1
@@ -5065,7 +4776,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233915-environmental-engineer" && (
         <>
           <Section1
@@ -5136,7 +4846,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233999-engineering-professionals-nec" && (
         <>
           <Section1
@@ -5220,7 +4929,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-263111-computer-networks-and-system-engineers" && (
         <>
           <Section1
@@ -5284,7 +4992,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-263311-telecommunication-engineers" && (
         <>
           <Section1
@@ -5372,7 +5079,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-313212-telecommunication-network-engineers" && (
         <>
           <Section1
@@ -5484,7 +5190,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-312211-civil-engineering-draftsperson" && (
         <>
           <Section1
@@ -5582,7 +5287,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-312212-civil-engineering-technician" && (
         <>
           <Section1
@@ -5670,7 +5374,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-312311-electrical-engineering-draftsperson" && (
         <>
           <Section1
@@ -5987,7 +5690,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-312411-electronics-draftsperson" && (
         <>
           <Section1
@@ -6064,7 +5766,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-233916-naval-architect" && (
         <>
           <Section1
@@ -6127,7 +5828,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-313213-telecommunications-network-planner" && (
         <>
           <Section1
@@ -6243,7 +5943,6 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
-
       {anzsco === "anzsco-313212-telecommunication-technologist" && (
         <>
           <Section1
@@ -6430,8 +6129,342 @@ Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
           />
         </>
       )}
+    </>
+  );
+
+  const anzscoRes = fieldRes?.data;
+
+  return (
+    <div className="mt-4 mt-md-0">
+      {router.isFallback || anzscoRes === null ? (
+        <>
+          <div>
+            {anzsco === "anzsco-133211-engineering-manager" && (
+              <Head>
+                <title>
+                  Engineering Manager | Unit Group 1332 | ANZSCO 133211
+                </title>
+                <meta
+                  name="description"
+                  content="Engineering Manager | Unit Group 1332 | ANZSCO 133211"
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233111-chemical-engineer" && (
+              <Head>
+                <title>
+                  Chemical Engineer | Unit Group 2331 | ANZSCO 233111
+                </title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2331 Chemical and Materials Engineer. ANZSCO 233111 PR Visa for Chemical Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233211-civil-engineer" && (
+              <Head>
+                <title>Civil Engineer ANZSCO 233211</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233211 PR Visa for Civil Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233212-geo-technical-engineer" && (
+              <Head>
+                <title>Geo technical Engineer ANZSCO 233212</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233212 PR Visa for Geo-Technical Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233214-structural-engineer" && (
+              <Head>
+                <title>Structural Engineer ANZSCO 233214</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233214 PR Visa for Structural Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233215-transport-engineer" && (
+              <Head>
+                <title>Transport Engineer ANZSCO 233215</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2332 Civil Engineering Professionals. ANZSCO 233215 PR Visa for Transport Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233311-electrical-engineer" && (
+              <Head>
+                <title>Electrical Engineer ANZSCO 233311</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2333 Electrical Engineers. 
+
+ANZSCO 233311 PR Visa for Electrical Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233411-electronics-engineer" && (
+              <Head>
+                <title>Electronics Engineer ANZSCO 233411</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2334 Electronics Engineer. 
+
+ANZSCO 233411 PR Visa for Electronics Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233511-industrial-engineer" && (
+              <Head>
+                <title>Industrial Engineer ANZSCO 233511</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233511 PR Visa for Industrial Engineer"
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233512-mechanical-engineer" && (
+              <Head>
+                <title>Mechanical Engineer ANZSCO 233512</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233512 PR Visa for Mechanical Engineers."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233513-production-or-plant-engineer" && (
+              <Head>
+                <title>Production or plant Engineer ANZSCO 233513</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2335 Industrial,  Mechanical and  Production  Engineers  ANZSCO 233513 PR Visa for Production or Plant engineers"
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233611-mining-engineer" && (
+              <Head>
+                <title>Mining Engineer ANZSCO 233611</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2336 Mining Engineers ANZSCO 233611 PR Visa for Mining Engineers."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233612-petroleum-engineer" && (
+              <Head>
+                <title>Petroleum Engineer ANZSCO 233612</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2336 Mining Engineers ANZSCO 233612 PR Visa for Petroleum Engineers."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233911-aeronautical-engineer" && (
+              <Head>
+                <title>Aeronautical Engineer ANZSCO 233911</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233911 PR Visa for Aeronautical Engineer"
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233912-agricultural-engineer" && (
+              <Head>
+                <title>Agricultural Engineer ANZSCO 233912</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233912 PR Visa for Agriculture Engineer"
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233913-biomedical-engineer" && (
+              <Head>
+                <title>Biomedical Engineer ANZSCO 233913</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233913 PR Visa for Biomedical Engineer"
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233914-engineering-technologist" && (
+              <Head>
+                <title>Engineering technologist ANZSCO 233914</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233914 PR Visa for Engineering Technologists"
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233915-environmental-engineer" && (
+              <Head>
+                <title>Environmental Engineer ANZSCO 233915</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233915 PR Visa for Environmental Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "anzsco-233999-engineering-professionals-nec" && (
+              <Head>
+                <title>Engineering professionals nec ANZSCO 233999</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2339 Other Engineering Professionals ANZSCO 233999 PR Visa for Engineering Professionals."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco ===
+              "computer-networks-and-system-engineers-anzsco-263111" && (
+              <Head>
+                <title>
+                  Computer Network and Systems Engineers ANZSCO 263111
+                </title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2631 Other Computer Network Professionals ANZSCO 263111 PR Visa for Computer Network and Systems Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}{" "}
+            {anzsco === "telecommunication-engineers-anzsco-263311" && (
+              <Head>
+                <title>Telecommunications Engineer ANZSCO 263311</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 2633 Telecommunications Engineering Professionals ANZSCO 263311 PR Visa for Telecommunications Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}{" "}
+            {anzsco === "telecommunication-network-engineers-anzsco-263312" && (
+              <Head>
+                <title>
+                  Telecommunications Network Engineers ANZSCO 263312
+                </title>
+                <meta
+                  name="description"
+                  content="Telecommunications Network Engineers ANZSCO 263312"
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}{" "}
+            {anzsco === "civil-engineering-draftsperson-anzsco-312211" && (
+              <Head>
+                <title>Civil Engineering Draftsperson ANZSCO 312211</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 3122 Civil Engineering Draftsperson and Technician ANZSCO 312211PR Visa for Civil Engineering Draftsperson."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}{" "}
+            {anzsco === "civil-engineering-technician-anzsco-312212" && (
+              <Head>
+                <title>Civil Engineering Technician ANZSCO 312212</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 3122 Civil Engineering Draftsperson and Technician ANZSCO 312212PR Visa for Civil Engineering Technician ."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}{" "}
+            {anzsco === "electrical-engineering-draftsperson-anzsco-312311" && (
+              <Head>
+                <title>Electrical Engineering Draftsperson ANZSCO 312311</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 3123 Electrical Engineering Draftsperson and Technician ANZSCO 312311PR Visa for Electrical Engineering Draftsperson."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}{" "}
+            {anzsco === "electrical-engineering-technician-anzsco-312312" && (
+              <Head>
+                <title>Electrical Engineering Technician ANZSCO 312312</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 3123 Electrical Engineering Draftsperson and Technician ANZSCO 312312PR Visa for Electrical Engineering Technician."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+            {anzsco === "telecommunication-field-engineer-anzsco-313212" && (
+              <Head>
+                <title>Telecommunications Field Engineer ANZSCO 313212</title>
+                <meta
+                  name="description"
+                  content="Occupational Unit Group 3132 Telecommunications Technical 
+
+Specialists. ANZSCO 313212PR Visa for Telecommunications Field Engineer."
+                />
+                <link rel="canonical" href={canonicalUrl} />
+              </Head>
+            )}
+          </div>
+          {anzscoData}
+        </>
+      ) : (
+        <>
+          <Seo seo={fieldRes?.data?.attributes?.seo} />
+
+          {anzscoData}
+        </>
+      )}
     </div>
   );
 };
+
+export async function getStaticPaths() {
+  const { NEXT_STRAPI_API_URL } = process.env;
+
+  const fields = await fetch(NEXT_STRAPI_API_URL + "anzscocodes?populate=deep");
+  const allField = await fields.json();
+  return {
+    paths: allField.data.map((anzsco) => ({
+      params: {
+        anzsco: anzsco.attributes.slug,
+      },
+    })),
+    fallback: true,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const { NEXT_STRAPI_API_URL } = process.env;
+
+  const field = await fetch(
+    NEXT_STRAPI_API_URL + `anzscocodes/${params.anzsco}?populate=deep`
+  );
+  const fieldRes = await field.json();
+
+  return {
+    props: { fieldRes: fieldRes || "" },
+    revalidate: 1,
+  };
+}
 
 export default SpecificAnzsco;
