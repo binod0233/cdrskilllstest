@@ -32,6 +32,11 @@ const Seo = ({ seo }) => {
         {Seo?.article && <meta property="og:type" content="article" />}
         <meta name="twitter:card" content="summary_large_image" />
         {Seo?.canonicalURL && <link rel="canonical" href={Seo.canonicalURL} />}
+        {Seo?.structuredData && (
+          <script type="application/ld+json" id="analytics">
+            {JSON.stringify(Seo?.structuredData)}
+          </script>
+        )}
       </Head>
     </>
   );

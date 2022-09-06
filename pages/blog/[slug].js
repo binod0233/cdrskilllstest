@@ -122,30 +122,21 @@ const SpecificBlog = ({ resBlogData, resData }) => {
       <Container style={{ backgroundColor: "" }}>
         <Row className="container">
           <Col sm={8} className="p-1 ">
-            <div
+            <Card.Img
+              variant="top"
+              src={resBlogData?.attributes?.image?.data?.attributes?.url}
               style={{
-                fontFamily: "Arial",
-                fontWeight: "400",
-                fontSize: "19px",
-                lineHeight: "21.52px",
-                backgroundColor: "#2D495F",
-                color: "white",
                 marginTop: "15px",
                 marginBottom: "-2px",
                 padding: "10px",
               }}
-            >
-              Home /Blogs /{""}
-              {resBlogData?.attributes?.title}
-            </div>
-            <Card.Img
-              variant="top"
-              src={resBlogData?.attributes?.image?.data?.attributes?.url}
             />
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
+                  <AddIcon />
                   <span
+                    className="ms-2"
                     style={{
                       fontFamily: "Arial",
                       fontWeight: "700",
@@ -154,9 +145,7 @@ const SpecificBlog = ({ resBlogData, resData }) => {
                       color: "#203546",
                     }}
                   >
-                    {" "}
-                    <AddIcon />
-                    {resBlogData?.attributes?.title}
+                    Table of Content
                   </span>
                 </Accordion.Header>
                 <Accordion.Body>
